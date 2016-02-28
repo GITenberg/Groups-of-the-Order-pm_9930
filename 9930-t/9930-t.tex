@@ -1,0 +1,4445 @@
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%                                                                         %
+% The Project Gutenberg EBook of Groups of Order p^m Which Contain Cyclic %
+% Subgroups of Order p^(m-3), by Lewis Irving Neikirk                     %
+%                                                                         %
+% This eBook is for the use of anyone anywhere in the United States and most
+% other parts of the world at no cost and with almost no restrictions     %
+% whatsoever.  You may copy it, give it away or re-use it under the terms of
+% the Project Gutenberg License included with this eBook or online at     %
+% www.gutenberg.org.  If you are not located in the United States, you'll have
+% to check the laws of the country where you are located before using this ebook.
+%                                                                         %
+%                                                                         %
+%                                                                         %
+% Title: Groups of Order p^m Which Contain Cyclic Subgroups of Order p^(m-3)
+%                                                                         %
+% Author: Lewis Irving Neikirk                                            %
+%                                                                         %
+% Release Date: April 24, 2015 [EBook #9930]                              %
+%                                                                         %
+% Language: English                                                       %
+%                                                                         %
+% Character set encoding: ASCII                                           %
+%                                                                         %
+% *** START OF THIS PROJECT GUTENBERG EBOOK GROUPS OF ORDER P^M WHICH *** %
+%                                                                         %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+\def\ebook{9930}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                  %%
+%% Packages and substitutions:                                      %%
+%%                                                                  %%
+%% book:  Required.                                                 %%
+%% enumerate: Enumeration extensions. Required.                     %%
+%%                                                                  %%
+%% amsmath:  AMS mathematics enhancements. Required.                %%
+%%                                                                  %%
+%% alltt:    Fixed-width font environment. Required.                %%
+%%                                                                  %%
+%% Producer's Comments:                                             %%
+%%                                                                  %%
+%%   This ebook was originally produced in 2003; boilerplate for    %%
+%%   auto-compiling at Project Gutenberg added April 2015.          %%
+%%                                                                  %%
+%% PDF pages: 71                                                    %%
+%% PDF page size: US Letter (8.5 x 11in)                            %%
+%%                                                                  %%
+%% Command block:                                                   %%
+%%                                                                  %%
+%%     pdflatex                                                     %%
+%%                                                                  %%
+%%                                                                  %%
+%% April 2015: pglatex.                                             %%
+%%   Compile this project with:                                     %%
+%%   pdflatex 9930-t.tex                                            %%
+%%                                                                  %%
+%%   pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian)   %%
+%%                                                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\listfiles
+\documentclass[oneside]{book}[2005/09/16]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{enumerate}[1999/03/05]
+
+\usepackage{amsmath}[2000/07/18] %% Displayed equations
+
+\usepackage{alltt}[1997/06/16]   %% boilerplate, credits, license
+
+\providecommand{\ebook}{00000}    % Overridden during white-washing
+
+%%%% Fixed-width environment to format PG boilerplate %%%%
+\newenvironment{PGtext}{%
+\begin{alltt}
+\fontsize{9.2}{10.5}\ttfamily\selectfont}%
+{\end{alltt}}
+
+%%%% Global style parameters %%%%
+% Loosen horizontal spacing
+\allowdisplaybreaks[1]
+\setlength{\emergencystretch}{1.5em}
+
+%%%% Major document divisions %%%%
+\newcommand{\PGBoilerPlate}{%
+  \frontmatter
+  \pagenumbering{Alph}
+  \pagestyle{empty}
+}
+\newcommand{\PGLicense}{%
+  \backmatter
+  \pagenumbering{Roman}
+}
+
+\newcommand{\TranscribersNote}{%
+  \begin{minipage}{0.85\textwidth}
+    \small
+    \subsection*{\centering\normalfont\scshape\normalsize Transcriber's Note}
+      Minor typographical corrections and presentational changes have been
+  made without comment. The \LaTeX\ source file may be downloaded from
+  \begin{center}
+    \texttt{www.gutenberg.org/ebooks/\ebook}.
+  \end{center}
+  \end{minipage}
+}
+
+\newcommand{\MainMatter}
+{
+  \mainmatter
+  \pagenumbering{arabic}
+  \pagestyle{plain}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%% START OF DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%% PG BOILERPLATE %%%%
+\PGBoilerPlate
+\begin{center}
+\begin{minipage}{\textwidth}
+\small
+\begin{PGtext}
+The Project Gutenberg EBook of Groups of Order p^m Which Contain Cyclic
+Subgroups of Order p^(m-3), by Lewis Irving Neikirk
+
+This eBook is for the use of anyone anywhere in the United States and most
+other parts of the world at no cost and with almost no restrictions
+whatsoever.  You may copy it, give it away or re-use it under the terms of
+the Project Gutenberg License included with this eBook or online at
+www.gutenberg.org.  If you are not located in the United States, you'll have
+to check the laws of the country where you are located before using this ebook.
+
+
+
+Title: Groups of Order p^m Which Contain Cyclic Subgroups of Order p^(m-3)
+
+Author: Lewis Irving Neikirk
+
+Release Date: April 24, 2015 [EBook #9930]
+
+Language: English
+
+Character set encoding: ASCII
+
+*** START OF THIS PROJECT GUTENBERG EBOOK GROUPS OF ORDER P^M WHICH ***
+\end{PGtext}
+\end{minipage}
+\end{center}
+\clearpage
+
+%%%% Credits and transcriber's note %%%%
+\begin{center}
+\begin{minipage}{\textwidth}
+\begin{PGtext}
+Produced by Cornell University, Joshua Hutchinson, Lee
+Chew-Hung, John Hagerson, and the Online Distributed
+Proofreading Team
+\end{PGtext}
+\end{minipage}
+\vfill
+\TranscribersNote
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%% FRONT MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\iffalse %%%%% Start of original header %%%%
+\documentclass[oneside]{article}
+\usepackage{enumerate}
+\usepackage[leqno]{amsmath}
+\allowdisplaybreaks[1]
+\begin{document}
+
+\thispagestyle{empty}
+\small
+\begin{verbatim}
+
+The Project Gutenberg EBook of Groups of Order p^m Which Contain Cyclic
+Subgroups of Order p^(m-3), by Lewis Irving Neikirk
+
+Copyright laws are changing all over the world. Be sure to check the
+copyright laws for your country before downloading or redistributing
+this or any other Project Gutenberg eBook.
+
+This header should be the first thing seen when viewing this Project
+Gutenberg file.  Please do not remove it.  Do not change or edit the
+header without written permission.
+
+Please read the "legal small print," and other information about the
+eBook and Project Gutenberg at the bottom of this file.  Included is
+important information about your specific rights and restrictions in
+how the file may be used.  You can also find out about how to make a
+donation to Project Gutenberg, and how to get involved.
+
+
+**Welcome To The World of Free Plain Vanilla Electronic Texts**
+
+**eBooks Readable By Both Humans and By Computers, Since 1971**
+
+*****These eBooks Were Prepared By Thousands of Volunteers!*****
+
+
+Title: Groups of Order p^m Which Contain Cyclic Subgroups of Order p^(m-3)
+
+Author: Lewis Irving Neikirk
+
+Release Date: February, 2006 [EBook #9930]
+[Yes, we are more than one year ahead of schedule]
+[This file was first posted on November 1, 2003]
+
+Edition: 10
+
+Language: English
+
+Character set encoding: US-ASCII
+
+*** START OF THE PROJECT GUTENBERG EBOOK GROUPS OF ORDER P^M ***
+
+
+Produced by Cornell University, Joshua Hutchinson, Lee Chew-Hung,
+John Hagerson, and the Online Distributed Proofreading Team.
+
+\end{verbatim}
+\normalsize
+\newpage
+
+\fi
+%%%%% End of original header %%%%
+
+\begin{center}
+\noindent \Large GROUPS OF ORDER $p^m$ WHICH CONTAIN CYCLIC
+SUBGROUPS OF ORDER $p^{m-3}$
+
+\bigskip
+\normalsize\textsc{by}
+\bigskip
+
+\large LEWIS IRVING NEIKIRK
+
+\footnotesize\textsc{sometime harrison research fellow in
+mathematics}
+
+\bigskip
+\large 1905
+\end{center}
+
+\newpage
+\begin{center}
+\large \textbf{INTRODUCTORY NOTE.}
+\end{center}
+\normalsize
+
+This monograph was begun in 1902-3. Class I, Class II, Part I, and
+the self-conjugate groups of Class III, which contain all the groups with
+independent generators, formed the thesis which I presented to the Faculty
+of Philosophy of the University of Pennsylvania in June, 1903, in partial
+fulfillment of the requirements for the degree of Doctor of Philosophy.
+
+The entire paper was rewritten and the other groups added while the
+author was Research Fellow in Mathematics at the University.
+
+I wish to express here my appreciation of the opportunity for scientific
+research afforded by the Fellowships on the George Leib Harrison Foundation
+at the University of Pennsylvania.
+
+I also wish to express my gratitude to Professor George H.\
+Hallett for his kind assistance and advice in the preparation of
+this paper, and especially to express my indebtedness to Professor
+Edwin S.\ Crawley for his support and encouragement, without which
+this paper would have been impossible.
+
+\begin{flushright}
+\textsc{Lewis I.\ Neikirk.}
+\end{flushright}
+
+\footnotesize \textsc{ University Of Pennsylvania,} \textit{May,
+1905.} \normalsize
+
+\MainMatter
+
+\begin{center}
+\large GROUPS OF ORDER $p^m$, WHICH CONTAIN CYCLIC SUBGROUPS OF
+ORDER $p^{(m-3)}$\footnote{Presented to the American Mathematical
+Society April 25, 1903.}
+
+\bigskip \normalsize \textsc{by}
+
+\bigskip \textsc{lewis irving neikirk}
+
+\bigskip\textit{Introduction.}
+\end{center}
+
+The groups of order $p^m$, which contain self-conjugate cyclic
+subgroups of orders $p^{m-1}$, and $p^{m-2}$ respectively, have
+been determined by \textsc{Burnside},\footnote{\textit{Theory of
+Groups of a Finite Order}, pp.\ 75-81.} and the number of groups of
+order $p^m$, which contain cyclic non-self-conjugate subgroups of
+order $p^{m-2}$ has been given by
+\textsc{Miller}.\footnote{Transactions, vol.\ 2 (1901), p.\ 259, and
+vol.\ 3 (1902), p.\ 383.}
+
+Although in the present state of the theory, the actual tabulation
+of all groups of order $p^m$ is impracticable, it is of importance
+to carry the tabulation as far as may be possible. In this paper
+\textit{all groups of order} $p^m$ ($p$ being an odd prime)
+\textit{which contain cyclic subgroups of order $p^{m-3}$ and none
+of higher order} are determined. The method of treatment used is
+entirely abstract in character and, in virtue of its nature, it is
+possible in each case to give explicitly the generational
+equations of these groups. They are divided into three classes,
+and it will be shown that these classes correspond to the three
+partitions: $(m-3,\, 3)$, $(m-3,\, 2,\, 1)$ and $(m-3,\, 1,\, 1,\, 1)$, of
+$m$.
+
+We denote by $G$ an abstract group $G$ of order $p^m$ containing
+operators of order $p^{m-3}$ and no operator of order greater than
+$p^{m-3}$. Let $P$ denote one of these operators of $G$ of order
+$p^{m-3}$. The $p^3$ power of every operator in $G$ is contained
+in the cyclic subgroup $\{P\}$, otherwise $G$ would be of order
+greater than $p^m$. The complete division into classes is effected
+by the following assumptions:
+\begin{enumerate}[I.]
+\item There is in $G$ at least one operator $Q_1$, such that
+$Q{}_1^{p^2}$ is not contained in $\{P\}$.
+\item The $p^2$ power of every operator in $G$ is contained in
+$\{P\}$, and there is at least one operator $Q_1$, such that
+$Q{}_1^p$ is not contained in $\{P\}$.
+\item The $p$th power of every operator in $G$ is
+contained in $\{P\}$.
+\end{enumerate}
+
+\newpage
+The number of groups for Class I, Class II, and Class III,
+together with the total number, are given in the table below:
+\bigskip
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+ & I & II$_1$ & II$_2$ & II$_3$ & II & III & Total \\ \hline
+$p>3$ & & & & & & & \\
+$m>8$ & 9 & $20+p$ & $6+2p$ & $6+2p$ & $32+5p$ & 23 & $64+5p$ \\ \hline
+$p>3$ & & & & & & & \\
+$m=8$ & 8 & $20+p$ & $6+2p$ & $6+2p$ & $32+5p$ & 23 & $63+5p$ \\ \hline
+$p>3$ & & & & & & & \\
+$m=7$ & 6 & $20+p$ & $6+2p$ & $6+2p$ & $32+5p$ & 23 & $61+5p$ \\ \hline
+$p=3$ & & & & & & & \\
+$m>8$ & 9 & 23 & 12 & 12 & 47 & 16 & 72 \\ \hline
+$p=3$ & & & & & & & \\
+$m=8$ & 8 & 23 & 12 & 12 & 47 & 16 & 71 \\ \hline
+$p=3$ & & & & & & & \\
+$m=7$ & 6 & 23 & 12 & 12 & 47 & 16 & 69 \\ \hline
+\end{tabular}
+
+\bigskip \bigskip
+\begin{center}
+\Large\textit{Class} I.\normalsize
+\end{center}
+
+1. \textit{General notations and relations.}---The group $G$ is
+generated by the two operators $P$ and $Q_1$. For brevity we
+set\footnote{With J.~W.\ \textsc{Young}, \textit{On a certain
+group of isomorphisms}, American Journal of Mathematics, vol.\ 25
+(1903), p.\ 206.}
+\begin{equation*}
+Q{}_1^a\, P^b\, Q{}_1^c\, P^d \cdots = [a,\, b,\, c,\, d,\, \cdots].
+\end{equation*}
+
+Then the operators of $G$ are given each uniquely in the form
+\begin{equation*}
+[y,\, x] \quad \left( \begin{aligned}y &= 0,\, 1,\, 2,\, \cdots,\, p^3-1 \\
+                                     x &= 0,\, 1,\, 2,\, \cdots,\, p^{m-3}-1
+                      \end{aligned} \right) .
+\end{equation*}
+
+We have the relation
+\begin{equation}
+Q{}_1^{p^3} = P^{hp^3}. %% 1
+\end{equation}
+
+\noindent There is in $G$, a subgroup $H_1$ of order $p^{m-2}$, which
+contains $\{P\}$ self-con\-ju\-gate\-ly.\footnote{\textsc{Burnside}:
+\textit{Theory of Groups}, Art.\ 54, p.\ 64.} The subgroup $H_1$ is
+generated by $P$ and some operator $Q{}_1^y P^x$ of $G$; it then
+contains $Q{}_1^y$ and is therefore generated by $P$ and
+$Q{}_1^{p^2}$; it is also self-conjugate in $H_2 = \{Q{}_1^p, P\}$
+of order $p^{m-1}$, and $H_2$ is self-conjugate in $G$.
+
+From these considerations we have the
+equations\footnote{\textit{Ibid.}, Art.\ 56, p.\ 66.}
+\begin{align}
+Q{}_1^{-p^2}\,P\,Q{}_1^{p^2} &= P^{1+kp^{m-4}}, \\ %% 2
+Q{}_1^{-p}\,P\,Q{}_1^p &= Q{}_1^{\beta p^2}\,P^{\alpha_1}, \\ %% 3
+Q{}_1^{-1}\,P\,Q_1 &= Q{}_1^{bp}\,P^{a_1}. %% 4
+\end{align}
+
+\medskip
+2. \textit{Determination of $H_1$. Derivation of a formula for
+$[yp^2, x]^s$.}---From (2), by repeated multiplication we obtain
+\begin{gather*}
+[-p^2,\, x,\, p^2] = [0,\, x(1 + kp^{m-4})]; \\
+\intertext{and by a continued use of this equation we have}
+[-yp^2,\, x,\, yp^2] = [0,\, x(1 + kp^{m-4})^y] = [0,\, x(1 + kyp^{m-4})] \qquad (m > 4)
+\end{gather*}
+\noindent and from this last equation,
+\begin{equation}
+[yp^2,\, x]^s = \bigl[syp^2,\, x\{s + k \tbinom{s}{2}yp^{m-4}\}\bigr]. %% 5
+\end{equation}
+
+\medskip
+3. \textit{Determination of $H_2$. Derivation of a formula for
+$[yp,\, x]^s$.}---It follows from (3) and (5) that
+\begin{equation*}
+[-p^2,\, 1,\, p^2] = \left[\beta\frac{\alpha_1^p-1}{\alpha_1-1}p^2,\,
+  \alpha_1^p\left \{ 1+\frac{\beta k}{2}
+  \frac{\alpha_1^p-1}{\alpha_1-1} p^{m-4}\right \} \right] \quad (m > 4).
+\end{equation*}
+\noindent Hence, by (2),
+\begin{gather*}
+\beta\frac{\alpha_1^p - 1}{\alpha_1 - 1}p^2 \equiv 0 \pmod{p^3}, \\
+\alpha{}_1^p \left \{ 1 + \frac{\beta k}{2}
+  \frac{\alpha{}_1^p-1}{\alpha_1 - 1} p^{m-4} \right \} +
+  \beta\frac{\alpha{}_1^p - 1}{\alpha_1 - 1}hp^2
+  \equiv 1 + kp^{m-4} \pmod{p^{m-3}}. \\
+\intertext{From these congruences, we have for $m > 6$}
+\alpha{}_1^p \equiv 1 \pmod{p^3}, \qquad \alpha_1 \equiv 1 \pmod{p^2}, \\
+\intertext{and obtain, by setting}
+\alpha_1 = 1 + \alpha_2 p^2, \\
+\intertext{the congruence}
+\frac{(1 + \alpha_2 p^2)^p - 1}{\alpha_2 p^3}(\alpha_2 + h\beta)p^3
+  \equiv kp^{m-4} \pmod{p^{m-3}}; \\
+\intertext{and so}
+(\alpha_2 + h\beta)p^3 \equiv 0 \pmod{p^{m-4}}, \\
+\intertext{since}
+\frac{(1+\alpha_2 p^2)^p-1}{\alpha_2 p^3} \equiv 1 \pmod{p^2}.
+\end{gather*}
+\noindent From the last congruences
+\begin{gather}
+(\alpha_2 + h\beta)p^3 \equiv kp^{m-4} \pmod{p^{m-3}}. \\ %% 6
+\intertext{Equation (3) is now replaced by}
+Q{}_1^{-p}\,P\, Q{}_1^{-p} = Q{}_1^{\beta p^2} P^{1 + \alpha_2 p^2}. %% 7
+\end{gather}
+\noindent From (7), (5), and (6)
+\begin{equation*}
+[-yp,\, x,\, yp] = \left[\beta xyp^2,\, x\{1 + \alpha_2 yp^2\}
+  + \beta k \tbinom{x}{2}yp^{m-4}\right].
+\end{equation*}
+\noindent A continued use of this equation gives
+\begin{multline}
+[yp,\, x]^s = [syp + \beta \tbinom{s}{2}xyp^2, \\
+  xs + \tbinom{s}{2} \{\alpha_2 xyp^2 + \beta k\tbinom{x}{2}yp^{m-4}\} +
+  \beta k\tbinom{s}{3}x^2yp^{m-4}]. %% 8
+\end{multline}
+
+\medskip
+4. \textit{Determination of $G$.}---From (4) and (8),
+\begin{gather*}
+[-p,\, 1,\, p] = [Np,\, a{}_1^p + Mp^2]. \\
+\intertext{From the above equation and (7),}
+a{}_1^p \equiv 1 \pmod{p^2}, \qquad a_1 \equiv 1 \pmod{p}.
+\end{gather*}
+
+Set $a_1 = 1 + a_2 p$ and equation (4) becomes
+\begin{equation}
+Q{}_1^{-1}\, P\, Q_1 = Q{}_1^{bp}\, P^{1 + a_2 p}. %% 9
+\end{equation}
+\noindent From (9), (8) and (6)
+\begin{gather*}
+[-p^2,\, 1,\, p^2] = \left[\frac{(1 + a_2 p)^{p^2}-1}{a_2 p}bp,
+  (1 + a_2 p)^{p^2}\right], \\
+\intertext{and from (1) and (2)}
+\frac{(1 + a_2 p)^{p^2} - 1}{a_2 p}bp \equiv 0 \pmod{p^3}, \\
+(1 + a_2 p)^{p^2} + bh\frac{(1 + a_2 p)^{p^2} - 1}{a_2 p}p
+  \equiv 1 + kp^{m-4} \pmod{p^{m-3}}.
+\end{gather*}
+\noindent By a reduction similar to that used before,
+\begin{equation}
+(a_2 + bh)p^3 \equiv kp^{m-4} \pmod{p^{m-3}}. %% 10
+\end{equation}
+
+The groups in this class are completely defined by (9), (1) and (10).
+
+These defining relations may be presented in simpler form by a suitable
+choice of the second generator $Q_1$. From (9), (6), (8) and (10)
+\begin{gather*}
+[1,\, x]^{p^3} = [p^3,\, xp^3] = [0,\, (x + h)p^3] \quad (m > 6), \\
+\intertext{and, if $x$ be so chosen that}
+x + h \equiv 0 \pmod{p^{m-6}}, \\
+\intertext{$Q_1\, P^x$ is an operator of order $p^3$ whose $p^2$
+power is not contained in $\{P\}$. Let $Q_1\, P^x = Q$. The group
+$G$ is generated by $Q$ and $P$, where}
+Q^{p^3} = 1, \quad P^{p^{m-3}} = 1. \\
+\intertext{Placing $h = 0$ in (6) and (10) we find}
+\alpha_2 p^3 \equiv a_2 p^3 \equiv k p^{m-4} \pmod{p^{m-3}}.
+\end{gather*}
+\noindent Let $\alpha_2 = \alpha p^{m-7}$, and $a_2 = ap^{m-7}$.
+Equations (7) and (9) are now replaced by
+\begin{equation}
+\left.
+  \begin{aligned}
+  Q^{-p}\, P\, Q^p &= Q^{\beta p^2} P^{1 + \alpha p^{m-5}},\\
+  Q^{-1}\, P\, Q   &= Q^{bp} P^{1 + ap^{m-6}}.
+  \end{aligned}
+\right. %% 11
+\end{equation}
+
+As a direct result of the foregoing relations, the groups in this
+class correspond to the partition $(m-3,\, 3)$. From (11) we
+find\footnote{For $m = 8$ it is necessary to add
+$a^2\binom{y}{2}p^4$ to the exponent of $P$ and for $m = 7$ the
+terms $a(a + \frac{abp}{2})\binom{y}{2}p^2 + a^3\binom{y}{3}p^3$
+to the exponent of $P$, and the term $ab\binom{y}{2}p^2$ to the
+exponent of $Q$. The extra term $27ab^2 k\binom{y}{3}$ is to be
+added to the exponent of $P$ for $m = 7$ and $p = 3$.}
+\begin{equation*}
+[-y,\, 1,\, y] = [byp,\, 1 + ayp^{m-6}] \qquad (m > 8).
+\end{equation*}
+
+It is important to notice that by placing $y = p$ and $p^2$ in the
+preceding equation we find that\footnote{For $m = 7,\,
+ap^2-\frac{a^2p^3}{2} \equiv ap^2 \pmod{p^4},\, ap^3 \equiv kp^3
+\pmod{p^4}$. For $m = 7$ and $p = 3$ the first of the above
+congruences has the extra terms $27(a^3 + ab\beta k)$ on the left
+side.}
+\begin{equation*}
+b \equiv \beta \pmod{p}, \qquad a \equiv \alpha \equiv k \pmod{p^3}
+  \qquad (m > 7).
+\end{equation*}
+
+A combination of the last equation with (8) yields\footnote{For $m
+= 8$ it is necessary to add the term $a\binom{y}{2}xp^4$ to the
+exponent of $P$, and for $m = 7$ the terms $x\{a(a +
+\frac{abp}{2})\binom{y}{2}p^2 + a^3\binom{y}{3}p^3\}$ to the
+exponent of $P$, with the extra term $27ab^2 k\binom{y}{3}x$ for
+$p = 3$, and the term $ab\binom{y}{2}xp^2$ to the exponent of
+$Q$.}
+\begin{multline}
+[-y,\, x,\, y] = [bxyp + b^2\tbinom{x}{2}yp^2, \\
+  x(1 + ayp^{m-6}) + ab\tbinom{x}{2}yp^{m-5} +
+  ab^2\tbinom{x}{3}yp^{m-4}] \qquad (m > 8). %% 12
+\end{multline}
+
+\newpage
+From (12) we get\footnote{For $m = 8$ it is necessary to add the
+term $\frac{1}{2} axy \binom{s}{2}[\frac{1}{3}y(2s - 1) - 1]p^4$
+to the exponent of $P$, and for $m=7$ the terms
+\begin{multline*}
+  x \Bigl\{ \frac{a}{2} \bigl( a + \frac{ab}{2} p \bigr)
+    \bigl(\frac{2s-1}{3} y - 1 \bigr) \tbinom{s}{2}yp^2 +
+    \frac{a^{3}}{3!} \bigl(\tbinom{s}{2}y^2 - (2s - 1)y + 2 \bigr) yp^3 \\
+  + \frac{a^2 bxy^2}{2} \tbinom{s}{3} \frac{3s-1}{2}p^3 + \frac{a^2 b}{2}
+    \bigl( \frac{s(s - 1)^2 (s - 4)}{4!}y - \tbinom{s}{3} \bigr) yp^3 \Bigr\}
+\end{multline*}
+\noindent with the extra terms
+\begin{equation*}
+  27abxy \Bigl\{ \frac{bk}{3!}\bigl[\tbinom{s}{2}y^2 - (2s - 1)y + 2\bigr] \tbinom{s}{3}
+    + x(b^2 k + a^2)(2y^2 + 1)\tbinom{s}{3} \Bigr\},
+\end{equation*}
+\noindent for $p=3$, to the exponent of $P$, and the terms
+$\frac{ab}{2} \bigl\{ 2s - \frac{1}{3}y - 1 \bigr\} \tbinom{s}{2}xyp^2$
+to the exponent of $Q$.} %% END OF FOOTNOTE
+\begin{multline}
+[y,\, x]^s = \bigl[ys + by\bigl\{(x +b\tbinom{x}{2}p)\tbinom{s}{2} + x\tbinom{s}{3}p\bigr\}p, \\
+  xs + ay\bigl\{(x+b\tbinom{x}{2}p + b^2\tbinom{x}{3}p^2)\tbinom{s}{2} \\
+  + (bx^2 p + 2b^2 x\tbinom{x}{2}p^2)\tbinom{s}{3} + bx^2\tbinom{s}{4}p^2\bigr\}p^{m-6}\bigr]
+  \qquad (m > 8). %% 13
+\end{multline}
+
+\medskip
+5. \textit{Transformation of the Groups.}---The general group $G$
+of Class I is specified, in accordance with the relations (2) (11)
+by two integers $a$, $b$ which (see (11)) are to be taken mod
+$p^3$, mod $p^2$, respectively. Accordingly setting
+\begin{gather*}
+a = a_1 p^\lambda, \quad b = b_1 p^\mu,
+\intertext{where}
+dv[a_1,\, p] = 1, \quad dv[b_1,\, p] = 1 \qquad (\lambda = 0,\, 1,\, 2,\, 3;\; \mu = 0,\, 1,\, 2),
+\intertext{we have for the group $G = G(a,\, b) = G(a,\, b)(P,\, Q)$ the
+generational determination:}
+G(a,\, b):\; \left \{
+  \begin{gathered}
+    Q^{-1}\, P\, Q = Q^{b_1 p^{\mu + 1}} P^{1 + a_1 p^{m + \lambda - 6}} \\
+    Q^{p^3} = 1, \quad P^{p^{m-3}} = 1.
+  \end{gathered} \right.
+\end{gather*}
+
+Not all of these groups however are distinct. Suppose that
+\begin{gather*}
+G(a,\, b)(P,\, Q) \sim G(a',\, b')(P',\, Q'),
+\intertext{by the correspondence}
+C = \left[\begin{array}{cc}
+                          Q,    & P \\
+                          Q'_1, & P'_1 \\
+          \end{array} \right],
+\intertext{where}
+Q'_1 = Q'^{y'} P'^{x'p^{m-6}}, \qquad \hbox{ and } \qquad P'_1 = Q'^y P'^x,
+\end{gather*}
+\noindent with $y'$ and $x$ prime to $p$.
+
+Since
+\begin{gather*}
+Q^{-1}\, P\, Q = Q^{bp} P^{1 + ap^{m-6}}, \\
+\intertext{then}
+{Q'}_1^{-1}\, P'_1\, Q'_1 = {Q'}_1^{bp} {P'}_1^{1 + ap^{m-6}}, \\
+\intertext{or in terms of $Q'$, and $P'$}
+\begin{aligned}
+  \bigl[y + b'xy'p &+ b'^2\tbinom{x}{2}y'p^2, x(1 + a'y'p^{m-6}) + a'b'\tbinom{x}{2}y'p^{m-5} \\
+    &+ a'b'^2\tbinom{x}{3}y'p^{m-4}\bigr] = [y + by'p, x + (ax + bx'p)p^{m-6}] \qquad (m > 8)
+\end{aligned}
+\end{gather*}
+\noindent and
+\begin{gather}
+by' \equiv b'xy' + b'^2\tbinom{x}{2}y'p \pmod{p^2}, \\ %% 14
+ax + bx'p \equiv a'y'x + a'b'\tbinom{x}{2}y'p + a'b'^2\tbinom{x}{3}y'p^2 \pmod{p^3}. %% 15
+\end{gather}
+\noindent The necessary and sufficient condition for the simple
+isomorphism of these two groups $G(a,\, b)$ and $G(a',\, b')$ is, that
+the above congruences shall be consistent and admit of solution
+for $x$, $y$, $x'$ and $y'$. The congruences may be written
+\begin{gather*}
+b_1 p^\mu \equiv b'_1 xp^{\mu'} + {b'}_1^2\tbinom{x}{2}p^{2\mu' + 1} \pmod{p^2}, \\
+\begin{aligned}
+  a_1 xp^{\lambda} + b_1 x'p^{\mu + 1} &\equiv \\
+    y'\{a'_1 xp^{\lambda'} &+ a'_1 b'_1\tbinom{x}{2}p^{\lambda'+\mu'+1}
+    + a'_1 {b'}_1^2\tbinom{x}{3}p^{\lambda'+2\mu'+2}\} \pmod{p^3}.
+\end{aligned}
+\end{gather*}
+\noindent Since $dv[x,\, p] = 1$ the first congruence gives $\mu =
+\mu'$ and $x$ may always be so chosen that $b_1 = 1$.
+
+We may choose $y'$ in the second congruence so that $\lambda =
+\lambda'$ and $a_1 = 1$ except for the cases $\lambda' \ge \mu + 1
+= \mu' + 1$ when we will so choose $x'$ that $\lambda = 3$.
+
+The type groups of Class I for $m > 8$\footnote{For $m = 8$ the
+additional term $ayp$ appears on the left side of the congruence
+(14) and $G(1,\, p^2)$ and $G(1,\, p)$ become simply isomorphic. The
+extra terms appearing in congruence (15) do not effect the result.
+For $m = 7$ the additional term $ay$ appears on the left side of
+(14) and $G(1,\, 1)$, $G(1,\, p)$, and $G(l,\, p^2)$ become simply
+isomorphic, also $G(p,\, p)$ and $G(p,\, p^2)$.} are then given by
+\begin{multline}
+G(p^\lambda,\, p^\mu):\; Q^{-1}\, P\, Q = Q^{p^{1+\mu}}
+  P^{1+p^{m-6+\lambda}},\, Q^{p^3} = 1,\, P^{p^{m-3}} = 1 \\
+\left(
+  \begin{aligned}
+    \mu = 0,\, 1,\, 2;\;& \lambda = 0,\, 1,\, 2;\; \lambda \ge \mu; \\
+    \mu = 0,\, 1,\, 2;\;& \lambda = 3
+  \end{aligned} \right)
+\tag{I}.
+\end{multline}
+
+Of the above groups $G(p^\lambda,\, p^\mu)$ the groups for $\mu = 2$ have
+the cyclic subgroup $\{P\}$ self-conjugate, while the group $G(p^3,\, p^2)$
+is the abelian group of type $(\mbox{$m-3$},\, 3)$.
+
+\bigskip \bigskip
+\begin{center}
+\Large\textit{Class} II. \normalsize
+\end{center}
+\setcounter{equation}{0}
+1. \textit{General relations.}
+
+There is in $G$ an operator $Q_1$ such that $Q{}_1^{p^2}$ is contained in
+$\{P\}$ while $Q{}_1^p$ is not.
+\begin{equation}
+Q{}_1^{p^2} = P^{hp^2}. %% 1
+\end{equation}
+
+The operators $Q_1$ and $P$ either generate a subgroup $H_2$ of order
+$p^{m-1}$, or the entire group $G$.
+
+\bigskip
+\begin{center}
+\large\textit{Section} 1. \normalsize
+\end{center}
+
+2. \textit{Groups with independent generators.}
+
+Consider the first possibility in the above paragraph. There is in
+$H_2$, a subgroup $H_1$ of order $p^{m-2}$, which contains $\{P\}$
+self-conjugately.\footnote{\textsc{Burnside}, \textit{Theory of
+Groups}, Art.\ 54, p.\ 64.} $H_1$ is generated by $Q{}_1^p$ and $P$.
+$H_2$ contains $H_1$ self-conjugately and is itself self-conjugate
+in $G$.
+
+From these considerations\footnote{\textit{Ibid.}, Art.\ 56, p.\ 66.}
+\begin{align}
+Q{}_1^{-p}\, P\, Q{}_1^p &= P^{1 + kp^{m-4}}, \\ %% 2
+Q{}_1^{-1}\, P\, Q &= Q{}_1^{\beta p} P^{\alpha_1}. %% 3
+\end{align}
+
+\medskip
+3. \textit{Determination of $H_1$ and $H_2$.}
+
+From (2) we obtain
+\begin{equation}
+[yp,\, x]^s = \bigl[syp,\, x\bigl\{s + k\tbinom{s}{2}yp^{m-4}\bigr\}\bigr] \quad (m > 4), %% 4
+\end{equation}
+\noindent and from (3) and (4)
+\begin{equation*}
+[-p,\, 1,\, p] = \left[\frac{\alpha{}_1^p - 1}{\alpha_1 - 1}\beta p,\,
+  \alpha{}_1^p\left\{1 + \frac{\beta k}{2}
+  \frac{\alpha{}_1^p-1}{\alpha_1-1} p^{m-4} \right\} \right].
+\end{equation*}
+
+A comparison of the above equation with (2) shows that
+\begin{gather*}
+\frac{\alpha{}_1^p - 1}{\alpha_1 - 1} \beta p \equiv 0 \pmod{p^2}, \\
+\alpha{}_1^p \left\{1 + \frac{\beta k}{2}\frac{\alpha{}_1^p-1}{a_1-1}
+  p^{m-4} \right\} + \frac{\alpha{}_1^p - 1}{\alpha_1 - 1} \beta hp
+  \equiv 1 + kp^{m-4} \pmod{p^{m-3}},
+\end{gather*}
+\noindent and in turn
+\begin{equation*}
+\alpha{}_1^p \equiv 1 \pmod{p^2}, \qquad \alpha_1 \equiv 1 \pmod{p} \qquad (m > 5).
+\end{equation*}
+
+Placing $\alpha_1 = 1 + \alpha_2 p$ in the second congruence, we obtain
+as in Class I
+\begin{equation}
+(\alpha_2 + \beta h)p^2 \equiv kp^{m-4} \pmod{p^{m-3}} \qquad (m > 5). %% 5
+\end{equation}
+
+Equation (3) now becomes
+\begin{equation}
+Q{}_1^{-1}\, P\, Q_1 = Q^\beta P^{1 + \alpha_2 p}. %% 6
+\end{equation}
+\noindent The generational equations of $H_2$ will be simplified
+by using an operator of order $p^2$ in place of $Q_1$.
+
+From (5), (6) and (4)
+\begin{gather*}
+[y,\, x]^s = [sy + U_s p,\, sx + W_s p]
+\intertext{in which}
+\begin{aligned}
+U_s &= \beta \tbinom{s}{2}xy, \\
+W_s &= \alpha_2 \tbinom{s}{2}xy + \Bigl\{ \beta k \bigl[\tbinom{s}{2}\tbinom{x}{2}
+     + \tbinom{s}{3}x^2 y\bigr] \\
+ & \qquad \qquad \qquad + \frac{1}{2}\alpha k\bigl[\frac{1}{3!}s(s - 1)(2s - 1)y^2
+     - \tbinom{s}{2}y\bigr]x \Bigr\} p^{m-5}.
+\end{aligned}
+\end{gather*}
+
+Placing $s = p^2$ and $y = 1$ in the above
+\begin{gather*}
+[Q_1\, P^x]^{p^2} = Q{}_1^{p^2} P^{xp^2} = P^{(x+h)p^2}.
+\intertext{If $x$ be so chosen that}
+(x + h) \equiv 0 \pmod{p^{m-5}} \qquad (m > 5)
+\end{gather*}
+\noindent $Q_1 P^x$ will be the required $Q$ of order $p^2$.
+
+Placing $h = 0$ in congruence (5) we find
+\begin{equation*}
+\alpha_2 p^2 \equiv kp^{m-4} \pmod{p^{m-3}}.
+\end{equation*}
+
+Let $\alpha_2 = \alpha p^{m-6}$. $H_2$ is then generated by
+\begin{equation*}
+Q^{p^2} = 1, \quad P^{p^{m-3}} = 1.
+\end{equation*}
+\begin{equation}
+Q^{-1}\, P\, Q = Q^{\beta p} P^{1 + \alpha p^{m-5}}. %% 7
+\end{equation}
+
+Two of the preceding formul\ae\ now become
+\begin{gather}
+[-y,\, x,\, y] = \bigl[\beta xyp,\, x(1 + \alpha yp^{m-5}) + \beta k\tbinom{x}{2}yp^{m-4}\bigr], \\ %% 8
+[y,\, x]^s = [sy + U_s p,\, xs + W_s p^{m-5}], %% 9
+\end{gather}
+\noindent where
+\begin{equation*}
+U_s = \beta \tbinom{s}{2}xy
+\end{equation*}
+\noindent and\footnote{For $m = 6$ it is necessary to add the terms
+$\frac{ak}{2} \left \{ \frac{s(s - 1)(2s - 1)}{3!}y^2 - \tbinom{s}{2}y \right \}p$
+to $W_s$.}
+\begin{equation*}
+W_s = \alpha \tbinom{s}{2}xy + \beta k\bigl\{\tbinom{s}{2}\tbinom{x}{2}
+  + \tbinom{s}{3}x^2\bigr\}yp \quad (m > 6).
+\end{equation*}
+
+\medskip
+4. \textit{Determination of $G$.}
+
+Let $R_1$ be an operation of $G$ not in $H_2$. $R{}_1^p$ is in $H_2$. Let
+\begin{equation}
+R{}_1^p = Q^{\lambda p} P^{\mu p}. %% 10
+\end{equation} %% 10
+
+Denoting $R{}_1^a\, Q^b\, P^c\, R{}_1^d\, Q^e\, P^f \cdots$ by the symbol $[a,\, b,\, c,\,
+d,\, e,\, f,\, \cdots]$, all the operations of $G$ are contained in the set $[z,\,
+y,\, x]$; $z = 0,\, 1,\, 2,\, \cdots,\, p - 1$; $y = 0,\, 1,\, 2,\, \cdots,\, p^2 - 1$; $x = 0,\,
+1,\, 2,\, \cdots,\, p^{m-3} - 1$.
+
+The subgroup $H_2$ is self-conjugate in $G$. From
+this\footnote{\textsc{Burnside}, \textit{Theory of Groups}, Art.\
+24, p.\ 27.}
+\begin{gather}
+R{}_1^{-1}\, P\, R_1 = Q^{b_1} P^{a_1}, \\ %% 11
+R{}_1^{-1}\, Q\, R_1 = Q^{d_1} P^{c_1 p^{m-5}}. %% 12
+\end{gather}
+\noindent In order to ascertain the forms of the constants in (11)
+and (12) we obtain from (12), (11), and (9)
+\begin{gather*}
+[-p,\, 1,\, 0,\, p] = [0,\, d{}_1^p + Mp,\, Np^{m-5}].
+\intertext{By (10) and (8)}
+R{}_1^p\, Q\, R{}_1^p = P^{-\mu p}\, Q\, P^{\mu p} = Q\, P^{-a\mu p^{m-4}}.
+\intertext{From these equations we obtain}
+d{}_1^p \equiv 1 \pmod p \quad \hbox{ and } \quad d_1 \equiv 1 \pmod p .
+\end{gather*}
+\noindent Let $d_1 = 1 + dp$. Equation (12) is replaced by
+\begin{equation}
+R{}_1^{-1}\, Q\, R_1 = Q^{1+dp} P^{e_1 p^{m-5}}. %% 13
+\end{equation}
+\noindent From (11), (13) and (9)
+\begin{gather*}
+[-p,\, 0,\, 1,\, p] = \left[\frac{a{}_1^p - 1}{a_1 - 1}b_1 + Kp,\, a{}_1^p + b_1 Lp^{m-5}\right]
+\intertext{in which}
+K = a_1 b_1 \beta \sum_1^{p-1}\tbinom{a{}_1^y}{2}.
+\intertext{By (10) and (8)}
+R{}_1^{-p}\, P\, R{}_1^p = Q^{-\lambda p} P\, Q^{\lambda p} = P^{1 + a \lambda p^{m-4}},
+\intertext{and from the last two equations}
+a{}_1^p \equiv 1 \pmod{p^{m-5}}
+\intertext{and}
+a_1 \equiv 1 \pmod{p^{m-6}} \quad (m > 6); \qquad a_1 \equiv 1 \pmod{p} \quad (m = 6).
+\end{gather*}
+
+Placing $a_1 = 1 + a_2 p^{m-6} \quad (m > 6)$; \qquad $a_1 = 1 + a_2 p \quad (m=6)$.
+\begin{equation*}
+K \equiv 0 \pmod{p},
+\end{equation*}
+\noindent and\footnote{$K$ has an extra term for $m = 6$ and $p =
+3$, which reduces to $3b_1 c_1$. This does not affect the
+reasoning except for $c_1 = 2$. In this case change $P^2$ to $P$
+and $c_1$ becomes $1$.}
+\begin{gather*}
+\frac{a{}_1^p - 1}{a_1 - 1}b_1 \equiv b_1 p \equiv 0 \pmod{p^2},
+  \qquad b_1 \equiv 0 \pmod p.
+\intertext{Let $b_1 = bp$ and we find}
+a{}_1^p \equiv 1 \pmod{p^{m-4}}, \qquad a_1 \equiv 1 \pmod{p^{m-5}}.
+\end{gather*}
+
+Let $a_1 = 1 + a_3 p^{m-5}$ and equation (11) is replaced by
+\begin{equation}
+R{}_1^{-1}\, P\, R_1 = Q^{bp} P^{1 + a_3 p^{m-5}}. %% 14
+\end{equation}
+\noindent The preceding relations will be simplified by taking for
+$R_1$ an operator of order $p$. This will be effected by two
+transformations.
+
+From (14), (9) and (13)\footnote{The extra terms appearing in the
+exponent of $P$ for $m=6$ do not alter the result.}
+\begin{gather*}
+[1,\, y]^p = \Bigl[p,\, yp,\, \frac{-c_1 y}{2} p^{m-4}\Bigr]
+  = \Bigl[0,\, (\lambda + y)p,\, \mu p - \frac{c_1 y}{2} p^{m-4}\Bigr],
+\intertext{and if $y$ be so chosen that}
+\lambda + y \equiv 0 \pmod{p},
+\end{gather*}
+\noindent $R_2 = R_1\, Q^y$ is an operator such that $R{}_2^p$ is in
+$\{P\}$.
+
+Let
+\begin{gather*}
+R{}_2^p = P^{lp}.
+\intertext{Using $R_2$ in the place of $R_1$, from (15), (9) and (14)}
+[1,\, 0,\, x]^p = \Bigl[p,\, 0,\, xp + \frac{ax}{2} p^{m-4}\Bigr] =
+  \Bigl[0,\, 0,\, (x + l)p + \frac{ax}{2} p^{m-4}\Bigr],
+\intertext{and if $x$ be so chosen that}
+x + l + \frac{ax}{2} p^{m-5} \equiv 0 \pmod{p^{m-4}},
+\end{gather*}
+\noindent then $R = R_2 P^x$ is the required operator of order $p$.
+
+$R^p = 1$ is permutable with both $Q$ and $P$. Preceding equations now
+assume the final forms
+\begin{align}
+Q^{-1}\, P\, Q & = Q^{\beta p} P^{1 + ap^{m-5}}, \\ %% 15
+R^{-1}\, P\, R & = Q^{bp} P^{1 + ap^{m-4}}, \\ %% 16
+R^{-1}\, Q\, R & = Q^{1 + dp} P^{cp^{m-4}},         %% 17
+\end{align}
+with $R^p = 1$, $Q^{p^2} = 1$, $P^{p^{m-3}} = 1$.
+
+The following derived equations are necessary\footnote{For $m=6$
+the term $a^2 \tbinom{x}{2} xp^2$ must be added to the exponent of
+$P$ in (18).}
+\begin{align}
+[0,\, -y,\, x,\, 0,\, y] &= \bigl[0,\, \beta xyp,\, x(1 + \alpha yp^{m-5}) + \alpha
+  \beta \tbinom{x}{2}yp^{m-4}\bigr], \\ %% 18
+[-y,\, 0,\, x,\, -y] &= \bigl[0,\, bxyp,\, x(1 + ayp^{m-4})
+  + ab\tbinom{x}{2} yp^{m-4}\bigr], \\ %% 19
+[-y,\, x,\, 0,\, y] &= [0,\, x(1 + dyp),\, cxyp^{m-4}]. %% 20
+\end{align}
+
+From a consideration of (18), (19) and (20) we arrive at the
+expression for a power of a general operator of $G$.
+\begin{equation}
+[z,\, y,\, x]^s = [sz,\, sy + U_s p,\, sx + V_s p^{m-5}], %% 21
+\end{equation}
+\noindent where\footnote{When $m = 6$ the following terms are to
+be added to $V_s$: $\frac{a^2 x}{2} \left\{\frac{s(s - 1)(2s - 1)}{3!}y^2
+   - \tbinom{s}{2}y\right\}p.$}
+\begin{align*}
+U_s &= \tbinom{s}{2} \{bxz +\beta xy + dyz \}, \\
+V_s &= \tbinom{s}{2} \Bigl\{\alpha xy + \bigl[axz + \alpha \beta \tbinom{x}{2}y
+  + cyz + ab\tbinom{x}{2}z\bigr]p\Bigr\} \\
+  & \qquad \qquad \qquad + \alpha\tbinom{s}{3} \{bxz + \beta xy + dyz \} xp.
+\end{align*}
+
+\medskip
+5. \textit{Transformation of the groups.} All groups of this
+section are given by equations (15), (16), and (17) with $a,\, b,\,
+\beta,\, c,\, d = 0,\, 1,\, 2,\, \cdots ,\, p - 1$, and $\alpha = 0,\, 1,\, 2,\,
+\cdots ,\, p^2 - 1$, independently. Not all these groups, however,
+are distinct. Suppose that $G$ and $G'$ of the above set are
+simply isomorphic and that the correspondence is given by
+\begin{equation*}
+C = \left[
+  \begin{matrix}
+  R,    & Q,    & P \\
+  R'_1, & Q'_1, & P'_1 \\
+  \end{matrix}
+\right],
+\end{equation*}
+\noindent in which
+\begin{align*}
+R'_1 &= R'^{z''} Q'^{y''p} P'^{x''p^{m-4}}, \\
+Q'_1 &= R'^{z'} Q'^{y'} P'^{x'p^{m-5}}, \\
+P'_1 &= R'^z Q'^y P'^x,
+\end{align*}
+\noindent where $x$, $y'$ and $z''$ \textit{are prime} to $p$.
+
+The operators $R'_1$, $Q'_1$, and $P'_1$ must be independent since
+$R$, $Q$, and $P$ are, and that this is true is easily verified.
+The lowest power of $Q'_1$ in $\{P'_1\}$ is $Q'{}_1^{p^2} = 1$ and
+the lowest power of $R'_1$ in $\{Q'_1, P'_1\}$ is $R'{}_1^p = 1$.
+Let $Q'{}_1^{s'} = P'{}_1^{sp^{m-5}}$.
+
+This in terms of $R'$, $Q'$, and $P'$ is
+\begin{gather*}
+\Bigl[s'z',\, y'\bigl\{s' + d'\tbinom{s'}{2}z'p\bigr\},\, s'x'p^{m-5} +
+c'\tbinom{s'}{2}y'z'p^{m-4}\Bigr] = [0,\, 0,\, sxp^{m-5}]. \\
+\intertext{From this equation $s'$ is determined by}
+s'z' \equiv 0 \pmod{p} \\
+y'\{s' + d'\tbinom{s}{2}z'p\} \equiv 0 \pmod{p^2},
+\intertext{which give}
+s'y' \equiv 0 \pmod{p^2}.
+\intertext{Since $y'$ is prime to $p$}
+s' \equiv 0 \pmod{p^2}
+\end{gather*}
+\noindent and the lowest power of $Q'_1$ contained in $\{P'_1\}$
+is $Q'{}_1^{p^2} = 1$.
+
+Denoting by ${R'}_1^{s''}$ the lowest power of $R'_1$ contained in
+$\{Q'_1, P'_1\}$.
+\begin{equation*}
+{R'}_1^{s''} = {Q'}_1^{s'p} {P'}_1^{sp^{m-4}}.
+\end{equation*}
+
+This becomes in terms of $R'$, $Q'$, and $P'$
+\begin{gather*}
+[s''z'',\, s''y''p,\, s''x''p^{m-4}] = [0,\, s'y'p,\, \{s'x' + sx\}p^{m-4}].
+\intertext{$s''$ is now determined by}
+s''z'' \equiv 0 \pmod{p}
+\intertext{and since $z''$ is prime to $p$}
+s'' \equiv 0 \pmod{p}.
+\end{gather*}
+\noindent The lowest power of $R'_1$ contained in $\{Q'_1, P'\}$ is therefore
+${R'}_1^p = 1$.
+
+Since $R$, $Q$, and $P$ satisfy equations (15), (16), and (17) $R'_1$,
+$Q'_1$, and $P'_1$ also satisfy them. Substituting in these equations the
+values of $R'_1$, $Q'_1$, and $P'_1$ and reducing we have in terms of
+$R'$, $Q'$, and $P'$
+\begin{gather}
+[z,\, y + \theta_1 p,\, x + \phi_1 p^{m-5}] =
+  [z,\, y + \beta y'p,\, x(1 + \alpha p^{m-5}) + \beta xp^{m-4}], \\ %% 22
+[z,\, y + \theta_2 p,\, x + \phi_2 p^{m-4}] =
+  [z,\, y + by'p,\, x(1 + ap^{m-4}) + bx'p^{m-4}], \\ %% 23
+[z',\, y' + \theta_3 p,\, (x' + \phi_3 p)p^{m-5}] =
+  [z',\, y'(1 + dp),\, x(1 + dp)p^{m-5} + cxp^{m-4}],                %% 24
+\end{gather}
+\noindent in which
+\begin{align*}
+\theta_1 &= d'(yz' - y'z) + x(b'z' + \beta'y'), \\
+\theta_2 &= d'yz'' + b'xz'', \\
+\theta_3 &= d'y'z'', \\
+\phi_1 &= \alpha'xy' + \bigl\{\alpha'(\beta'y' + b'z')\tbinom{x}{2} +
+  a'xz + c'(yz'-y'z)\bigr\}p, \\
+\phi_2 &= \alpha'xy'' + a'xz'' + \alpha'b'\tbinom{x}{2}z'' + c'yz'', \\
+\phi_3 &= c'yz''.
+\end{align*}
+
+A comparison of the members of the above equations give six congruences
+between the primed and unprimed constants and the nine indeterminates.
+
+\begin{align*}
+\theta_1 &\equiv \beta y' \pmod{p},                \tag{I} \\
+\phi_1   &\equiv \alpha x + \beta x'p \pmod{p^2},  \tag{II} \\
+\theta_2 &\equiv by' \pmod{p},                     \tag{III} \\
+\phi_2   &\equiv ax + bx' \pmod{p},                \tag{IV} \\
+\theta_3 &\equiv dy' \pmod{p},                     \tag{V} \\
+\phi_3   &\equiv cx + dx' \pmod{p}.                \tag{VI}
+\end{align*}
+
+The necessary and sufficient condition for the simple isomorphism of
+the two groups $G$ and $G'$ is, \textit{that the above congruences shall be
+consistent and admit of solution for the nine indeterminates, with the
+condition that $x$, $y'$ and $z''$ be prime to $p$.}
+
+For convenience in the discussion of these congruences, the groups are
+divided into six sets, and each set is subdivided into 16 cases.
+
+The group $G'$ is taken from the simplest case, and we associate with
+this case all cases, which contain a group $G$, simply isomorphic with
+$G'$. Then a single group $G$, in the selected case, simply isomorphic
+with $G'$, is chosen as a type.
+
+$G'$ is then taken from the simplest of the remaining cases and we proceed
+as above until all the cases are exhausted.
+
+Let $\kappa = \kappa_1 p^{\kappa_2}$, and $dv_1[\kappa_1 ,\, p] = 1$
+$(\kappa = a,\, b,\, \alpha ,\, \beta ,\, c,$ and $d)$.
+
+The six sets are given in the table below.
+
+\begin{center}
+\large I. \normalsize
+
+\smallskip
+\begin{tabular}{|c|c|c||c|c|c|}
+\hline
+   &$\alpha_2$&$d_2$&   &$\alpha_2$&$d_2$ \\ \hline
+$A$&     0    &  0  &$D$&     2    &  0   \\ \hline
+$B$&     0    &  1  &$E$&     1    &  1   \\ \hline
+$C$&     1    &  0  &$F$&     2    &  1   \\ \hline
+\end{tabular}
+\end{center}
+
+\medskip
+The subdivision into cases and the results are given in Table II.
+
+\begin{center}
+\large II. \normalsize
+
+\smallskip
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+  &$a_2$&$b_2$&$\beta_2$&$c_2$& $A$ &  $B$   & $C$ & $D$ &   $E$  &   $F$   \\ \hline
+ 1&  1  &  1  &    1    &  1  &     &        &     &     &        &         \\ \hline
+ 2&  0  &  1  &    1    &  1  &$A_1$& $B_1$  &     &$C_2$&        & $E_2$   \\ \hline
+ 3&  1  &  0  &    1    &  1  &$A_1$&        &$C_1$&$D_1$&        &         \\ \hline
+ 4&  1  &  1  &    0    &  1  &$A_1$&        &$C_1$&$D_1$&        & $E_4$   \\ \hline
+ 5&  1  &  1  &    1    &  0  &$A_1$&        &$C_1$&$D_1$&        & $E_5$   \\ \hline
+ 6&  0  &  0  &    1    &  1  &$A_1$& $B_3$  &$C_2$&$C_2$&  $E_3$ & $F_3$   \\ \hline
+ 7&  0  &  1  &    0    &  1  &$A_1$& $B_4$  &$C_2$&$C_2$&        & $E_7$   \\ \hline
+ 8&  0  &  1  &    1    &  0  &$A_1$& $B_5$  &$C_2$&$C_2$&  $E_5$ & $E_5$   \\ \hline
+ 9&  1  &  0  &    0    &  1  &$A_1$& $B_3$  &$C_1$&$D_1$&  $E_3$ & $F_3$   \\ \hline
+10&  1  &  0  &    1    &  0  &$A_1$&        &$C_2$&$C_2$&        &$E_{10}$ \\ \hline
+11&  1  &  1  &    0    &  0  &$A_1$&        &  *  &$C_1$&        &$E_{11}$ \\ \hline
+12&  0  &  0  &    0    &  1  &$A_1$& $B_3$  &$C_2$&$C_2$&    *   & $E_3$   \\ \hline
+13&  0  &  0  &    1    &  0  &$A_1$&$B_{10}$&  *  &  *  &$E_{10}$&$E_{10}$ \\ \hline
+14&  0  &  1  &    0    &  0  &$A_1$&$B_{11}$&$C_2$&$C_2$&$E_{11}$&$E_{11}$ \\ \hline
+15&  1  &  0  &    0    &  0  &$A_1$&$B_{10}$&$C_2$&$C_2$&$E_{10}$&$E_{10}$ \\ \hline
+16&  0  &  0  &    0    &  0  &$A_1$&$B_{10}$&  *  &  *  &$E_{10}$&$E_{10}$ \\ \hline
+\end{tabular}
+
+\footnotesize The groups marked (*) divide into two or three parts. \normalsize
+\end{center}
+
+\medskip
+Let $ad - bc = \theta_1 p^{\theta_2}$, $\alpha_1 d - \beta c =
+\phi_1 p^{\phi_2}$ and $\alpha_1 b - a\beta = \chi_1 p^{\chi_2}$ with
+$\theta_1$, $\phi_1$, and $\chi_1$ prime to $p$.
+
+\begin{center}
+\large III. \normalsize
+
+\smallskip
+\begin{tabular}{|c|c|c|c|c||c|c|c|c|c|}
+\hline
+    *   &$\theta_2$&$\phi_2$&$\chi_2$&    &    *   &$\theta_2$&$\phi_2$&$\chi_2$&      \\ \hline
+$C_{11}$&          &    1   &       &$D_1$&$D_{13}$&    1     &        &        &$D_1$ \\ \hline
+$C_{11}$&          &    0   &       &$C_1$&$D_{13}$&    0     &        &        &$C_2$ \\ \hline
+$C_{13}$&    1     &        &       &$C_1$&$D_{16}$&    1     &        &        &$C_1$ \\ \hline
+$C_{13}$&    0     &        &       &$C_2$&$D_{16}$&    0     &        &        &$C_2$ \\ \hline
+$C_{16}$&    1     &    1   &       &$D_1$&$E_{12}$&          &        &    1   &$F_3$ \\ \hline
+$C_{16}$&    1     &    0   &       &$C_1$&$E_{12}$&          &        &    0   &$E_3$ \\ \hline
+$C_{16}$&    0     &        &       &$C_2$&        &          &        &        &      \\ \hline
+\end{tabular}
+
+\newpage
+6. \textit{Types.}
+\end{center}
+
+The type groups are given by equations (15), (16) and (17) with the
+values of the constants given in Table IV.
+
+\begin{center}
+\large IV. \normalsize
+
+\smallskip
+\begin{tabular}{|c|c|c|c|c|c|c||c|c|c|c|c|c|c|}
+\hline
+        &   $a$  &$b$&$\alpha$&$\beta$&   $c$  &$d$&        &$a$&$b$&$\alpha$&$\beta$&   $c$  &$d$ \\ \hline
+$A_1$   &    0   & 0 &    1   &   0   &    0   & 1 &$E_1$   & 0 & 0 &   $p$  &   0   &    0   & 0  \\ \hline
+$B_1$   &    0   & 0 &    1   &   0   &    0   & 0 &$E_2$   & 1 & 0 &   $p$  &   0   &    0   & 0  \\ \hline
+$B_3$   &    0   & 1 &    1   &   0   &    0   & 0 &$E_3$   & 0 & 1 &   $p$  &   0   &    0   & 0  \\ \hline
+$B_4$   &    0   & 0 &    1   &   1   &    0   & 0 &$E_4$   & 0 & 0 &   $p$  &   1   &    0   & 0  \\ \hline
+$B_5$   &    0   & 0 &    1   &   0   &    1   & 0 &$E_5$   & 0 & 0 &   $p$  &   0   &    1   & 0  \\ \hline
+$B_{10}$&    0   & 1 &    1   &   0   &$\kappa$& 0 &$E_7$   & 1 & 0 &   $p$  &   1   &    0   & 0  \\ \hline
+$B_{11}$&    0   & 0 &    1   &   1   &    1   & 0 &$E_{10}$& 0 & 1 &   $p$  &   0   &$\kappa$& 0  \\ \hline
+$C_1$   &    0   & 0 &   $p$  &   0   &    0   & 1 &$E_{11}$& 0 & 0 &   $p$  &   1   &    1   & 0  \\ \hline
+$C_2$   &$\omega$& 0 &   $p$  &   0   &    0   & 1 &$F_1$   & 0 & 0 &   0    &   0   &    0   & 0  \\ \hline
+$D_1$   &    0   & 0 &    0   &   0   &    0   & 1 &$F_3$   & 0 & 1 &   0    &   0   &    0   & 0  \\ \hline
+\end{tabular}
+
+\footnotesize
+\begin{align*}
+\kappa &= 1, \hbox{ and a non-residue } \pmod{p}, \\
+\omega &= 1, 2, \cdots, p - 1.
+\end{align*}
+\normalsize
+\end{center}
+
+\medskip
+The congruences for three of these cases are completely analyzed as
+illustrations of the methods used.
+
+\medskip
+\begin{equation*} B_{10}. \end{equation*}
+
+The congruences for this case have the special forms.
+\begin{gather*}
+b'xz' \equiv \beta y' \pmod{p},                                            \tag{I} \\
+\alpha'y' \equiv \alpha \pmod{p},                                          \tag{II} \\
+b'xz'' \equiv by' \pmod{p},                                                \tag{III} \\
+\alpha'xy'' + \alpha'b'\tbinom{x}{2}z'' + c'yz'' \equiv ax + bx' \pmod{p}, \tag{IV} \\
+d \equiv 0 \pmod{p},                                                       \tag{V} \\
+c'y'z'' \equiv cx \pmod{p}.                                                \tag{VI}
+\end{gather*}
+
+Since $z'$ is unrestricted (I) gives $\beta \equiv 0$ or $\not\equiv 0 \pmod{p}$.
+
+From (II) since $y' \not\equiv 0, \alpha \not\equiv 0 \pmod{p}$.
+
+From (III) since $x, y', z'' \not\equiv 0$, $b \not\equiv 0 \pmod{p}$.
+
+In (IV) $b \not\equiv 0$ and $x'$ is contained in this congruence alone,
+and, therefore, $a$ may be taken $\equiv 0$ or $\not\equiv 0 \pmod{p}$.
+
+(V) gives $d \equiv 0 \pmod{p}$ and (VI), $c \not\equiv 0 \pmod{p}$.
+
+Elimination of $y'$ between (III) and (VI) gives
+\begin{equation*}
+b'c'z''^{2} \equiv bc \pmod{p}
+\end{equation*}
+\noindent so that $bc$ is a quadratic residue or non-residue (mod $p$)
+according as $b'c'$ is a residue or non-residue.
+
+The types are given by placing $a = 0$, $b = 1$, $\alpha = 1$, $\beta = 0$,
+$c = \kappa$, and $d = 0$ where $\kappa$ has the two values, 1 and a
+representative non-residue of $p$.
+
+\medskip
+\begin{equation*} C_2. \end{equation*}
+
+The congruences for this case are
+\begin{gather*}
+d'(yz' - y'z) \equiv \beta y' \pmod{p},                      \tag{I} \\
+\alpha'_1 xy' + a'xz' \equiv \alpha_1 x + \beta x' \pmod{p}, \tag{II} \\
+d'yz'' \equiv by' \pmod{p},                                  \tag{III} \\
+a'xz'' \equiv ax + bx' \pmod{p},                             \tag{IV} \\
+d'z'' \equiv d \pmod{p},                                     \tag{V} \\
+cx + dx' \equiv 0 \pmod{p}.                                  \tag{VI}
+\end{gather*}
+
+Since $z$ appears in (I) alone, $\beta$ can be either $\equiv 0$ or
+$\not\equiv 0 \pmod{p}$. (II) is linear in $z'$ and, therefore, $\alpha
+\equiv 0$ or $\not\equiv 0 \pmod{p}$, (III) is linear in $y$ and,
+therefore, $b \equiv 0$ or $\not\equiv 0$.
+
+Elimination of $x'$ and $z''$ between (IV), (V), and (VI) gives
+\begin{equation*}
+a'd^2 \equiv d'(ad - bc) \pmod{p}.
+\end{equation*}
+\noindent Since $z''$ is prime to $p$, (V) gives $d \not\equiv 0 \pmod{p}$, so that
+$ad - bc \not\equiv 0 \pmod{p}$. We may place $b = 0$, $\alpha = p$,
+$\beta = 0$, $c = 0$, $d = 1$, then $a$ will take the values $1, 2, 3, \cdots,
+p - 1$ giving $p - 1$ types.
+
+\medskip
+\begin{equation*} D_1. \end{equation*}
+
+The congruences for this case are
+\begin{align*}
+d'(yz' - y'z) &\equiv \beta y' \pmod{p},  \tag{I} \\
+\alpha_1 x + \beta x' &\equiv 0 \pmod{p}, \tag{II} \\
+d'yz'' &\equiv by' \pmod{p},              \tag{III} \\
+ax + bx' &\equiv 0 \pmod{p},              \tag{IV} \\
+d'z'' &\equiv d \pmod{p},                 \tag{V} \\
+cx + dx' &\equiv 0 \pmod{p}.              \tag{VI}
+\end{align*}
+\noindent $z$ is contained in (I) alone, and therefore $\beta \equiv 0$ or
+$\not\equiv 0 \pmod{p}$.
+
+(III) is linear in $y$, and $b \equiv 0$ or $\not\equiv 0 \pmod{p}$.
+
+(V) gives $d \not\equiv 0 \pmod{p}$.
+
+Elimination of $x'$ between (II) and (VI) gives $\alpha_1 d - \beta c
+\equiv 0 \pmod{p}$, and between (IV) and (VI) gives $ad - bc \equiv 0
+\pmod{p}$. The type group is derived by placing $a = 0$, $b = 0$, $\alpha = 0$,
+$\beta = 0$, $c = 0$ and $d = 1$.
+
+\bigskip
+\begin{center}
+\large\textit{Section} 2. \normalsize
+\end{center}
+\setcounter{equation}{0}
+
+1. \textit{Groups with dependent generators.} In this section, $G$ is generated
+by $Q_1$ and $P$ where
+\begin{equation}
+Q{}_1^{p^2} = P^{hp^2}. %% 1
+\end{equation}
+\noindent There is in $G$, a subgroup $H_1$, of order $p^{m-2}$, which contains $\{P\}$
+self-con\-ju\-gate\-ly.\footnote{\textsc{Burnside}, \textit{Theory of Groups},
+Art.\ 54, p.\ 64.} $H_1$ either contains, or does not contain $Q{}_1^p$. We will
+consider the second possibility in the present section, reserving the first for
+the next section.
+
+\medskip
+2. \textit{Determination of $H_1$.} $H_1$ is generated by $P$ and some other operator
+$R_1$ of $G$. $R{}_1^p$ is contained in $\{P\}$. Let
+\begin{equation}
+R{}_1^p = P^{lp}. %% 2
+\end{equation}
+\noindent Since $\{P\}$ is self-conjugate in $H_1$,\footnote{\textsc{Burnside},
+\textit{Theory of Groups}, Art.\ 56, p.\ 66.}
+\begin{equation}
+R{}_1^{-1}\, P\, R_1 = P^{1 + kp^{m-4}} %% 3
+\end{equation}
+\noindent Denoting $R{}_1^a\, P^b\, R{}_1^c\, P^d \cdots$ by the symbol $[a,\, b,\, c,\, d,\,
+\cdots]$ we derive from (3)
+\begin{gather}
+[-y,\, x,\, y] = [0,\, x(1 + kyp^{m-4})] \qquad (m > 4), %% 4
+\intertext{and}
+[y,\, x]^s = \Bigl[sy,\, x\bigl\{s + k\tbinom{s}{2}yp^{m-4}\bigr\}\Bigr] %% 5
+\end{gather}
+\noindent Placing $s = p$ and $y = 1$ in (5) we have, from (2)
+\begin{gather*}
+[R_1\, P^x]^p = R{}_1^p P^{xp} = P^{(l + x)p}.
+\intertext{Choosing $x$ so that}
+x + l \equiv 0 \pmod{p^{m-4}},
+\end{gather*}
+\noindent $R = R_1 P^x$ is an operator of order $p$, which will be used in the place
+of $R_1$, and $H = \{R, P\}$ with $R^p = 1$.
+
+\medskip
+3. \textit{Determination of $H_2$.} We will now use the symbol $[a,\, b,\, c,\, d,\, e,\, f,\,
+\cdots]$ to denote $Q{}_1^a\, R^b\, P^c\, Q{}_1^d\, R^e\, P^f \cdots$.
+
+$H_1$ and $Q_1$ generate $G$ and all the operations of $G$ are given by
+$[x,\, y,\, z]$ ($z = 0,\, 1,\, 2,\, \cdots,\, p^2 - 1$; $y = 0,\, 1,\, 2,\, \cdots,\, p - 1$;
+$x = 0,\, 1,\, 2,\, \cdots,\, p^{m-3} - 1$), since these are $p^m$ in number and
+are all distinct. There is in $G$ a subgroup $H_2$ of order $p^{m-1}$
+which contains $H_1$ self-conjugately. $H_2$ is generated by $H_1$ and
+some operator $[z,\, y,\, x]$ of $G$. $Q{}_1^z$ is then in $H_2$ and $H_2$
+is the subgroup $\{Q{}_1^p, H_1\}$. Hence,
+\begin{gather}
+Q{}_1^{-p}\, P\, Q{}_1^p = R^\beta P^{\alpha_1}, \\ %% 6
+Q{}_1^{-p}\, P\, Q{}_1^p = R^{b_1} P^{ap^{m-4}}.    %% 7
+\end{gather}
+\noindent To determine $\alpha_1$ and $\beta$ we find from (6), (5) and (7)
+\begin{multline*}
+[-p^2,\, 0,\, 1,\, p^2] = \biggl[ 0,\, \frac{\alpha{}_1^p - b{}_1^p}{\alpha_1 - b_1}
+    \beta,\, \alpha{}_1^p\Bigl\{1 + \frac{\beta k}{2}\frac{\alpha{}_1^p - 1}
+    {\alpha_1 - 1}p^{m-4} \Bigr\} \\
+  + a\beta\Bigl\{ p\frac{\alpha{}_1^{p-1}}{\alpha_1 - b_1} -
+    \frac{\alpha{}_1^p - b{}_1^p}{(\alpha_1 - b_1)^2}
+    \Bigr\}p^{m-4} \biggr].
+\end{multline*}
+\noindent By (1)
+\begin{gather*}
+Q{}_1^{-p^2}\, P\, Q{}_1^{p^2} = P,
+\intertext{and, therefore,}
+\frac{\alpha{}_1^p - b{}_1^p}{\alpha_1 - b_1}\beta \equiv 0 \pmod{p}, \\
+  \alpha{}_1^p \equiv 1 \pmod{p^{m-4}}, \qquad \hbox{ and } \qquad
+  \alpha_1 \equiv 1 \pmod{p^{m-5}} \quad  (m > 5).
+\end{gather*}
+
+Let $\alpha_1 = 1 + \alpha_2 p^{m-5}$ and equation (6) is replaced by
+\begin{equation}
+Q{}_1^{-p}\, P\, Q{}_1^p = R^\beta P^{1 + \alpha_2 p^{m-5}}. %% 8
+\end{equation}
+
+To find $a$ and $b_1$ we obtain from (7), (8) and (5)
+\begin{gather*}
+[-p^2,\, 1,\, 0,\, p^2] = \Bigl[0,\, b{}_1^p,\, a\frac{b{}_1^p - 1}{b_1 - 1}p^{m-4} \Bigr].
+\intertext{By (1) and (4)}
+Q{}_1^{-p^2}\, R\, Q{}_1^{p^2} = P^{-lp^2} R\, P^{lp^2} = R,
+\intertext{and, hence,}
+b{}_1^p \equiv 1 \pmod{p}, \qquad a\frac{b{}_1^p - 1}{b_1 - 1} \equiv 0 \pmod{p},
+\end{gather*}
+\noindent therefore $b_1 = 1$.
+
+Substituting $b_1 = 1$ and $\alpha_1 = 1 + \alpha_2 p^{m-5}$ in the
+congruence determining $\alpha_1$ we obtain $(1 + \alpha_2 p^{m-5})^p
+\equiv 1 \pmod{p^{m-3}}$, which gives $\alpha_2 \equiv 0 \pmod{p}$.
+
+Let $\alpha_2 = \alpha p$ and equations (8) and (7) are now replaced by
+\begin{align}
+Q{}_1^p\,    P\, Q{}_1^p &= R^\beta P^{1 + \alpha p^{m-4}}, \\ %% 9
+Q{}_1^{-p}\, R\, Q{}_1^p &= RP^{ap^{m-4}}.                     %% 10
+\end{align}
+
+From these we derive
+\begin{align}
+[-yp,\, 0,\, x,\, yp] &= \Bigl[0,\, \beta xy,\, x + \bigl\{\alpha xy
+  + a\beta x\tbinom{y}{2} + \beta k\tbinom{x}{2}y\bigr\}p^{m-4}\Bigr], \\ %% 11
+[-yp,\, x,\, 0,\, yp] &= [0,\, x,\, axyp^{m-4}].                          %% 12
+\end{align}
+
+A continued use of (4), (11), and (12) yields
+\begin{equation}
+[zp,\, y,\, x]^s = [szp,\, sy + U_s,\, sx + V_sp^{m-4}]  %% 13
+\end{equation}
+\noindent where
+\begin{align*}
+U_s &= \beta\tbinom{s}{2}xz, \\
+V_s &= \tbinom{s}{2}\Bigl\{\alpha xz + \beta k\tbinom{s}{2}z + kxy
+       + ayz\Bigr\} + \beta k\tbinom{s}{3}x^2 z \\
+ & \qquad \qquad \qquad + \frac{1}{2}a\beta\Bigl\{\frac{1}{3!}s(s - 1)(2s - 1)z^2
+       - \tbinom{s}{2}z\Bigr\}.
+\end{align*}
+
+\medskip
+4. \textit{Determination of $G$.}
+
+Since $H_2$ is self-conjugate in $G_1$ we have
+\begin{align}
+Q{}_1^{-1}\, P\, Q_1 &= Q{}_1^{\gamma p} R^\delta P^{\epsilon_1}, \\ %% 14
+Q{}_1^{-1}\, R\, Q_1 &= Q{}_1^{cp} R^d P^{ep^{m-4}}.                 %% 15
+\end{align}
+
+From (14), (15) and (13)
+\begin{gather*}
+[-p,\, 0,\, 1,\, p] = [\lambda p,\, \mu,\, \epsilon{}_1^p + vp^{m-4}]
+\intertext{and by (9) and (1)}
+\lambda p \equiv 0 \pmod{p^2}, \qquad
+\epsilon{}_1^p + \nu p^{m-4} + \lambda hp \equiv 1 + \alpha p^{m-4}
+  \pmod{p^{m-3}},
+\intertext{from which}
+\epsilon{}_1^p \equiv 1 \pmod{p^2}, \quad \hbox{ and } \quad \epsilon_1 \equiv 1 \pmod{p}
+  \qquad (m > 5).
+\end{gather*}
+
+Let $\epsilon_1 = 1 + \epsilon_2 p$ and equation (14) is replaced by
+\begin{equation}
+Q{}_1^{-1}\, P\, Q_1 = Q{}_1^{\gamma p} R^\delta P^{1 + \epsilon_2 p}. %% 16
+\end{equation}
+
+From (15), (16), and (13)
+\begin{gather*}
+[-p,\, 1,\, 0,\, p] = \left[c\frac{d^p - 1}{d - 1}p,\, d^p,\, Kp^{m-4} \right]
+\intertext{where}
+K = \frac{d^p - 1}{d - 1}e + \sum_{1}^{p-1} acd\frac{d^n(d^n - 1)}{2}.
+\end{gather*}
+
+By (10)
+\begin{gather*}
+d^p \equiv 1 \pmod{p}, \qquad \hbox{ and } \qquad d = 1
+\intertext{and by (1)}
+chp^2 \equiv ap^{m-4} \pmod{p^{m-3}}.
+\end{gather*}
+
+Equation (15) is now replaced by
+\begin{equation}
+Q{}_1^{-1}\, R\, Q_1 = Q{}_1^{cp} R P^{ep^{m-4}}. %% 17
+\end{equation}
+
+A combination of (17), (16) and (13) gives
+\begin{equation*}
+[-p,\, 0,\, 1,\, p] = \Bigl[\bigl\{\gamma\frac{(1 + \epsilon_2 p)^p - 1}
+{\epsilon_2 p^2} + c\delta\frac{p - 1}{2} \bigr\}p^2,\, 0,\, (1 +
+\epsilon_2 p)^p \Bigr].
+\end{equation*}
+
+By (9)
+\begin{equation*}
+\Bigl\{\gamma\frac{(1 + \epsilon_2 p)^p - 1}{\epsilon_2 p^2} + c\delta
+\frac{p - 1}{2}\Bigr\}hp^2 + (1 + \epsilon_2 p)^p \equiv 1 + \alpha p^{m-4}
+\pmod{p^{m-3}},
+\end{equation*}
+\noindent $\beta \equiv 0 \pmod{p}.$
+
+A reduction of the first congruence gives
+\begin{gather*}
+\frac{(1 + \epsilon_2 p)^p - 1}{\epsilon p^2}\bigl\{\epsilon_2 + \gamma h\bigr\}p^2
+  \equiv \Bigl\{\alpha - a\delta\frac{p - 1}{2}\Bigr\}p^{m-4} \pmod{p^{m-3}}
+\intertext{and, since}
+\frac{(1 + \epsilon_2 p)^p - 1}{\epsilon_2 p^2} \equiv 1 \pmod{p}, \qquad
+(\epsilon_2 + \gamma h)p^2 \equiv 0 \pmod{p^{m-4}}
+\end{gather*}
+\noindent and
+\begin{equation}
+(\epsilon_2 + \gamma h)p^2 \equiv \bigl(\alpha + \frac{a\delta}{2}\bigr)p^{m-4}
+  \pmod{p^{m-3}}. %% 18
+\end{equation}
+
+From (17), (16), (13) and (18)
+\begin{align}
+[-y,\, x,\, 0,\, y] &= \Bigl[cxyp,\, x,\, \bigl\{exy + ac\tbinom{x}{2}y\bigr\}p^{m-4}\Bigr], \\ %% 19
+[-y,\, 0,\, x,\, y] &= \Bigl[x\bigl\{\gamma y + c\delta\tbinom{y}{2}\bigr\}p,\,
+                 \delta xy,\, x(1 + \epsilon_2 yp) + \theta p^{m-4}\Bigr] %% 20
+\end{align}
+\noindent where
+\begin{multline*}
+\theta = \Bigl\{e\delta x + a\delta\gamma x + \epsilon_2 \left(\alpha
+    + \frac{a\delta}{2}\right)x\Bigr\}\tbinom{y}{2} \\
+  + \frac{1}{2}ac \Bigl\{\frac{1}{3!}y(y-1)(2y-1)\delta^2
+    - \tbinom{y}{2}\delta\Bigr\} \\
+  + \bigl\{\alpha\gamma y + \delta ky + a\delta xy^2
+    + (ac\delta^2 y + ac\delta) \tbinom{y}{2}\bigr\} \tbinom{x}{2}.
+\end{multline*}
+
+From (19), (20), (4) and (18)
+\begin{equation*}
+\{Q_1\, P^x\}^{p^2} = Q{}_1^{p^2} P^{xp^2} = P^{(h+x)p^2}.
+\end{equation*}
+
+If $x$ be so chosen that
+\begin{equation*}
+h + x \equiv 0 \pmod{p^{m-5}}
+\end{equation*}
+\noindent $Q = Q_1\, P^x$ is an operator of order $p^2$ which will be used in place
+$Q_1$ and $Q^{p^2} = 1$.
+
+Placing $h = 0$ in (18) we get
+\begin{equation*}
+\epsilon_2 p^2 \equiv 0 \pmod{p^{m-4}}.
+\end{equation*}
+
+Let $\epsilon_2 = \epsilon p^{m-6}$ and equation (16) is replaced by
+\begin{equation}
+Q^{-1}\, P\, Q = Q^{\gamma p} R^\delta P^{1 + \epsilon p^{m-5}} %% 21
+\end{equation}
+
+The congruence
+\begin{gather*}
+ap^{m-4} \equiv chp^2 \pmod{p^{m-3}}
+\intertext{becomes}
+ap^{m-4} \equiv 0 \pmod{p^{m-3}}, \qquad \hbox{ and } \qquad a \equiv 0 \pmod{p}.
+\end{gather*}
+\noindent Equations (19) and (20) are replaced by
+\begin{align}
+[-y,\, x,\, 0,\, y] &= [cxyp,\, x,\, exyp^{m-4}] \\  %% 22
+[-y,\, 0,\, x,\, y] &= \Bigl[ \bigl\{\gamma y + c\delta\tbinom{y}{2} \bigr\}xp,\,
+   \delta xy,\, x(1 + \epsilon yp^{m-5}) + \theta p^{m-4} \Bigr] %% 23
+\end{align}
+\noindent where
+\begin{equation*}
+\theta = e\delta x\tbinom{y}{2} + \bigl\{\alpha\gamma y + \delta ky +
+  \alpha c\delta\tbinom{y}{2}\bigr\}\tbinom{x}{2}.
+\end{equation*}
+
+A formula for any power of an operation of $G$ is derived from (4),
+(22) and (23)
+\begin{equation}
+[z,\, y,\, x]^s = [sz + U_s p,\, sy + V_s,\, sx + W_s p^{m-5}] %% 24
+\end{equation}
+\noindent where
+\begin{align*}
+U_s &= \tbinom{s}{2}\bigl\{\gamma xz + cyz\bigr\} + \frac{1}{2}c\delta x
+   \Bigl\{\frac{1}{3!}s(s - 1)(2s - 1)z^2 - \tbinom{s}{2}z\Bigr\}, \\
+V_s &= \delta \tbinom{s}{2}xz, \\
+W_s &= \tbinom{s}{2} \Bigl\{\epsilon xz + \bigl[(a\gamma + \delta k)\tbinom{x}{2}z + eyz + kxy\bigr]p\Bigr\} \\
+   & \qquad \qquad + \tbinom{s}{3}\bigl\{\epsilon \gamma x + \epsilon y + \delta kx \bigr\}xzp
+      + \frac{1}{2}c \delta \epsilon \bigl\{\frac{1}{2}(s - 1)z^2 - z\bigr\} \tbinom{s}{3}xp \\
+   & \qquad \qquad + \frac{1}{2}\bigl\{\delta ex + \alpha c \delta \tbinom{x}{2}\bigr\}
+      \bigl\{\frac{1}{3!}s(s - 1)(2s - 1)z^2 - \tbinom{s}{2}z\bigr\}p.
+\end{align*}
+
+\medskip
+5. \textit{Transformations of the groups.} Placing $y = 1$ and $x = -1$ in (22)
+we obtain (17) in the form
+\begin{equation*}
+R^{-1}\, Q\, R = Q^{1-cp} P^{-ep^{m-4}}.
+\end{equation*}
+\noindent A comparison of the generational equations of the present section with
+those of Section 1, shows that groups, in which $\delta \equiv 0 \pmod{p}$,
+are simply isomorphic with those in Section 1, so we need consider only
+those cases in which $\delta \not\equiv 0 \pmod{p}$.
+
+All groups of this section are given by
+\begin{equation*}
+G: \left\{ \begin{aligned}
+                R^{-1}\, P\, R &= P^{1 + kp^{m-4}}, \\
+                Q^{-1}\, P\, Q &= Q^{\gamma p} R^\delta P^{1 + \epsilon p^{m-5}}, \\
+                Q^{-1}\, R\, Q &= Q^{cp} R\, P^{\epsilon p^{m-4}}. \\ \end{aligned}
+\right. \tag*{(25), (26), (27)}
+\end{equation*}
+\noindent $R^p = 1$, $Q^{p^2} = 1$, and $P^{p^{m-3}} = 1$, $(k,\, \gamma,\, c,\, e = 0,\, 1,\,
+2,\, \cdots ,\, p - 1$; $\delta = 1,\, 2,\, \cdots,\, p - 1$; $\epsilon = 0,\, 1,\, 2,\, \cdots,\,
+p^2 - 1)$.
+
+Not all these groups, however, are distinct. Suppose that $G$ and $G'$ of
+the above set are simply isomorphic and that the correspondence is given by
+\begin{equation*}
+C = \left[\begin{matrix}R,    & Q,    & P \\
+                        R'_1, & Q'_1, & P'_1 \\ \end{matrix} \right] .
+\end{equation*}
+\noindent Since $R^p = 1$, $Q^{p^2} = 1$, and $P^{p^{m-3}} = 1$, $R'{}_1^p = 1$,
+$Q'{}_1^{p^2} = 1$ and $P'{}_1^{p^{m-3}}$.
+
+The forms of these operators are then
+\begin{align*}
+P'_1 &= Q'^z R'^y P'^x, \\
+R'_1 &= Q'^{z'p} R'^{y'} P'^{x'p^{m-4}}, \\
+Q'_1 &= Q'^{z''} R'^{y''}P'^{x''p^{m-5}}, \
+\end{align*}
+\noindent where $dv[x,\, p] = 1$.
+
+Since $R$ is not contained in $\{P\}$, and $Q^p$ is not contained in
+$\{R, P\}$ $R'_1$ is not contained in $\{P'_1\}$, and $Q'{}_1^p$ is not contained in
+$\{R'_1, P'_1\}$.
+
+Let
+\begin{gather*}
+{R'}_1^{s'} = {P'}_1^{sp^{m-4}}.
+\intertext{This becomes in terms of $Q'$, $R'$ and $P'$}
+[s'z'p,\, s'y',\, s'x'p^{m-4}] = [0,\, 0,\, sxp^{m-4}],
+\intertext{and}
+s'y' \equiv 0 \pmod{p}, \qquad s'z' \equiv 0 \pmod{p}.
+\end{gather*}
+\noindent Either $y'$ or $z'$ is prime to $p$ or $s'$ may be taken $= 1$.
+
+Let
+\begin{gather*}
+{Q'}_1^{s''p} = {R'}_1^{s'} P'{}_1^{sp^{m-4}},
+\intertext{and in terms of $Q'$, $R'$ and $P'$}
+[s''z''p,\, 0,\, s''x''p^{m-4}] = [s'z'p,\, s'y',\, (s'x' + sx)p^{m-4}],
+\intertext{from which}
+s''z'' \equiv s'z' \pmod{p}, \qquad \hbox{ and } \qquad s'y' \equiv 0 \pmod{p}.
+\intertext{Eliminating $s'$ we find}
+s''y'z'' \equiv 0 \pmod{p},
+\end{gather*}
+\noindent $dv[y'z'',\, p] = 1$ or $s''$ may be taken $= 1$. We have then $z''$, $y'$
+and $x$ \textit{prime to} $p$.
+
+Since $R$, $Q$ and $P$ satisfy equations (25), (26) and (27) $R'_1$, $Q'_1$
+and $P'_1$ do also. These become in terms of $R'$, $Q'$ and $P'$.
+\begin{align*}
+[z + \Phi'_1 p,\, y,\, x + \Theta'_1 p^{m-4}] &= [z,\, y,\, x(1 + kp^{m-4})], \\
+[z + \Phi'_2 p,\, y + \delta'xz'',\, x + \Theta'_2 p^{m-5}] &= [z + \Phi_2 p,\,
+  y + \delta y',\, x + \Theta_2 p^{m-5}], \\
+[(z' + \Phi'_3)p,\, y',\, \Theta'_3 p^{m-4}] &= [(z' + \Phi_3)p,\, y,\, \Theta'_3 p^{m-4}],
+\end{align*}
+\noindent where
+\begin{align*}
+\Phi'_1 &= -c'yz', \quad \Theta'_1 = \epsilon'xz' + k'xy' - e'y'z, \\
+\Phi'_2 &= \Bigl\{\gamma'z'' + c'\delta'\tbinom{z}{2}\Bigr\}x + c'(yz'' - y''z), \\
+\Theta'_2 &= \epsilon'xz'' + \Bigl\{\tbinom{x}{2}\bigl[\alpha'\gamma'z''
+     + \alpha'c'\delta'\tbinom{z''}{2} + \delta'k'z''\bigr] \\
+  & \qquad \qquad \qquad + \delta'e'x \tbinom{z''}{2} + e'(yz'' - y''z) + k'xy''\Bigr\}p, \\
+\Phi_2 &= \gamma z'' + \delta z' + c'\delta y'z, \quad \Theta_2 \equiv
+  \epsilon x + (\gamma x'' + \delta x + e'\delta y'z)p, \\
+\Phi'_3 &= c'y'z'', \quad \Theta'_3 = e'y'z'', \quad \Phi_3 = cz'', \quad
+  \Theta_3 = ex + cx''.
+\end{align*}
+
+A comparison of the members of these equations give seven congruences
+\begin{align*}
+\Phi'_1     &\equiv 0         \pmod{p},   \tag{I} \\
+\Theta'_1   &\equiv kx        \pmod{p},   \tag{II} \\
+\Phi'_2     &\equiv \Phi_2    \pmod{p},   \tag{III} \\
+\delta'xz'' &\equiv \delta y' \pmod{p},   \tag{IV} \\
+\Theta'_2   &\equiv \Theta_2  \pmod{p^2}, \tag{V} \\
+\Phi_3'     &\equiv cz''      \pmod{p},   \tag{VI} \\
+\Theta'_3   &\equiv \Theta_3  \pmod{p}.   \tag{VII}
+\end{align*}
+
+The necessary and sufficient condition for the simple isomorphism of $G$
+and $G'$ is, \textit{that these congruences be consistent and admit of solution
+for the nine indeterminants with $x$, $y'$, and $z''$ prime to $p$}.
+
+Let $\kappa = \kappa_1 p^{\kappa_2},\, dv[\kappa_1,\, p] = 1\; (\kappa = k,\,
+\delta,\, \gamma,\, \epsilon,\, c,\, e)$.
+
+The groups are divided into three parts and each part is subdivided into
+16 cases.
+
+The methods used in discussing the congruences are the same as those
+used in Section 1.
+
+\medskip
+6. \textit{Reduction to types.} The three parts are given by
+
+\begin{center}
+\large I. \normalsize
+
+\smallskip
+\begin{tabular}{|c|c|c|} \hline
+     & $\epsilon_2$ & $\delta_2$ \\ \hline
+ $A$ &      0       &      0     \\ \hline
+ $B$ &      1       &      0     \\ \hline
+ $C$ &      2       &      0     \\ \hline
+\end{tabular}
+\end{center}
+
+The subdivision into cases and the results of the discussion of the
+congruences are given in Table II.
+
+\medskip
+\begin{center}
+\large II. \normalsize
+
+\smallskip
+\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline
+    &$k_2$&$\gamma_2$&$c_2$&$e_2$&  $A$  &  $B$  &  $C$  \\ \hline
+ 1  &  1  &    1     &  1  &  1  &       &       & $B_1$ \\ \hline
+ 2  &  0  &    1     &  1  &  1  &       &       & $B_2$ \\ \hline
+ 3  &  1  &    0     &  1  &  1  & $A_2$ & $B_1$ & $B_1$ \\ \hline
+ 4  &  1  &    1     &  0  &  1  &       &       & $B_4$ \\ \hline
+ 5  &  1  &    1     &  1  &  0  &       &       & $B_5$ \\ \hline
+ 6  &  0  &    0     &  1  &  1  &   *   & $B_2$ & $B_2$ \\ \hline
+ 7  &  0  &    1     &  0  &  1  & $A_4$ &       & $B_7$ \\ \hline
+ 8  &  0  &    1     &  1  &  0  & $A_5$ & $B_5$ & $B_5$ \\ \hline
+ 9  &  1  &    0     &  0  &  1  & $A_4$ & $B_4$ & $B_4$ \\ \hline
+ 10 &  1  &    0     &  1  &  0  & $A_5$ & $B_5$ & $B_5$ \\ \hline
+ 11 &  1  &    1     &  0  &  0  & $A_4$ & $B_4$ & $B_4$ \\ \hline
+ 12 &  0  &    0     &  0  &  1  & $A_4$ & $B_7$ & $B_7$ \\ \hline
+ 13 &  0  &    0     &  1  &  0  & $A_5$ & $B_5$ & $B_5$ \\ \hline
+ 14 &  0  &    1     &  0  &  0  & $A_4$ & $B_7$ & $B_7$ \\ \hline
+ 15 &  1  &    0     &  0  &  0  & $A_4$ & $B_4$ & $B_4$ \\ \hline
+ 16 &  0  &    0     &  0  &  0  & $A_4$ & $B_7$ & $B_7$ \\ \hline
+\end{tabular}
+\end{center}
+
+$A_6$ divides into two parts.
+
+The groups of $A_6$ in which $\delta k + \epsilon\gamma \equiv 0 \pmod{p}$
+are simply isomorphic with the groups of $A_1$ and those in which $\delta
+k + \epsilon\gamma \not\equiv 0 \pmod{p}$ are simply isomorphic with the
+groups of $A_2$. The types are given by equations (25), (26) and (27) where
+the constants have the values given in Table III.
+
+\begin{center}
+\large III. \normalsize
+
+\smallskip
+\begin{tabular}{|c|c|c|c|c|c|c|} \hline
+       & $k$ & $\delta$ & $\gamma$ & $\epsilon$ &    $c$   &    $e$   \\ \hline
+ $A_1$ &  0  &     1    &    0     &      1     &     0    &     0    \\ \hline
+ $A_2$ &  1  &     1    &    0     &      1     &     0    &     0    \\ \hline
+ $A_4$ &  0  &     1    &    0     &      1     &     1    &     0    \\ \hline
+ $A_5$ &  0  &     1    &    0     &      1     &     0    & $\omega$ \\ \hline
+ $B_1$ &  0  &     1    &    0     &     $p$    &     0    &     0    \\ \hline
+ $B_2$ &  1  &     1    &    0     &     $p$    &     0    &     0    \\ \hline
+ $B_4$ &  0  &     1    &    0     &     $p$    &     1    &     0    \\ \hline
+ $B_5$ &  0  &     1    &    0     &     $p$    &     0    & $\kappa$ \\ \hline
+ $B_7$ &  1  &     1    &    0     &     $p$    & $\omega$ &     0    \\ \hline
+\end{tabular}
+
+\footnotesize
+\begin{align*}
+\kappa &= 1, \hbox { and a non-residue } \pmod{p}, \\
+\omega &= 1, 2, \cdots, p - 1.
+\end{align*}
+\normalsize
+\end{center}
+
+A detailed analysis of several cases is given below, as a general
+illustration of the methods used.
+
+\medskip
+\begin{equation*} A_1. \end{equation*}
+
+The special forms of the congruences for this case are
+\begin{align*}
+          \epsilon'xz' &\equiv kx         \pmod{p}, \tag{II} \\
+\gamma z'' + \delta z' &\equiv 0          \pmod{p}, \tag{III} \\
+           \delta'xz'' &\equiv \delta y'  \pmod{p}, \tag{IV} \\
+         \epsilon'xz'' &\equiv \epsilon x \pmod{p}, \tag{V} \\
+                  cz'' &\equiv 0          \pmod{p}, \tag{VI} \\
+                    ex &\equiv 0          \pmod{p}. \tag{VII}
+\end{align*}
+\noindent Congruence (IV) gives $\delta \not\equiv 0 \pmod{p}$, from (II) $k$ can be
+$\equiv 0$ or $\not\equiv 0 \pmod{p}$, (III) gives $\gamma \equiv 0$
+or $\not\equiv 0$, (V) gives $\epsilon \not\equiv 0$, (VI) and (VII)
+give $c \equiv e \equiv 0 \pmod{p}$. Elimination of $x$, $z'$ and $z''$
+between (II), (III) and (V) gives $\delta k + \gamma\epsilon \equiv 0
+\pmod{p}$. If $k \equiv 0$, then $\gamma \equiv 0 \pmod{p}$ and
+if $k \not\equiv 0$, then $\gamma \not\equiv 0 \pmod{p}$.
+
+\medskip
+\begin{equation*} A_2. \end{equation*}
+
+The congruences for this case are
+\begin{align*}
+  \epsilon'xz' + k'xy' &\equiv kx         \pmod{p}, \tag{II} \\
+\gamma x'' + \delta z' &\equiv 0          \pmod{p}, \tag{III} \\
+           \delta'xz'' &\equiv \delta y'  \pmod{p}, \tag{IV} \\
+         \epsilon'xz'' &\equiv \epsilon x \pmod{p}, \tag{V} \\
+                  cz'' &\equiv 0          \pmod{p}, \tag{VI} \\
+                    ex &\equiv 0          \pmod{p}. \tag{VII}
+\end{align*}
+\noindent Congruence (III) gives $\gamma \equiv 0$ or $\not\equiv 0$, (IV) gives
+$\delta \not\equiv 0$, (V) $\epsilon \not\equiv 0$, (VI) and (VII) give $c
+\equiv e \equiv 0 \pmod{p}$. Elimination of $x$, $z'$, and $z''$ between
+(II), (III) and (V) gives
+\begin{gather*}
+\delta k + \gamma\epsilon \equiv k'\delta y' \pmod{p}
+\intertext{from which}
+\delta k + \gamma\epsilon \not\equiv 0 \pmod{p}.
+\end{gather*}
+\noindent If $k \equiv 0$, then $\gamma\not\equiv 0$, and if $\gamma \equiv 0$ then
+$k \not\equiv 0 \pmod {p}$.
+
+Both $\gamma$ and $k$ can be $\not\equiv 0 \pmod{p}$ provided the above
+condition is fulfilled.
+
+\medskip
+\begin{equation*} A_5. \end{equation*}
+
+The congruences for this case are
+\begin{align*}
+    \epsilon'xz'-e'y'z &\equiv kx        \pmod p, \tag{II} \\
+\gamma z'' + \delta z' &\equiv 0         \pmod p, \tag{III} \\
+           \delta'xz'' &\equiv \delta y' \pmod p, \tag{IV} \\
+         \epsilon'xz'' &\equiv ex        \pmod p, \tag{V} \\
+                  cz'' &\equiv 0         \pmod p, \tag{VI} \\
+               e'y'z'' &\equiv ex        \pmod p. \tag{VII}
+\end{align*}
+\noindent (II) and (III) are linear in $z$ and $z'$ so $k$ and $\gamma$ are $\equiv
+\hbox{ or } \not\equiv 0 \pmod{p}$ independently, (IV) gives $\delta \not
+\equiv 0$, (V) give $\epsilon \not\equiv 0$, (VI) $c \equiv 0$, and (VII)
+$e \not\equiv 0$.
+
+Elimination between (IV), (V), and (VII) gives
+\begin{equation*}
+\delta'e'\epsilon^2 \equiv \delta e \epsilon'^2 \pmod{p}.
+\end{equation*}
+
+The types are derived by placing $\epsilon = \delta = 1$, and $e = 1, 2,
+\cdots, p - 1$.
+
+\begin{equation*} B_5. \end{equation*}
+
+The congruences for this case are
+\begin{align*}
+                -e'y'z &\equiv kx        \pmod{p}, \tag{II} \\
+\gamma z'' + \delta z' &\equiv 0         \pmod{p}, \tag{III} \\
+           \delta'xz'' &\equiv \delta y' \pmod{p}, \tag{IV} \\
+\epsilon'_1 xz'' + \delta'e'x\tbinom{z''}{2} + e'yz''
+                       &\equiv e_1 x + \gamma x'' + \delta x'
+                                         \pmod{p}, \tag{V} \\
+                  cz'' &\equiv 0         \pmod{p}, \tag{VI} \\
+               e'y'z'' &\equiv ex        \pmod{p}. \tag{VII}
+\end{align*}
+\noindent (II), and (III) being linear in $z$ and $z'$ give $k \equiv 0 \hbox{ or }
+\not\equiv 0$, and $\gamma \equiv 0 \hbox{ or } \not\equiv 0 \pmod{p}$,
+(IV) gives $\delta \not\equiv 0$, (V) being linear in $x'$ gives
+$\epsilon_1 \equiv 0 \hbox{ or } \not\equiv 0 \pmod{p}$, (VI) gives $c
+\equiv 0$ and (VII) $e \not\equiv 0$.
+
+Elimination of $x$ and $y'$ from (IV) and (VII) gives
+\begin{equation*}
+\delta'e'z''^2 \equiv \delta e \pmod{p}.
+\end{equation*}
+
+$\delta e$ is a quadratic residue or non-residue $\pmod{p}$ according as
+$\delta'e'$ is a residue or non-residue.
+
+The two types are given by placing $\delta = 1$, and $e = 1$ and a
+non-residue $\pmod{p}$.
+
+\bigskip
+\begin{center}
+\textit{Section} 3.
+\end{center}
+\setcounter{equation}{0}
+
+1. \textit{Groups with dependent generators continued.} As in Section 2, $G$
+is here generated by $Q_1$ and $P$, where
+\begin{equation*}
+Q{}_1^{p^2} = P^{hp^2}.
+\end{equation*}
+\noindent $Q{}_1^p$ is contained in the subgroup $H_1$ of order $p^{m-2}$, $H_1
+= \{Q{}_1^p, P\}$.
+
+\medskip
+2. \textit{Determination of $H_1$.} Since $\{P\}$ is self-conjugate in $H_1$
+\begin{equation}
+Q{}_1^{-p}\, P\, Q{}_1^p = P^{1 + kp^{m-4}}. %% 1
+\end{equation}
+\noindent Denoting $Q{}_1^a\, P^b\, Q{}_1^c\, P^d \cdots$ by the symbol $[a, b, c, d,
+\cdots]$, we have from (1)
+\begin{equation}
+[-yp,\, x,\, yp] = [0,\, x(1 + kyp^{m-4})] \qquad (m > 4). %% 2
+\end{equation}
+\noindent Repeated multiplication with (2) gives
+\begin{equation}
+[yp, x]^s = \Bigl[syp, x\bigl\{s + k\tbinom{s}{2}yp^{m-4}\bigr\}\Bigr]. %% 3
+\end{equation}
+
+\medskip
+3. \textit{Determination of $H_2$.} There is a subgroup $H_2$ of order $p^{m-1}$
+which contains $H_1$ self-conjugately.\footnote{\textsc{Burnside}, \textit{Theory of
+Groups}, Art.\ 54, p.\ 64.} $H_2$ is generated by $H_1$ and some operator
+$R_1$ of $G$. $R{}_1^p$ is contained in $H_1$, in fact in $\{P\}$,
+since if $R{}_1^{p^2}$ is the first power of $R_1$ in $\{P\}$, then $H_2
+= \{R_1, P\}$, which case was treated in Section 1.
+\begin{equation}
+R{}_1^p = P^{lp}. %% 4
+\end{equation}
+
+Since $H_1$ is self-conjugate in $H_2$
+\begin{align}
+R{}_1^{-1}\, P\, R_1   &= Q{}_1^{\beta p} P^{\alpha_1}, \\
+R{}_1^{-1}\, Q^p\, R_1 &= Q{}_1^{bp} P^{\alpha_1 p}.
+\end{align}
+
+Using the symbol $[a, b, c, d, e, f, \cdots]$ to denote $R{}_1^a\, Q{}_1^b\,
+P^c\, R{}_1^d\, Q{}_1^e\, P^f \cdots$, we have from (5), (6) and (3)
+\begin{equation}
+[-p,\, 0,\, 1,\, p] = [0,\, \beta Np,\, \alpha{}_1^p + Mp], %% 7
+\end{equation}
+\noindent and by (4)
+\begin{equation*}
+\alpha{}_1^p \equiv 1 \pmod{p}, \qquad \hbox{ and } \qquad \alpha_1 \equiv 1 \pmod{p}.
+\end{equation*}
+
+Let $\alpha_1 = 1 + \alpha_2 p$ and (5) is now replaced by
+\begin{equation}
+R{}_1^{-1}\, P\, R_1 = Q{}_1^{\beta p} P^{1 + \alpha_2 p}.
+\end{equation}
+
+From (6), (8) and (3)
+\begin{gather*}
+[-p,\, p,\, 0,\, p] = \bigl[0,\, b^p p,\, a_1 \frac{b^p - 1}{b - 1}p + a_1 Up^2\bigr],
+\intertext{and by (4) and (2)}
+R{}_1^{-p}\, Q{}_1^p\, R{}_1^p = Q{}_1^p
+\end{gather*}
+\noindent and therefore $b^p \equiv 1 \pmod{p}$, and $b = 1$. Placing
+$b = 1$ in the above equation the exponent of $P$ takes the form
+\begin{gather*}
+a_1 p^2 (1 + U'p) = a_1 \frac{\left\{1 + (\alpha_2 + \beta h)p\right\}^p
+- 1}{(\alpha_2 + \beta h)p^2}p^2
+\intertext{from which}
+a_1 p^2 (1 + U'p) \equiv 0 \pmod{p^{m-3}}
+\intertext{or}
+a_1 \equiv 0 \pmod{p^{m-5}} \quad (m > 5).
+\end{gather*}
+
+Let $a_1 = ap^{m-5}$ and (6) is replaced by
+\begin{equation}
+R{}_1^{-1}\, Q{}_1^p\, R_1 = Q{}_1^p\, P^{ap^{m-4}}. %% 9
+\end{equation}
+
+(7) now has the form
+\begin{gather*}
+[-p,\, 0,\, 1,\, p] = [0,\, \beta Np,\, (1 + \alpha_2 p)^p + Mp^2],
+\intertext{where}
+N = p \quad \hbox{ and } \quad M = \beta h \left\{ \frac{(1 + \alpha_2 p)^p - 1}
+   {\alpha_2 p^2} -1 \right\},
+\intertext{from which}
+(1 + \alpha_2 p)^p + \frac{(1 + \alpha_2 p)^p - 1}{\alpha_2 p^2}\beta hp^2
+   \equiv 1 \pmod{p^{m-3}}
+\intertext{or}
+\frac{(1 + \alpha_2 p)^p - 1}{\alpha_2 p^2}\{\alpha_2 + \beta h\}p^2
+   \equiv 0 \pmod{p^{m-3}}
+\intertext{and since}
+\frac{(1 + \alpha_2 p)^p - 1}{\alpha_2 p^2} \equiv 1 \pmod{p}
+\end{gather*}
+\begin{equation}
+(\alpha_2 + \beta h)p^2 \equiv 0 \pmod{p^{m-3}}. %% 10
+\end{equation}
+
+From (8), (9), (10) and (3)
+\begin{align}
+[-y,\,  0,\, x,\, y] &= [0,\, \beta xyp,\, x(1+\alpha_2 yp)+\theta p^{m-4}], \\ %% 11
+[-y,\, xp,\, 0,\, y] &= [0,\, xp,\, axyp^{m-4}], %% 12
+\end{align}
+\noindent where
+\begin{equation*}
+\theta = a \beta x \tbinom{y}{2} + \beta k \tbinom{x}{2} y.
+\end{equation*}
+
+By continued use of (11), (12), (2) and (10)
+\begin{equation}
+[z,\, yp,\, x]^s = [sz,\, (sy + U_s)p,\, xs+ V_s p], %% 13
+\end{equation}
+\noindent where
+\begin{align*}
+U_s &= \beta \tbinom{s}{2} xz \\
+V_s &= \tbinom{s}{2} \Bigl\{ \alpha_2 xz + \bigl[ayz + kxy + \beta k\tbinom{x}{2}z \bigr]
+  p^{m-5} \Bigr\} \\ & \qquad \qquad +\Bigl\{\beta\tbinom{s}{3}x^2 z + \frac{1}{2}a\beta
+  \Bigl[\frac{1}{3!} s(s - 1)(2s - 1)z^2 - \tbinom{s}{2}z\Bigr]x \Bigr\}p^{m-5}.
+\end{align*}
+
+Placing in this $y = 0$, $z = 1$ and $s = p$,\footnote{Terms of the form
+$(Ax^2 + Bx)p^{m-4}$ in the exponent of $P$ for $p = 3$ and $m > 5$ do not
+alter the result.}
+\begin{gather*}
+(R_1\, P^x)^p = R{}_1^p\, P^{xp} = P^{(x+l)p},
+\intertext{determine $x$ so that}
+x + l \equiv 0 \pmod{p^{m-4}},
+\end{gather*}
+then $R = R_1 P^x$ is an operator of order $p$ which will be used in the
+place of $R_1$, $R^p = 1$.
+
+\medskip
+4. \textit{Determination of $G$.} Since $H_2$ is self-conjugate in $G$
+\begin{align}
+Q{}_1^{-1}\, P\, Q_1 &= R^\gamma\, Q{}_1^{\delta p}\, P^{\epsilon_1}, \\ %% 14
+Q{}_1^{-1}\, R\, Q_1 &= R^c\, Q{}_1^{dp}\, P^{e_1 p}. %% 15
+\end{align}
+
+From (15)
+\begin{gather*}
+(R^c\, Q{}_1^{dp}\, P^{e_1 p})^p = 1,
+\intertext{by (13)}
+Q{}_1^{dp^2}\, P^{e_1 p^2} = P^{(e_1 + dh)p^2} = 1,
+\end{gather*}
+\noindent and
+\begin{equation}
+(e_1+ dh)p^2 \equiv 0 \pmod{p^{m-3}}. %% 16
+\end{equation}
+
+From (14), (15) and (13)
+\begin{equation}
+[0,\, -p,\, 1,\, 0,\, p] = [L,\, Mp,\, \epsilon_1^p + Np]. %% 17
+\end{equation}
+
+By (1)
+\begin{equation*}
+\epsilon{}_1^p \equiv 1 \pmod{p}, \qquad \hbox{ and } \qquad \epsilon_1 \equiv 1 \pmod{p}.
+\end{equation*}
+
+Let $\epsilon_1 = 1 + \epsilon_2 p$ and (14) is replaced by
+\begin{equation}
+Q{}_1^{-1}\, P\, Q_1 = R^\gamma\, Q{}_1^{\delta p}\, P^{1 + \epsilon_2 p}. %% 18
+\end{equation}
+
+From (15), (18), and (13)
+\begin{equation*}
+[0,\, -p,\, 0,\, 1,\, p] = \left[c_p,\, \frac{c^p - 1}{c - 1}dp,\, Kp \right].
+\end{equation*}
+
+Placing $x = 1$ and $y =-1$ in (12) we have
+\begin{equation}
+[0,\, -p,\, 0,\, 1,\, p] = [1,\, 0,\, -ap^{m-4}], %% 19
+\end{equation}
+and therefore $c^p \equiv 1 \pmod{p}$, and $c = 1$. (15) is now replaced by
+\begin{equation}
+Q{}_1^{-1}\, R\, Q_1 = R\, Q{}_1^{dp}\, P^{e_1 p}. %% 20
+\end{equation}
+
+Substituting $1 + \epsilon_2 p$ for $\epsilon_1$ and 1 for $c$ in (17)
+gives, by (16)
+\begin{gather*}
+[0,\, -p,\, 1,\, p] = [0,\, Mp^2,\, (1 + \epsilon_2 p)^p + Np^2],
+\intertext{where}
+M = \gamma d \frac{p-1}{2} + \delta\frac{(1 + \epsilon_2 p)^p - 1}{\epsilon_2 p^2}
+\intertext{and}
+N = \frac{e_1\gamma}{(\epsilon_2 + \delta h)p^2} \left\{\frac{[1 + (\epsilon_2 +
+\delta h)p]^p - 1}{(\epsilon_2 + \delta h)p} - p \right\}.
+\end{gather*}
+
+By (1)
+\begin{gather*}
+(1 + \epsilon_2 p)^p + (N + Mh)p^2 \equiv 1 + kp^{m-4} \pmod{p^{m-3}},
+\intertext{or reducing}
+\psi(\epsilon_2 + \delta h)p^2 \equiv kp^{m-4} \pmod{p^{m-3}},
+\intertext{where}
+\psi = \frac{(1 + \epsilon_2 p)^p - 1}{\epsilon_2 p^2} + N -
+   e_1 \gamma \frac{p-1}{2}.
+\end{gather*}
+
+Since
+\begin{equation*}
+\psi = 1 \pmod{p}.
+\end{equation*}
+\begin{equation}
+(\epsilon_2 + \delta h)p^2 \equiv kp^{m-4} \pmod{p^{m-3}}. %% 21
+\end{equation}
+
+From (18), (20), (13), (16) and (21)
+\begin{align}
+[0,\, -y,\, x,\, 0,\, y] &= [\gamma xy,\, \theta_1 p,\, x + \phi_1 p], \\ %% 22
+[0,\, -y,\, 0,\, x,\, y] &= [x,\, dxyp,\, \phi_2 p], %% 23
+\end{align}
+\noindent where
+\begin{align*}
+\theta_1 &= d\gamma x\tbinom{y}{2} + \delta xy + \beta\gamma\tbinom{x}{2}y, \\
+\phi_1 &= \epsilon_2 xy + \alpha_2\gamma\tbinom{x}{2}y + e_1\gamma
+  \tbinom{y}{2}x + \bigl\{x\tbinom{y}{2}(\epsilon_2 k + \delta \gamma) \\
+& \qquad + \frac{1}{2}ad\left[\frac{1}{3!}y(y - 1)(2y - 1)\gamma^2 -
+  \frac{y}{2}\gamma\right]x + a\gamma^2 dx\frac{1}{3!}y(y + 1)(y - 1) \\
+& \qquad + e_1\gamma k\tbinom{y}{3}x + \frac{1}{2}a\beta\left[\frac{1}{3!}x(x - 1)(2x - 1)\gamma^2 y^2
+  - \tbinom{x}{2}\gamma y\right] \\
+& \qquad \qquad + \tbinom{x}{2}(a + k)\left[dy\tbinom{y}{2}
+  + \delta y\right] + \beta\gamma \tbinom{x}{3}\bigr\}p^{m-5}, \\
+\phi_2 &= e_1 xy + \left\{e_1 k\tbinom{y}{2} + ad\tbinom{x}{2}y \right\}p^{m-5}.
+\end{align*}
+
+Placing $x = 1$ and $y = p$ in (23) and by (16)
+\begin{gather*}
+Q{}_1^{-p}\, R\, Q{}_1^p = R,
+\intertext{and by (19)}
+a \equiv 0 \pmod{p}.
+\end{gather*}
+
+A continued multiplication, with (11), (22), and (23), gives
+\begin{gather*}
+(Q_1\, P^x)^{p^2} = Q{}_1^{p^2}\, P^{xp^2} = P^{(x + l)p^2}.
+\intertext{Let $x$ be so chosen that}
+(x + l) \equiv 0 \pmod{p^{m-5}},
+\end{gather*}
+\noindent then $Q = Q_1\, P^x$ is an operator of order $p^2$ which will be used in
+place of $Q_1$, $Q^{p^2} = 1$ and
+\begin{equation*}
+h \equiv 0 \pmod{p^{m-5}}.
+\end{equation*}
+
+From (21), (10) and (16)
+\begin{equation*}
+\epsilon_2 p^2 \equiv kp^{m-4}, \qquad \alpha_2 p^2 \equiv 0 \qquad \hbox{ and }
+  \qquad e_1 p^2 \equiv 0 \pmod{p^{m-3}}.
+\end{equation*}
+\noindent Let $\epsilon_2 = \epsilon p^{m-6}$, $\alpha_2 = \alpha p^{m-5}$ and
+$e_1 = ep^{m-5}$. Then equations (18), (20) and (8) are replaced by
+\begin{gather*}
+G: \left\{ \begin{aligned}
+Q^{-1}\, P\, Q &= R^\gamma\, Q^{\delta p}\, P^{1 + \epsilon p^{m-5}}, \\
+Q^{-1}\, R\, Q &= R\, Q^{dp}\, P^{ep^{m-4}}, \\
+R^{-1}\, P\, R &= Q^{\beta p}\, P^{1 + \alpha p^{m-4}}, \\ \end{aligned} \right.
+\tag*{(24), (25), (26)} \\
+R^p = 1, \qquad Q^{p^2} = 1, \qquad P^{p^{m-3}} = 1.
+\end{gather*}
+
+\setcounter{equation}{26}
+(11), (22) and (23) are replaced by
+\begin{align}
+     [-y,\, 0,\, x,\, y] &= [0,\, \beta xyp,\, x + \phi p^{m-4}], \\ %% 27
+[0,\, -y,\, x,\, 0,\, y] &= [\gamma xy,\, \theta_1 p,\, x + \phi_1 p^{m-5}], \\ %% 28
+[0,\, -y,\, 0,\, x,\, y] &= [x,\, dxyp,\, \phi_2 p^{m-4}],                      %% 29
+\end{align}
+\noindent where
+\begin{gather*}
+\phi = \alpha xy + \beta k\tbinom{x}{2}y, \quad
+  \theta_1 = d\gamma\tbinom{y}{2}x + \delta xy + \beta\gamma\tbinom{x}{2}y, \\
+\phi_1 = exy + \left\{e\gamma x\tbinom{y}{2} + \tbinom{x}{2}\left(\alpha\gamma y +
+  d\gamma k\tbinom{y}{2} + \delta ky\right) + \beta\gamma y\tbinom{x}{3}\right\}p, \\
+\phi_2 = exy.
+\end{gather*}
+\noindent A formula for a general power of any operator of $G$ is derived from (27),
+(28) and (29)
+\begin{equation}
+[0,\, z,\, 0,\, y,\, 0,\, z]^s = [0,\, sz + U_s p,\, 0,\, sy + V_s,\, 0,\, sx + W_s p^{m-5}], %% 30
+\end{equation}
+\noindent where
+\begin{align*}
+U_s &= \tbinom{s}{2}\left\{\delta xz + dyz + \beta xy + \beta\gamma \tbinom{x}{2}z \right\} \\
+ & \qquad + \frac{1}{2}dx \left\{ \frac{1}{3!}s(s - 1)(2s - 1)z^2 - \tbinom{s}{2}z \right\}x
+   + \beta\gamma\tbinom{s}{2}x^2 z, \\
+V_s &= \gamma\tbinom{s}{2}xz, \displaybreak \\
+W_s &= \tbinom{s}{2} \left\{\epsilon xz + \left[axy + eyz + (\beta ky + \alpha\beta
+  \gamma + \delta kz)\tbinom{x}{2}\right]p \right\} \\
+ & \qquad + \tbinom{s}{3}\left\{\alpha\gamma x^2 z + dkxyz + \delta kx^2 z +
+   \beta kx^2 y + 2\beta\gamma k\tbinom{x}{2}xz\right\}p \\
+ & \qquad + \beta yk\tbinom{s}{4}x^3 zp + \frac{1}{2}\left\{\frac{1}{3!}s(s - 1)(2s - 1)z^2
+   - \frac{s}{2}z \right\} \left\{e\gamma x + d\gamma k\tbinom{x}{2}\right\}p \\
+ & \qquad + \frac{1}{2}d\gamma k\left[\frac{1}{2}(s - 1)z^2 - z\right]\tbinom{s}{3}x^2.
+\end{align*}
+\noindent A comparison of the generational equations of the present section with those
+of Sections 1 and 2, shows that, $\gamma \equiv 0 \pmod{p}$ gives groups
+simply isomorphic with those of Section 1, while $\beta \equiv 0 \pmod{p}$,
+groups simply isomorphic with those of Section 2 and we need consider only
+the groups in which $\beta$ and $\gamma$ are prime to $p$.
+
+\medskip
+5. \textit{Transformation of the groups.} All groups of this section are given by
+equations (24), (25), and (26), where $\gamma, \beta = 1, 2, \cdots, p - 1$;
+$\alpha, \delta, d, e = 0, 1, 2, \cdots, p - 1$; and $\epsilon = 0, 1,
+2, \cdots, p^2 - 1$.
+
+Not all of these, however are distinct. Suppose that $G$ is simply
+isomorphic with $G'$ and that the correspondence is given by
+\begin{equation*}
+C = \left[\begin{matrix}R,    & Q,    & P \\
+                        R'_1, & Q'_1, & P'_1 \\ \end{matrix} \right].
+\end{equation*}
+\noindent An inspection of (30) gives
+\begin{align*}
+R'_1 &= Q'^{z''p}\, R'^{y''}\, P'^{x''p^{m-4}}, \\
+Q'_1 &= Q'^{z'}\, R'^{y'}\, P'^{x'p^{m-5}}, \\
+P'_1 &= Q'^z\, R'^y\, P'^x,
+\end{align*}
+\noindent with $dv[x,\, p] = 1$. Since $Q^p$ is not in $\{P\}$, and $R$ is not in
+$\{Q^p, P\}$, ${Q'}_1^p$ is not in $\{P'_1\}$ and $R'_1$ is not in
+$\{{Q'}_1^p, P'_1\}$. Let
+\begin{gather*}
+{Q'}_1^{s'p} = {P'}_1^{sp^{m-4}}.
+\intertext{This is in terms of $R'$, $Q'$, and $P'$,}
+[0,\, s'z'p,\, s'x'p^{m-4}] = [0,\, 0,\, sxp^{m-4}].
+\intertext{From which}
+s'z'p \equiv 0 \pmod{p^2},
+\intertext{and $z'$ must be prime to $p$, since otherwise $s' \hbox{ can } = 1$. Let}
+{R'}_1^{s''} = {Q'}_1^{s'p}\, {P'}_1^{sp^{m-4}},
+\intertext{or in terms of $R'$, $Q'$, and $P'$,}
+[s''y'',\, s''z''p,\, s''x''p^{m-4}] = [0,\, s'z'p,\, (sx + s'x')p^{m-4}]
+\intertext{and}
+s''z'' \equiv s'z' \pmod{p}, \qquad s''y'' \equiv 0 \pmod{p},
+\end{gather*}
+\noindent and $y''$ is prime to $p$, since otherwise $s''$ can $= 1$. Since $R$,
+$Q$, and $P$ satisfy equations (24), (25) and (26), $R'_1$, $Q'_1$, and
+$P'_1$ must also satisfy them. These become when reduced in terms of $R'$,
+$Q'$ and $P'$
+\begin{align*}
+[0,&\, z + \theta'_1 p,\, 0,\, y + \gamma'xz',\, 0,\, x + \psi'_1 p^{m-5}] \\
+  & \qquad \qquad \qquad \qquad \qquad = [0,\, z + \theta_1 p,\, 0,\, y + \gamma y'',\, 0,\, x + \psi_1 p^{m-5}], \\
+[0,&\, (z'' + \theta'_2)p,\, 0,\, y'',\, 0,\, (x'' + \psi_2)p^{m-4}] \\
+  & \qquad \qquad \qquad \qquad \qquad = [0,\, (z'' + \theta_2)p,\, 0,\, y'',\, 0,\, (x'' + \psi_2)p^{m-4}], \\
+[0,&\, z + \theta'_3p,\, 0,\, y,\, 0,\, x + \psi'_3 p^{m-4}]
+  = [0,\, z + \theta_3p,\, 0,\, y,\, 0,\, x + \psi_3 p^{m-4}],
+\end{align*}
+\noindent where
+\begin{align*}
+\theta'_1 &= d'(yz' - y'z) + x\left\{d'\gamma'\tbinom{z'}{2} + \delta'z' +
+\beta'y'\right\} + \beta'\gamma'\tbinom{x}{2}z', \\
+\theta_1 &= \gamma z'' + \delta z' + d'\gamma y''z, \\
+\psi'_1 &= \epsilon'xz' + \bigl\{e'\gamma'x\tbinom{z'}{2} + \tbinom{x}{2}\left[\alpha'
+  \gamma'z' + \gamma'\epsilon'd'k'\tbinom{z'}{2} + \delta'\epsilon k'z' +
+  \beta'k'y'\right] \\
+ & \qquad + \beta'\gamma'\tbinom{x}{3}z' + e'(yz' - y'z) + \alpha'xy'\bigr\}p, \\
+\psi_1 &= \epsilon x + \{\delta x' + \gamma x'' + e'\gamma y''z\}p, \\
+\theta'_2 &= d'y''z', \qquad \theta_2 = dz', \qquad \psi'_2 = e'y''z, \qquad
+  \psi_2 = dx' + ex, \\
+\theta'_3 &= \beta'xy'' - d'y''z, \qquad \theta_3 = \beta z', \\
+\psi_3 &= \epsilon'xz'' - e'y''z + \alpha'xy'' + \beta'\epsilon'\tbinom{x}{2}y'',
+  \qquad \psi_3 = \alpha x + \beta x'.
+\end{align*}
+
+A comparison of the two sides of these equations give seven congruences
+\begin{align*}
+\theta'_1  &\equiv \theta_1   \pmod{p},   \tag{I} \\
+\gamma'xz' &\equiv \gamma y'' \pmod{p},   \tag{II} \\
+\psi'_1    &\equiv \psi_1     \pmod{p^2}, \tag{III} \\
+\theta'_2  &\equiv \theta_2   \pmod{p},   \tag{IV} \\
+\psi'_2    &\equiv \psi_2     \pmod{p},   \tag{V} \\
+\theta'_3  &\equiv \theta_3   \pmod{p},   \tag{VI} \\
+\psi'_3    &\equiv \psi_3     \pmod{p}.   \tag{VII}
+\end{align*}
+
+(VI) is linear in $z$ provided $d' \not\equiv 0 \pmod{p}$ and $z$ may be
+so determined that $\beta \equiv 0 \pmod{p}$ and therefore all groups in
+which $d' \not\equiv 0 \pmod{p}$ are simply isomorphic with groups in
+Section 2.
+
+Consequently we need only consider groups in which $d' \equiv 0 \pmod{p}$.
+
+As before we take for $G'$ the simplest case and associate with it all
+simply isomorphic groups $G$. We then take as $G'$ the simplest case left
+and proceed as above.
+
+Let $\kappa = \kappa_1 p^{\kappa_2}$ where $dv[\kappa_1, p] = 1, (\kappa =
+\alpha, \beta, \gamma, \delta, \epsilon, d, e)$.
+
+For convenience the groups are divided into three sets and each set is
+subdivided into eight cases.
+
+The sets are given by
+\begin{equation*}
+\begin{matrix}
+A: & \epsilon_2 = 0, & \beta_2 = 0, & \gamma_2 = 0, \\
+B: & \epsilon_2 = 1, & \beta_2 = 0, & \gamma_2 = 0, \\
+C: & \epsilon_2 = 2, & \beta_2 = 0, & \gamma_2 = 0.
+\end{matrix}
+\end{equation*}
+
+The subdivision into cases and results of the discussion are given in
+Table I.
+
+\begin{center}
+\large I. \normalsize
+
+\smallskip
+\begin{tabular}{|c|c|c|c|c|c|c|} \hline
+   & $\delta_2$ & $e_2$ & $\alpha_2$ &  $A$  &  $B$  &  $C$  \\ \hline
+ 1 &     1      &   1   &      1     &       &       & $B_1$ \\ \hline
+ 2 &     0      &   1   &      1     & $A_1$ & $B_1$ & $B_1$ \\ \hline
+ 3 &     1      &   0   &      1     &       &       & $B_3$ \\ \hline
+ 4 &     1      &   1   &      0     & $A_1$ & $B_1$ & $B_1$ \\ \hline
+ 5 &     0      &   0   &      1     & $A_3$ & $B_3$ & $B_3$ \\ \hline
+ 6 &     0      &   1   &      0     & $A_1$ & $B_1$ & $B_1$ \\ \hline
+ 7 &     1      &   0   &      0     & $A_3$ & $B_3$ & $B_3$ \\ \hline
+ 8 &     0      &   0   &      0     & $A_3$ & $B_3$ & $B_3$ \\ \hline
+\end{tabular}
+\end{center}
+
+\medskip
+6. \textit{Reduction to types.} The types of this section are given by equations
+(24), (25) and (26) with $\alpha = 0, \beta = 1, \lambda = 1$ or a
+quadratic non-residue (mod $p$), $\delta \equiv 0; \epsilon = l, e = 0, 1,
+2, \cdots, p - 1;$ and $\epsilon = p, e = 0, 1,$ or a
+non-residue (mod $p$), $2p+6$ in all.
+
+The special forms of the congruences for these cases are given below.
+
+\medskip
+\begin{equation*} A_1. \end{equation*}
+\begin{align*}
+\beta'\gamma'\tbinom{x}{2}z' + \beta'xy'
+             &\equiv \gamma z'' + \delta z' \pmod{p}, \tag{I} \\
+  \gamma'xz' &\equiv \gamma y'' \pmod{p},             \tag{II} \\
+\epsilon'xz' &\equiv \epsilon x \pmod{p},             \tag{III} \\
+         dz' &\equiv 0 \pmod{p},                      \tag{IV} \\
+          ex &\equiv 0 \pmod{p},                      \tag{V} \\
+  \beta'xy'' &\equiv \beta z' \pmod{p},               \tag{VI} \\
+\epsilon'xz'' + \beta'\epsilon'\tbinom{x}{2}y'
+             &\equiv \alpha x + \beta x' \pmod{p}.    \tag{VII}
+\end{align*}
+
+(I) is linear in $z''$ and $\delta \equiv 0$ or $\not\equiv 0$, (II)
+gives $\gamma \not\equiv 0$, (III) $\epsilon \not\equiv 0$, (IV) and (V)
+$d \equiv e \equiv 0$, (VI) $\beta \not\equiv 0$, (VII) is linear in $x'$
+and $\alpha \equiv 0$ or $\not\equiv 0 \pmod{p}$.
+
+Elimination of $y''$ and $z'$ between (II) and (VI) gives
+\begin{equation*}
+\beta'\gamma'x^2 \equiv \beta\gamma \pmod{p}
+\end{equation*}
+\noindent and $\beta\gamma$ is a residue or non-residue $\pmod{p}$ according as
+$\beta'\gamma'$ is a residue or non-residue.
+
+\medskip
+\begin{equation*} A_3. \end{equation*}
+\begin{align*}
+\beta'\gamma'\tbinom{x}{2}z' + \beta'xy'
+            &\equiv \gamma z'' + \delta z' \pmod{p}, \tag{I} \\
+ \gamma'xz' &\equiv \gamma y'' \pmod{p},             \tag{II} \\
+\epsilon'z' &\equiv \epsilon \pmod{p},               \tag{III} \\
+          d &\equiv 0 \pmod{p},                      \tag{IV} \\
+    e'y''z' &\equiv ex \pmod{p},                     \tag{V} \\
+ \beta'xy'' &\equiv \beta z' \pmod{p},               \tag{VI} \\
+\epsilon'xz'' - e'y''z + \beta'\epsilon'\tbinom{x}{2}y'
+            &\equiv \alpha x + \beta x' \pmod{p}.    \tag{VII}
+\end{align*}
+
+(I) is linear in $z''$ and $\delta \equiv 0$ or $\not\equiv 0$. (II)
+gives $\gamma \not\equiv 0$, (III) $\epsilon \not\equiv 0$, (V) $e \not
+\equiv 0$ and (VI) $\beta \not\equiv 0$. (VII) is linear in $x'$ and
+$\alpha \equiv 0$ or $\not\equiv 0 \pmod{p}$.
+
+Elimination between (II) and (VI) gives
+\begin{gather*}
+\beta'\gamma'x^2 \equiv \beta\gamma \pmod{p},
+\intertext{and between (II), (III), and (IV) gives}
+\epsilon'^2 \gamma e \equiv \epsilon^2\gamma'e' \pmod{p}.
+\end{gather*}
+
+$\beta\gamma$ is a residue, or non-residue, according as $\beta'\gamma'$ is
+or is not, and if $\gamma$ and $\epsilon$ are fixed, $e$ must take the
+$(p - 1)$ values $1, 2, \cdots, p - 1$.
+
+\medskip
+\begin{equation*} B_1. \end{equation*}
+\begin{align*}
+\beta'\gamma'\tbinom{x}{2}z' + \beta'xy'
+           &\equiv \gamma z'' + \delta z' \pmod{p}, \tag{I} \\
+\gamma'xz' &\equiv \gamma y'' \pmod{p},             \tag{II} \\
+\epsilon'_1 xz' + \beta'xz'\tbinom{x}{3}
+           &\equiv \epsilon_1 x + \delta x' + \gamma x'' \pmod{p}, \tag{III} \\
+        ex &\equiv 0 \pmod{p},                      \tag{IV} \\
+\beta'xy'' &\equiv \beta z' \pmod{p},               \tag{VI} \\
+\alpha x + \beta x' &\equiv 0 \pmod{p}.             \tag{VII}
+\end{align*}
+
+(I) gives $\delta \equiv 0$ or $\not\equiv 0$, (II) $\gamma \not
+\equiv 0$, (III) is linear in $x''$ and gives $\epsilon_1 \equiv 0$
+or $\not\equiv 0$, (V) $e = 0$, (VI) $\beta \not\equiv 0$ and
+(VII) is linear in $x'$ and gives $\alpha \equiv 0$ or $\not\equiv 0$.
+
+Elimination between (II) and (VI) gives
+\begin{equation*}
+\beta'\gamma'x^2 \equiv \beta\gamma \pmod{p}.
+\end{equation*}
+
+\newpage
+\begin{equation*} B_3. \end{equation*}
+\begin{align*}
+\beta'\gamma'\tbinom{x}{2}z' + \beta'xy'
+                &\equiv \gamma\beta'' + \delta z' \pmod{p}, \tag{I} \\
+     \gamma'xz' &\equiv \gamma y' \pmod{p},                 \tag{II} \\
+ \epsilon'_1 xz' + e'\gamma'x\tbinom{z'}{2} + \beta'\gamma'\tbinom{x}{3} &+ e'(yz' - y'z) \\
+                &\equiv \epsilon_1 x + \delta x' + \gamma x'' + e'\gamma zy'' \pmod{p},
+                                                            \tag{III} \\
+        e'y''z' &\equiv ex \pmod{p}.                        \tag{V} \\
+     \beta'xy'' &\equiv \beta z' \pmod{p},                  \tag{VI} \\
+        -e'y''z &\equiv \alpha x + \beta x' \pmod{p}.       \tag{VII} \\
+\end{align*}
+(I) gives $\delta\equiv 0$ or $\not\equiv 0$, (II) $\gamma \not
+\equiv 0$, (III) is linear in $x''$ and gives $\epsilon_1 \equiv 0$ or
+$\not\equiv 0$, (V) $e \not\equiv 0$, (VI) $\beta \not\equiv 0$, (VII) is
+linear in $x'$ and gives $\alpha \equiv 0$ or $\not\equiv 0 \pmod{p}$.
+Elimination of $y''$ and $z'$ between (II) and (VI) gives
+\begin{gather*}
+\beta'\gamma'x^2 \equiv \beta\gamma \pmod{p},
+\intertext{and between (V) and (VI) gives}
+\beta'e'y''^2 \equiv \beta e \pmod{p}
+\end{gather*}
+\noindent and $\beta\gamma$ and $\beta e$ are residues or non-residues, independently,
+according as $\beta'\gamma'$ and $\beta'e'$ are residues or non-residues.
+
+\bigskip \bigskip
+\begin{center}
+\Large\textit{Class} III.\normalsize
+\end{center}
+\setcounter{equation}{0}
+
+1. \textit{General relations.} In this class, the $p$th power of every operator of
+$G$ is contained in $\{P\}$. There is in $G$ a subgroup $H_1$ of order
+$p^{m-2}$, which contains $\{P\}$ self-conjugately.\footnote{\textsc{Burnside},
+\textit{Theory of Groups}, Art.\ 54, p.\ 64.}
+
+\medskip
+2. \textit{Determination of $H_1$.} $H_1$ is generated by $P$ and some operator
+$Q_1$ of $G$.
+\begin{equation*}
+Q{}_1^p = P^{hp}.
+\end{equation*}
+\noindent Denoting $Q{}_1^a\, P^b\, Q{}_1^c\, P^d \cdots$ by the symbol $[a, b, c, d,
+\cdots]$, all operators of $H_1$ are included in the set $[y, x]; (y = 0,
+1, 2, \cdots, p - 1, x = 0, 1, 2, \cdots, p^{m-3} - 1)$.
+
+Since $\{P\}$ is self-conjugate in $H_1$\footnote{\textit{Ibid.}, Art.\ 56, p.\ 66.}
+\begin{gather}
+Q{}_1^{-1}\, P\, Q_1 = P^{1 + kp^{m-4}}. %% 1
+\intertext{Hence}
+[-y,\, x,\, y] = [0,\, x(1 + kyp^{m-4})] \qquad (m > 4). %% 2
+\intertext{and}
+[y,\, x]^s = \left[sy, x\left\{s + ky \tbinom{s}{2}p^{m-4} \right\}\right]. %% 3
+\end{gather}
+\noindent Placing $y = 1$ and $s = p$ in (3), we have,
+\begin{gather*}
+[Q_1\, P^x]^p = Q{}_1^p\, P^{xp} = P^{(x + h)p}
+\intertext{and if $x$ be so chosen that}
+(x + h) \equiv 0 \pmod{p^{m-4}},
+\end{gather*}
+\noindent $Q = Q_1\, P^x$ will be an operator of order $p$ which will be used in place
+of $Q_1$, $Q^p = 1$.
+
+\medskip
+3. \textit{Determination of $H_2$.} There is in $G$ a subgroup $H_2$ of order
+$p^{m-1}$, which contains $H_1$ self-conjugately. $H_2$ is generated by
+$H_1$, and some operator $R_1$ of $G$.
+\begin{equation*}
+R{}_1^p = P^{lp}.
+\end{equation*}
+
+We will now use the symbol $[a, b, c, d, e, f, \cdots]$ to denote $R{}_1^a$ $Q^b$
+$P^c$ $R{}_1^d$ $Q^e$ $P^f$ $\cdots$.
+
+The operations of $H_2$ are given by $[z, y, x];$ $(z, y = 0, 1, \cdots, p - 1$;
+$x = 0, 1, \cdots, p^{m-3} - 1)$. Since $H_1$ is self-conjugate in $H_2$
+\begin{align}
+R{}_1^{-1}\, P\, R_1 &= Q{}_1^\beta P^{\alpha_1}, \\ %% 4
+R{}_1^{-1}\, Q\, R_1 &= Q{}_1^{b_1} P^{\alpha p^{m-4}}.      %% 5
+\end{align}
+
+From (4), (5) and (3)
+\begin{gather*}
+[-p,\, 0,\, 1,\, p] = \left[0,\, \frac{\alpha{}_1^p - b{}_1^p}{\alpha_1 - b_1}\beta,\,
+  \alpha{}_1^p + \theta p^{m-4} \right] = [0,\, 0,\, 1], \\
+\intertext{where}
+\theta = \frac{\alpha{}_1^p \beta k}{2}\frac{\alpha{}_1^p - 1}{\alpha_1-1}
+  + a\beta \left\{\frac{\alpha{}_1^p - 1}{\alpha_1 - b_1}p -
+  \frac{\alpha{}_1^p - b{}_1^p}{(\alpha_1 - b_1)^2}\right\}.
+\end{gather*}
+\noindent Hence
+\begin{equation}
+\frac{\alpha{}_1^p - b{}_1^p}{\alpha_1 - b_1}\beta \equiv 0 \pmod{p}, \qquad
+\alpha{}_1^p + \theta p^{m-4} \equiv 1 \pmod{p^{m-3}},     %% 6
+\end{equation}
+\noindent and $\alpha{}_1^p \equiv 1 \pmod{p^{m-4}}$, or $\alpha_1 \equiv 1
+\pmod{p^{m-5}} \qquad (m > 5)$, $\alpha_1 = 1 + \alpha_2 p^{m-5}.$ Equation (4)
+is replaced by
+\begin{equation}
+R{}_1^{-1}\, P\, R_1 = Q^\beta P^{1 + \alpha_2 p^{m-5}},
+\end{equation}
+
+From (5), (7) and (3).
+\begin{equation*}
+[-p,\, 1,\, 0,\, p] = \left[0,\, b{}_1^p,\, a\frac{b{}_1^p - 1}{b - 1} p^{m-4} \right].
+\end{equation*}
+\noindent Placing $x = lp$ and $y = 1$ in (2) we have $Q^{-1} P^{lp} Q = P^{lp}$, and
+\begin{equation*}
+b{}_1^p \equiv 1 \pmod{p}, \qquad a\frac{b{}_1^p - 1}{b_1 - 1} \equiv 0
+\pmod{p}.
+\end{equation*}
+\noindent Therefore, $b_1 = 1$.
+
+Substituting 1 for $b_1$ and $1 + \alpha_2 p^{m-5}$ for $\alpha_1$ in
+congruence (6) we find
+\begin{equation*}
+(1 + \alpha_2 p^{m-5})^p \equiv 1 \pmod{p^{m-3}}, \qquad \hbox{ or } \qquad
+\alpha_2 \equiv 0 \pmod{p}.
+\end{equation*}
+
+Let $\alpha_2 = \alpha p$ and equations (7) and (5) are replaced by
+\begin{align}
+R{}_1^{-1}\, P\, R_1 &= Q^\beta P^{1 + \alpha p^{m-4}}, \\ %% 8
+R{}_1^{-1}\, Q\, R_1 &= Q P^{\alpha p^{m-4}}.              %% 9
+\end{align}
+
+From (8), (9) and (3)
+\begin{align}
+[-y,\, 0,\, x,\, y] &= \Bigl[0,\, \beta xy,\, x + \bigl\{\alpha xy + a\beta x \tbinom{y}{2} +
+  \beta ky\tbinom{x}{2}\bigr\}p^{m-4}\Bigr], \\ %% 10
+[-y,\, x,\, 0,\, y] &= [0,\, x,\, axyp^{m-4}].     %% 11
+\end{align}
+
+From (2), (10), and (11)
+\begin{equation}
+[z,\, y,\, x]^s = [sz,\, sy + U_s,\, sx + V_s p^{m-4}], %% 12
+\end{equation}
+\noindent where
+\begin{align*}
+U_s &= \beta \tbinom{s}{2}xz, \\
+V_s &= \tbinom{s}{2}\left\{\alpha xz + kxy + ayz + \beta k\tbinom{x}{2}z\right\} \\
+  & \qquad \qquad + \beta k\tbinom{s}{3}x^2 z + \frac{1}{2}a\beta\tbinom{s}{2} \left\{\frac{1}{3!}
+  (2s - 1)z - 1\right\}xz.
+\end{align*}
+
+Placing $z = 1$, $y = 0$, and $s = p$ in (12)\footnote{The terms of the form
+$(Ax + Bx^2)p^{m-4}$ which appear in the exponent of $P$ for $p = 3$
+do not alter the conclusion for $m > 5$.}
+\begin{equation*}
+[R_1\, P^x]^p = R{}_1^p\, P^{xp} = P^{(x+l)p}.
+\end{equation*}
+
+If $x$ be so chosen that
+\begin{equation*}
+x + l \equiv 0 \pmod{p^{m-4}}
+\end{equation*}
+\noindent then $R =R_1 P^x$ is an operator of order $p$ which will be used in
+place of $R_1$, and $R^p = 1$.
+
+\medskip
+4. \textit{Determination of $G$.} $G$ is generated by $H_2$ and some operation
+$S_1$.
+\begin{equation*}
+S{}_1^p = P^{\lambda p}.
+\end{equation*}
+
+Denoting $S{}_1^a\, R^b\, Q^c\, P^d \cdots$ by the symbol $[a, b, c, d, \cdots]$
+all the operators of $G$ are given by
+\begin{equation*}
+[v,\, z,\, y,\, x];\, (v,\, z,\, y = 0, 1, \cdots, p - 1; x = 0, 1, \cdots, p^{m-3} - 1).
+\end{equation*}
+
+Since $H_2$ is self-conjugate in $G$
+\begin{align}
+S{}_1^{-1}\, P\, S_1 &= R^\gamma Q^s P^{\epsilon_1}, \\ %% 13
+S{}_1^{-1}\, Q\, S_1 &= R^c Q^d P^{ep^{m-4}}, \\ %% 14
+S_1\,        R\, S_1 &= R^f Q^g P^{jp^{m-4}}.                  %% 15
+\end{align}
+
+From (13), (14), (15), and (12)
+\begin{gather*}
+[-p,\, 0,\, 0,\, 1,\, p] = [0,\, L,\, M,\, \epsilon{}_1^p + Np^{m-4}] = [0,\, 0,\, 0,\, 1]
+\intertext{and}
+\epsilon{}_1^p \equiv 1 \pmod{p^{m-4}} \qquad \hbox{ or } \qquad
+  \epsilon_1 \equiv 1 \pmod{p^{m-5}} \quad (m > 5).
+\end{gather*}
+\noindent Let $\epsilon_1 = 1 + \epsilon_2 p^{m-5}$. Equation (13) is
+now replaced by
+\begin{equation}
+S{}_1^{-1}\, P\, S_1 = R^\gamma Q^\delta P^{1 + \epsilon_2 p^{m-5}}. %% 16
+\end{equation}
+
+If $\lambda = 0 \pmod{p}$ and $\lambda = \lambda'p,$
+\begin{multline*}
+[1,\, 0,\, 0,\, 1]^p = \left[p,\, 0,\, 0,\, p + \epsilon\tbinom{p}{2}p^{m-5} + Wp^{m-4}\right] \\
+= [0,\, 0,\, 0,\, p + \lambda'p^2 + W'p^{m-4}]
+\end{multline*}
+\noindent and for $m>5$ $S_1 P$ is of order $p^{m-3}$. We will take this in place
+of $S_1$ and assume $dv [\lambda, p] = 1$.
+\begin{equation*}
+S{}_1^{p^{m-3}} = 1.
+\end{equation*}
+\noindent There is in $G$ a subgroup $H'_1$ of order $p^{m-2}$ which contains
+$\{S_1\}$ self-conjugately. $H'_1 = \{S_1,\, S^v_1\, R^z\, Q^y\, P^x\}$ and the
+operator $T= R^z\, Q^y\, P^x$ is in $H'_1$.
+
+There are two cases for discussion.
+
+\smallskip
+$1^\circ$. Where $x$ is prime to $p$.
+
+$T$ is an operator of $H_2$ of order $p^{m-3}$ and will be taken as $P$.
+Then
+\begin{gather*}
+H'_1 = \{S_1, P\}.
+\intertext{Equation (16) becomes}
+S{}_1^{-1}\, P\, S_1 = P^{1 + \epsilon p^{m-4}}.
+\end{gather*}
+\noindent There is in $G$ a subgroup $H'_2$ of order $p^{m-1}$ which contains $H'_1$
+self-conjugately.
+\begin{equation*}
+H'_2 = \{H'_1,\, S{}_1^{v'}\, R^{z'}\, Q^{y'}\, P^{x'}\}.
+\end{equation*}
+\noindent $T' = R^{z'}Q^{y'}$ is in $H'_2$ and also in $H_2$ and is taken as $Q$,
+since $\{P, T'\}$ is of order $p^{m-2}$.
+
+$H'_2 = \{H'_1, Q\} = \{S_1, H_1\}$ and in this case $c$ may be taken
+$\equiv 0 \pmod{p}$.
+
+\smallskip
+$2^\circ$. \textit{Where $x = x_1 p$.} $P^p$ is in $\{S_1\}$ since $\lambda$ is
+prime to $p$. In the present case $R^z\, Q^y$ is in $H'_1$ and also in $H_2$.
+If $z \not\equiv 0 \pmod{p}$ take $R^z\, Q^y$ as $R$; if $z \equiv 0
+\pmod{p}$ take it as $Q$.
+\begin{gather*}
+H'_1 = \{S_1, R\} \quad \hbox{ or } \quad \{S_1,Q\},
+\intertext{and}
+R^{-1}\, S_1\, R = S{}_1^{1 + k'p^{m-4}} \qquad \hbox{ or } \qquad
+Q^{-1}\, S_1\, Q = S{}_1^{1 + k''p^{m-4}}.
+\intertext{On rearranging these take the forms}
+S{}_1^{-1}\, R\, S_1 = R\,S{}_1^{np^{m-4}} = R\,P^{jp^{m-4}} \quad \hbox{ or }
+  \quad S_1^{-1}\, Q\, S_1 = Q\,S{}_1^{n'p^{m-4}} = Q\,P^{ep^{m-4}},
+\end{gather*}
+\noindent and either $c$ or $g$ may be taken $\equiv 0 \pmod{p}$,
+\begin{equation}
+cg \equiv 0 \pmod{p}. %% 17
+\end{equation}
+\noindent From (14), (15), (16), (12) and (17)
+\begin{equation*}
+[-p,\, 0,\, 1,\, 0,\, p] = \left[0,\, c\frac{d^p - f^p}{d - f},\, d^p,\, Wp^{m-4}\right].
+\end{equation*}
+
+Place $x = \lambda p$ and $y = 1$ in (12)
+\begin{gather*}
+Q^{-1}\, P^{\lambda p}\,Q = P^{\lambda p} \qquad \hbox{ or } \qquad
+  S{}_1^p\, Q\, S{}_1^p = Q,
+\intertext{and}
+d^p \equiv 1 \pmod{p}, \qquad d = 1.
+\end{gather*}
+\noindent Equation (14) is replaced by
+\begin{equation}
+S{}_1^{-1}\, Q\, S_1 = R^c\, Q\, P^{ep^{m-4}}. %% 18
+\end{equation}
+
+From (15), (18), (17), (16) and (12)
+\begin{equation*}
+[-p,\, 1,\, 0,\, 0,\, p] = \left[0,\, f^p,\, \frac{d^p - f^p}{d - f}g, W'p^{m-4}\right].
+\end{equation*}
+\noindent Placing $x = \lambda p,\, y = 1$ in (10)
+\begin{equation*}
+R^{-1}\, P^{\lambda p}\, R = P^{\lambda p},
+\end{equation*}
+\noindent and $f^p \equiv 1 \pmod{p},\, f = 1$. Equation (15) is replaced by
+\begin{equation}
+S{}_1^{-1}\, R\, S_1 = R\, Q^g\, P^{jp^{m-4}}. %% 19
+\end{equation}
+\noindent From (16), (18), (19) and (12)
+\begin{equation*}
+S{}_1^{-p}\, P\, S{}_1^p = P^{1 + \epsilon_2 p^{m-4}} = P
+\end{equation*}
+\noindent and $\epsilon_2 \equiv 0 \pmod{p}$. Let $\epsilon_2 = \epsilon p$ and (16)
+is replaced by
+\begin{equation}
+S{}_1^{-1}\, P\, S_1 = R^\gamma\, Q^\delta\, P^{1 + \epsilon p^{m-4}}. %% 20
+\end{equation}
+\noindent Transforming both sides of (1), (8) and (9) by $S_1$
+\begin{align*}
+S{}_1^{-1} Q^{-1} S_1 \cdot S{}_1^{-1} P S_1 \cdot S{}_1^{-1} Q S_1 &=
+  S{}_1^{-1} P^{1 + kp^{m-4}} S_1, \\
+S{}_1^{-1} R^{-1} S_1 \cdot S{}_1^{-1} P S_1 \cdot S{}_1^{-1} R S_1 &=
+  S{}_1^{-1} Q^\beta S_1 \cdot S{}_1^{-1} P^{1 + \alpha p^{m-4}} S_1, \\
+S{}_1^{-1} R^{-1} S_1 \cdot S{}_1^{-1} Q S_1 \cdot S{}_1^{-1} R S_1 &=
+  S{}_1^{-1} Q S_1 \cdot S{}_1^{-1} P^{ap^{m-4}} S_1.
+\end{align*}
+\noindent Reducing these by (18), (19), (20) and (12) and rearranging
+\begin{align*}
+\bigl[0,&\, \gamma,\, \delta + \beta c,\, 1 + \left \{ \epsilon + \alpha c + k + ac\delta +
+    a\beta\tbinom{c}{2} - a\gamma \right \} p^{m-4} \bigr] \\
+  & \qquad \qquad \qquad = [0,\, \gamma,\, \delta, 1 + (\epsilon + k)p^{m-4}]. \\
+[0,&\, \gamma,\, \beta + \delta,\, 1 + \{kg + \epsilon + \alpha + a\delta -
+    a\gamma g\}p^{m-4}] \\
+  & \qquad \qquad \qquad = \Bigl[0,\, \gamma + \beta c,\, \beta + \delta,\, 1
+    + \bigl\{\epsilon + \alpha + \beta e + \alpha\tbinom{\beta}{2}c
+    + a\beta\gamma\bigr\}p^{m-4}\Bigr], \\
+[0,&\, c,\, 1,\, (e + a)p^{m-4}] = [0,\, c,\, 1,\, (e + a)p^{m-4}].
+\end{align*}
+
+The first gives
+\begin{gather}
+\beta c \equiv 0 \pmod{p}, \\ %% 21
+ac + ac\delta - a\gamma \equiv 0 \pmod{p}. %% 22
+\intertext{Multiplying this last by $g$}
+ag\gamma \equiv 0 \pmod{p}. %% 23
+\intertext{From the second equation above}
+gk + \alpha\delta \equiv \beta e + a\beta\gamma \pmod{p}. %% 24
+\intertext{Multiplying by $c$}
+ac\delta \equiv 0 \pmod{p}. %% 25
+\end{gather}
+
+These relations among the constants \textit{must be satisfied} in order that our
+equations should define a group.
+
+From (20), (19), (18) and (12)
+\begin{align}
+[-y,\, 0,\, 0,\, x,\, y] &= [0,\, \gamma xy + \chi_1 (x, y),\, \delta xy + \phi_1
+  (x, y),\, x + \Theta_1 (x, y)p^{m-4}], \\ %% 26
+[-y,\, 0,\, x,\, 0,\, y] &= [0,\, cxy,\, x,\, \Theta_2 (x, y)p^{m-4}], \\ %% 27
+[-y,\, x,\, 0,\, 0,\, y] &= [0,\, x,\, gxy,\, \Theta_3 (x, y)p^{m-4}],    %% 28
+\end{align}
+\noindent where
+\begin{align*}
+\chi_1 (x,\, y) &= c\delta x\tbinom{y}{2}, \\
+\phi_1 (x,\, y) &= \gamma gx\tbinom{y}{2} + \beta\gamma\tbinom{x}{2}y, \\
+\Theta_1 (x,\, y) &= \epsilon xy + \tbinom{y}{2}\left[\gamma jx + e\delta x +
+    a\delta\gamma + (\alpha\gamma + k\delta)\tbinom{x}{2}\right] \\
+  & \qquad \qquad + \tbinom{y}{3} [c\delta j + eg\gamma]x
+    + \tbinom{x}{2}[\alpha\gamma y + \delta ky + a\delta\gamma y^2]
+    + \beta\gamma k\tbinom{x}{3}y^2, \\
+\Theta_2 (x, y) &= exy + cjx\tbinom{y}{2} + ac\tbinom{x}{2}y, \\
+\Theta_3 (x, y) &= jxy + egx\tbinom{y}{2} + ag\tbinom{x}{2}y.
+\end{align*}
+
+Let a general power of any operator be
+\begin{equation}
+[v,\, z,\, y,\, x]^s = [sv,\, sz + U_s,\, sy + V_s,\, sx + W_s p^{m-4}]. %% 29
+\end{equation}
+
+Multiplying both sides by $[v,\, z,\, y,\, x]$ and reducing by (2), (10), (11),
+(26), (27) and (28), we find
+\begin{align*}
+U_{s+1} &\equiv U_s + (cy + \gamma x)sv + c \delta\tbinom{sv}{2}x \pmod{p}, \\
+V_{s+1} &\equiv V_s + (gz + \delta x)sv + \gamma g\tbinom{sv}{2}x
+  + \beta\gamma\tbinom{x}{2}sv + \beta (sz + U_s)x \pmod{p}, \\
+W_{s+1} &\equiv W_s + \Theta_1 (x, sv) + \left\{ey + jz + a \gamma xy +
+    ac\tbinom{y}{2} + ag\tbinom{z}{2} \right\}sv \\
+ & \qquad \qquad + \left\{\alpha x + \beta k\tbinom{x}{2}
+    + ay + a\delta sx + \alpha gsvz\right\}sz + ksxy \\
+ & \qquad \qquad + \tbinom{sv}{2}\{cjy + egz\} + U_s \left\{\alpha x
+    + \beta k\tbinom{x}{2} + ay + a(\delta x + gz)sv\right\} \\
+ & \qquad \qquad + a\beta\tbinom{sz + Us}{2}x + kV_s x \pmod{p}.
+\end{align*}
+
+From (29)
+\begin{equation*}
+U_1 \equiv 0, \qquad V_1 \equiv 0, \qquad W_1 \equiv 0 \pmod{p}.
+\end{equation*}
+
+A continued use of the above congruences give
+\begin{align*}
+U_s &\equiv (cy + \gamma x)\tbinom{s}{2}v + \frac{1}{2} c\delta xv
+      \{\frac{1}{3} (2s - 1)v - 1\}\tbinom{s}{2} \pmod{p}, \\
+V_s &\equiv \{[gz + \delta x + \beta\gamma\tbinom{x}{2}v + \beta xz\}
+      \tbinom{s}{2} \\ & \qquad + \frac{1}{2} \gamma gxv\{\frac13 (2s - 1)v -1\}
+      \tbinom{s}{2} + \beta\gamma\tbinom{s}{3}x^2 v \pmod{p}, \displaybreak \\
+%%
+W_s &\equiv \tbinom{s}{2}
+  \Bigl\{
+    \epsilon xv + egv + (\alpha\gamma + \delta kv + \beta kz)\tbinom{s}{2}
+    + \beta\gamma\ k\tbinom{x}{3}v + ac\tbinom{y}{2}v \\
+    & \qquad + jvz + ag\tbinom{z}{2}v + \alpha xz + kxy + a\gamma xyv + ayz
+  \Bigr\}
++ \tbinom{s}{3}
+  \Bigl\{
+    \alpha cxyv \\ & \qquad + \alpha\gamma x^2 v + 2\beta\gamma k\tbinom{x}{2} xv
+    + gkxzv + \delta kx^2 v
+    + \beta kx^2 z + acvy^2 \\ & \qquad + a\gamma xvy
+  \Bigr\}
++ \beta k \gamma\tbinom{s}{4}x^3 v + \tbinom{s}{2}\frac{2s-1}{3}
+  \Bigl\{
+    a\delta\gamma\tbinom{x}{2}v^2 + a\delta xzv \\
+    & \qquad + agvz^2
+  \Bigr\}
++ \frac{1}{2}v\tbinom{s}{2}
+  \Bigl\{
+    \frac13(2s-1)v - 1
+  \Bigr\}
+  \Bigl\{
+    \gamma jx + e\delta x + a\delta\gamma x \\
+    & \qquad + \alpha c \delta\tbinom{x}{2} + \gamma gk \tbinom{x}{2} + cjy + egz
+  \Bigr\}
++ \frac{1}{6}\tbinom{s}{2}
+  \Bigl\{
+    \tbinom{s}{2}v^2 - (2s-1)v \\ & \qquad + 2
+  \Bigr\}
+  \bigl\{
+    c\delta jx + eg\gamma x
+  \bigr\}v
++ \frac{1}{2}\tbinom{s}{3}
+  \Bigl\{
+    \frac{1}{2}(s-1)v-1
+  \Bigr\}
+  \bigl\{
+    \alpha c \delta \\ & \qquad + \gamma gk
+  \bigr\} x^2 v
++ \frac12 a\beta x \tbinom{s}{2}
+  \Bigl\{
+    \frac{1}{3}(2s-1)z - 1
+  \Bigr\} z \\
+& \qquad + \frac{1}{2} a\delta\gamma x^2 v\tbinom{s}{3} \frac{1}{2}(3s-1) \pmod{p}
+\end{align*}
+
+Placing $v = 1,\, z = y = s = p$ in (29)\footnote{For $p = 3$ and
+$c\delta \equiv \gamma g \equiv \beta \gamma
+\equiv 0 \pmod{p}$ there are terms of the form $(A + Bx + Cx^2 + Dx^3)
+p^{m-4}$ in the exponent of $P$. For $m > 5$ these do not vitiate our
+conclusion. For $p = 3$ and $c\delta$, $\gamma g$, or $\beta\gamma$ prime
+to $p$, $[S_1\, P^x]^p$ is not contained in $\{P\}$ and the groups defined
+belong to Class II.}
+\begin{gather*}
+[S_1\, P^x]^p = S{}_1^p P^{xp} = P^{(\lambda + x)p} \qquad (p > 3).
+\intertext{If $x$ be so chosen that}
+x + \lambda \equiv 0 \pmod{p^{m-4}}.
+\intertext{$S = S_1\, P^x$ is an operator of order $p$ and is taken in place
+of $S_1$.}
+S^p = 1.
+\end{gather*}
+
+The substitution of $S$ for $S_1$ leaves congruence (17) invariant.
+
+\medskip
+5. \textit{Transformation of the groups.} All groups of this class are given by
+
+\begin{equation}
+G: \begin{cases}
+Q^{-1} P\, Q = P^{1 + kp^{m-4}}, \\
+R^{-1} P\, R = Q^\beta\, P^{1 + \alpha p^{m-4}}, \\
+R^{-1} Q\, R = Q\, P^{ap^{m-4}}, \\
+S^{-1} P\, S = R^\gamma\, Q^\delta P^{1 + \epsilon p^{m-4}}, \\
+S^{-1} Q\, S = R^c\, Q\, P^{ep^{m-4}}, \\
+S^{-1} R\, S = R\, Q^g\, P^{jp^{m-4}}, \\
+\end{cases} %% 30
+\end{equation}
+\noindent with
+\begin{equation*}
+P^{p^{m-3}} = 1, \quad Q^p = R^p = S^p = 1,
+\end{equation*}
+\noindent$(k,\, \beta,\, \alpha,\, a,\, \gamma,\, \delta,\, \epsilon,\, c,\,
+e,\, g,\, j = 0,\, 1,\, 2,\, \cdots,\, p - 1)$.
+
+These constants are however subject to conditions (17), (21), (22), (23),
+(24) and (25). Not all these groups are distinct. Suppose that $G$ and
+$G'$ of the above set are simply isomorphic and that the correspondence is
+given by
+
+\begin{equation*}
+C = \left[ \begin{matrix}S,    & R,    & Q,    & P \\
+                         S'_1, & R'_1, & Q'_1, & P'_1 \\ \end{matrix} \right].
+\end{equation*}
+
+Inspection of (29) gives
+\begin{align*}
+S'_1 &= S'^{v'''} R'^{z'''} Q'^{y'''} P'^{x'''p^{m-4}}, \\
+R'_1 &= S'^{v''} R'^{z''} Q'^{y''} P'^{x''p^{m-4}}, \\
+Q'_1 &= S'^{v'} R'^{z'} Q'^{y'} P'^{x'p^{m-4}}, \\
+P'_1 &= S'^v R'^z Q'^y P'^x,
+\end{align*}
+\noindent in which $x$ and one out of each of the sets $v'$, $z'$, $y'$, $x'$; $v''$,
+$z''$, $y''$, $x''$; $v'''$, $z'''$, $y'''$, $x'''$ are prime to $p$.
+
+Since $S$, $R$, $Q$, and $P$ satisfy equations (30), $S'_1$, $R'_1$, $Q'_1$
+and $P'_1$ also satisfy them. Substituting these operators and reducing in
+terms of $S'$, $R'$, $Q'$, and $P'$ we get the six equations
+\begin{equation}
+[V'_\kappa,\, Z'_\kappa,\, Y'_\kappa,\, X'_\kappa] = [V_\kappa,\, Z_\kappa,\,
+Y_\kappa,\, X_\kappa] \qquad (\kappa = 1,\, 2,\, 3,\, 4,\, 5,\, 6), %% 31
+\end{equation}
+\noindent which give the following twenty-four congruences
+\begin{equation}
+  \begin{cases}
+  V'_\kappa \equiv V_\kappa \pmod{p}, \\
+  Z'_\kappa \equiv Z_\kappa \pmod{p}, \\
+  Y'_\kappa \equiv Y_\kappa \pmod{p}, \\
+  X'_\kappa \equiv X_\kappa \pmod{p^{m-3}},
+  \end{cases} %% 32
+\end{equation}
+\noindent where
+\begin{align*}
+V'_1 &= v, \quad V_1 = v, \\
+Z'_1 &= Z + c'(yv' - y'v) + \gamma'xv' + c\delta x\tbinom{v'}{2}, \quad Z_1 = z, \\
+Y'_1 &= y + g'(zv' - z'v) + \delta'xv' + \gamma'g'x\tbinom{v}{2} + \beta'xz', \quad Y_1 = y, \\
+%%
+X'_1 &= x + \Bigl\{\epsilon'xv' + (\gamma'j'x + e'\delta'x + a'\delta'\gamma'x)
+    \tbinom{v'}{2} + c'\delta'j'\tbinom{v'}{3} + (\alpha'\gamma'v' + \delta'k'v' \\
+  &\quad+ a'\delta'\gamma'v^2 + \beta'k'z')\tbinom{x}{2} + j'(zv' - z'v) +
+    e'g'[z\tbinom{v'}{2} - z'\tbinom{v}{2}] \\
+  &\quad+ a'g'[\tbinom{z}{2}v' + \tbinom{z'}{2}v - zz'v] + e'(yv' - y'v) +
+    c'j'[y\tbinom{v'}{2} - y'\tbinom{v}{2}] \\
+  &\quad+ a'c'[\tbinom{y}{2}v' + v\tbinom{-y'}{2} - yy'v] + a'(yz' - y'z)
+    - a'\beta'xz'^2 + \alpha'xz' \\
+  &\quad+ \alpha'\beta'x\tbinom{z'}{2} + a'\gamma'x(y - y')v' + k'xy'\Bigr\}p^{m-4}, \\
+%%
+X_1 &= x + kxp^{m-4}, \\
+V'_2 &= v, \quad V_2 = v + \beta v', \\
+Z'_2 &= z + c'(yv'' - y''v) + \gamma'xv'' + e'\delta'\tbinom{v''}{2},
+  \quad Z_2 = z + \beta z' + c'\beta y'v, \\
+Y'_2 &= y + g'(zv'' - z''v) + \delta'xv'' + \gamma'g'x\tbinom{v''}{2} +
+  \beta'\gamma'\tbinom{x}{2}v'' + \beta'xz'', \\
+%%
+Y_2 &= y + \beta y' + g'\beta z'v, \\
+X'_2 &= x + \Bigl\{\Theta'_1(x, v'') + j'(zv'' - z''v) + e'g'[z\tbinom{v''}{2} -
+    z''\tbinom{v}{2}] + a'g'[\tbinom{x}{2}v'' \\
+ &\quad+ \tbinom{-z''}{2}v - zz''v] + e'(yv'' - y''v) + c'j'[y\tbinom{v''}{2}
+    - y''\tbinom{v}{2}] + a'c'[\tbinom{y}{2}v'' \\
+ &\quad+ \tbinom{-y''}{2}v - yy''v''] + a'g'(zv'' - z''v)z'' + a'(yz'' - y''z)
+    + a'\delta'v''z'' \\
+ &\quad+ a'\gamma'(y - y'')v''x + \alpha'xz'' + a'\beta'x\tbinom{z''}{2}
+    + \beta'k'\tbinom{x}{2}z'' + k'xy''\Bigr\}p^{m-4}, \\
+%%
+X_2 &= x + \Bigl\{\alpha x + \beta x' + a'\tbinom{\beta}{2}y'z' + e'\beta vy' +
+    (c'j'\beta + e'g'\beta z')\tbinom{v}{2} \\
+  &+ a'c'\tbinom{\beta y'}{2}v + j'\beta vz' + a'g'\tbinom{\beta z'}{2}
+     + a'\beta(g'z'v + y')z\Bigr\}p^{m-4}, \\
+V'_3 &= v', \quad V_3 = v', \\
+Z'_3 &= z' + c'(y'v'' - y''v'), \quad Z_3 = z', \\
+Y'_3 &= y' + g'(z'v'' - z''v'), \quad Y_3 = y', \\
+%%
+X'_3 &= \Bigl\{x' + j'(z'v'' - z''v') + e'g'[\tbinom{v''}{2}z' -
+    \tbinom{v'}{2}z''] + a'g'[\tbinom{z'}{2}v'' + \tbinom{-z''}{2}v' \\
+ &\quad- z'z''v'] + e'(y'v'' - y''v') + c'j'[y'\tbinom{v''}{2} - y''\tbinom{v'}{2}]
+    + a'c'[\tbinom{y'}{2}v'' + \tbinom{-y''}{2}v' \\
+ &\quad- y''y'v''] + a'(y'z'' - y''z')\Bigr\}p^{m-4}, \\
+X_4 &= (x' + a'x)p^{m-4}, \\
+%%
+V'_4 &= v, \quad V_4 = v + \gamma v'' + \delta v', \\
+Z'_4 &= z + c'(yv''' - y'''v) + \gamma'xv''' + c'\delta'x\tbinom{v'''}{2}, \\
+Z_4 &= z + \gamma z'' + \delta z' + c'[\tbinom{\gamma}{2}v''y''
+    + \tbinom{\delta}{2}v'y'] + c'(\gamma y'' + \delta y')v + c'\gamma\delta y''v, \\
+Y'_4 &= y + g'(zv''' - z'''v) + \delta' xv''' + \gamma' g'x\tbinom{v'''}{2}
+    + \beta'\gamma'\tbinom{x}{2}v''' + \beta'xz''', \\
+%%
+Y_4 &= y + \gamma y'' + \delta y' + g'[\tbinom{\gamma}{2}v''z''
+    + \tbinom{\delta}{2}v'z'] + g'(\gamma z'' + \delta z')v + g'\delta\gamma v'z'', \\
+X'_4 &= x + \Bigl\{\Theta'_1 (x, v''') + j'(zv''' - z'''v) +
+      e'g'[\tbinom{v'''}{2}z - \tbinom{v}{2}z'''] + a'g'\left[\tbinom{z}{2}v''' \right. \\
+  &\quad \left. + \tbinom{-z'''}{2}v - zz'''v\right] + e'(yv''' - y'''v)
+      + c'j'[y\tbinom{v'''}{2} -  y'''\tbinom{v}{2}] \\
+  &\quad+ a'c'[\tbinom{y}{2}v''' + \tbinom{-y'''}{2}v - yy'''v''']
+      + a'g'(v'''z - vz''')z''' \\
+  &\quad+ a'(yz''' - y'''z) + a'\delta' xz'''v''' + a'\gamma' x(y - y''')v''' + \alpha' xz''' \\
+  &\quad+ a'\beta' x\tbinom{z'''}{2} + \beta' k'z'''\tbinom{x}{2} + k'xy''' \Bigr\} p^{m-4}. \displaybreak \\
+%%
+X_4 &= x + \Bigl\{\epsilon x + \delta x' + \gamma x'' + \tbinom{\gamma}{2}
+     [a'c'\tbinom{y''}{2}v'' + a'y''z'' + e'v''y'' + j'v''z'' \\
+  &\quad+ a'g'\tbinom{z''}{2}v'' + (c'j'v''y'' + e'g'v''z'')(v + \delta v')
+     + a'(z + \delta z')v''z'' \\
+  &\quad+ \frac{2\gamma - 1}{3}a'g'v''z''^2 + \frac{1}{2}[\frac{1}{3}(2\gamma - 1)v''
+     - 1](c'j'y'' + e'g'z'')v''] \\
+  &\quad+ \tbinom{\gamma}{3}a'c'v''y'' + \tbinom{\delta}{2}[a'c'\tbinom{y'}{2}v'
+     + a'y'z' + e'v'y' + j'v'z' \\
+  &\quad+ a'g'\tbinom{z'}{2}v' + j'c'vv'y' + e'g'vv'z' + a'g'v'zz' + a'c'\gamma y'y''v' \\
+  &\quad+ \frac{2\delta - 1}{3}a'g'v'z'^2 + \frac{1}{2}\{\frac{1}{3}(2\delta - 1)v'
+     - 1\}(c'j'y' + e'g'z')] \\
+  &\quad+ \tbinom{\delta}{3}a'c'v'y'^2 + (v + \delta v')[j'\gamma z''
+     + \tbinom{\gamma z''}{2}a'g' + e'\gamma y'' + \tbinom{\gamma y''}{2}a'c' \\
+  &\quad+ a'g'(z + \delta z')] + \tbinom{v + \delta v'}{2}[e'g'\gamma z''
+     + c'j'\gamma y''] + \delta[(e'g'z' \\
+  &\quad+ c'j'y')\tbinom{v}{2} + e'vy' + j'z' + a'zy + a'g'vzz' + a'\gamma z'y''
+     + a'c'\gamma vy'y''] \\
+  &\quad+ a'g'\tbinom{\delta z'}{2}v + a'c'\tbinom{\delta y'}{2} v
+     + a'\gamma zy''\Bigr\}p^{m-4}, \\
+%%
+V'_5 &= v', \quad V_5 = v' + cv'', \\
+Z'_5 &= z' + c'(y'v''' - y'''v'), \quad Z_5 = z' + cz'' + c'cy''v, \\
+Y'_5 &= y' + g'(z'v''' - z'''v'), \quad Y_5 = y' + cy'' + g'cv'z'', \\
+X'_5 &= \Bigl\{x' + j'(z'v''' - z'''v') + e'g'[\tbinom{v'''}{2}z'
+     - \tbinom{v'}{2}z'''] + a'g'[\tbinom{z'}{2}v''' \\
+  &\quad+ \tbinom{-z'''}{2}v' - z'z'''v'] + c'(y'v''' - y'''v')
+     + c'j'[y'\tbinom{\delta'''}{2} - y'''\tbinom{v'}{2}] \\
+  &\quad+ a'c'[\tbinom{y'}{2}v''' + \tbinom{-y'''}{2}v' - y'y'''v''']
+     + a'(y'z''' - y'''z')\Bigr\}p^{m-4}, \\
+%%
+X_5 &= \Bigl\{x' + ex + cx'' + a'\tbinom{c}{2}y''z'' + j'cv'z''
+     + (e'g'cz'' + c'cj'y'')\tbinom{v'}{2} + e'cy''v \\
+  &\quad+ a'cy''z' + a'g'z'v' + a'g'\tbinom{cz''}{2} + a'c'\tbinom{cy''}{2}\Bigr\}p^{m-4}, \\
+V'_6 &= v'', \quad V_6 = v'' + gv', \\
+Z'_6 &= z'' + c'(y''v''' - y'''v''), \quad Z_6 = z'' + gz', \\
+Y'_6 &= y'' + g'(z''v''' - z'''v''), \quad Y_6 = y'' + gy', \\
+%%
+X'_6 &= \Bigl\{x'' + j'(z''v''' - z'''v'') + e'g'[\tbinom{v'''}{2}z''
+     - \tbinom{v''}{2}z'''] + a'g'\left[\tbinom{z''}{2}v''' \right. \\
+  &\quad+ \left. \tbinom{-z'''}{2}v'' - z''z'''v''\right] + e'(y''v''' - y'''v'')
+     + c'j'[y''\tbinom{v'''}{2} - y'''\tbinom{v''}{2}] \\
+  &\quad+ a'c'[\tbinom{y''}{2}v''' + \tbinom{-y'''}{2}v'' - y''y'''v''']
+     + a'(y''z''' - y'''z'')\Bigr\}p^{m-4}, \\
+X_6 &= \{x'' + jx + gx' + a'gy''z'\}p^{m-4}.
+\end{align*}
+
+The necessary and sufficient condition for the simple isomorphism of the
+two groups $G$ and $G'$ is \textit{that congruences (32) shall be consistent and
+admit of solution} subject to conditions derived below.
+
+\medskip
+6. \textit{Conditions of transformation.} Since $Q$ is not contained in $\{P\}$,
+$R$ is not contained in $\{Q, P\}$, and $S$ is not contained in $\{R, Q,
+P\}$, then $Q'_1$ is not contained in $\{P'_1\}$, $R'_1$ is not contained
+in $\{Q'_1, P'_1\}$, and $S'_1$ is not contained in $\{R'_1, Q'_1, P'_1\}$.
+
+Let
+\begin{equation*}
+{Q'}_1^{s'} = {P'}_1^{sp^{m-4}}.
+\end{equation*}
+
+This equation becomes in terms of $S'$, $R'$, $Q'$ and $P'$
+\begin{gather*}
+[s'v',\, s'z' + c'\tbinom{s'}{2}v'y',\, s'y' + g'\tbinom{s'}{2}v'z',\, Dp^{m-4}]
+   = [0,\, 0,\, 0,\, sxp^{m-4}],
+\intertext{and}
+s'v' \equiv s'z' \equiv s'y' \equiv 0 \pmod{p}.
+\end{gather*}
+
+At least one of the three quantities $v'$, $z'$ or $y'$ is prime to $p$,
+since otherwise $s'$ may be taken $= 1$.
+
+Let
+\begin{equation*}
+{R'}_1^{s''} = {Q'}_1^{s'} {P'}_1^{sp^{m-4}},
+\end{equation*}
+\noindent or in terms of $S'$, $R'$, $Q'$ and $P'$
+\begin{multline*}
+[s''v'',\, s''z'' + c'\tbinom{s''}{2}v''y'',\, s''y'' + g'\tbinom{s''}{2}v''
+    z'',\, Ep^{m-4}] \\ = [s'v',\, s'z' + c'\tbinom{s'}{2}v'y',\, s'y' +
+    g'\tbinom{s'}{2}v'z',\, E_1 p^{m-4}],
+\end{multline*}
+\noindent and
+\begin{align*}
+s''v'' &\equiv s'v' \pmod{p}, \\
+s''z'' + c'\tbinom{s''}{2}v''y'' &\equiv s'z' + c'\tbinom{s'}{2}v'y' \pmod{p}, \\
+s''y'' + g'\tbinom{s''}{2}v''z'' &\equiv s'y' + g'\tbinom{s'}{2}v'z' \pmod{p}.
+\end{align*}
+
+Since $c'g' \equiv 0 \pmod{p}$, suppose $g' \equiv 0 \pmod{p}$. Elimination
+of $s'$ between the last two give by means of the congruence $Z'_3 \equiv
+Z_3 \pmod{p}$,
+\begin{equation*}
+s''\{2(y'z'' - y''z') + c'y'y''(v' - v'')\} \equiv 0 \pmod{p},
+\end{equation*}
+\noindent between the first two
+\begin{equation*}
+s''\{2(v'z'' - v''z') + c'v'v''(y' - y'')\} \equiv 0 \pmod{p},
+\end{equation*}
+\noindent and between the first and last
+\begin{equation*}
+s''(y'v'' - y''v') \equiv 0 \pmod{p}.
+\end{equation*}
+
+At least one of the three above coefficients of $s''$ is prime to $p$,
+since otherwise $s''$ may be taken $= 1$.
+
+Let
+\begin{equation*}
+{S'}_1^{s'''} = {R'}_1^{s''} {Q'}_1^{s'} {P'}_1^{sp^{m-4}}
+\end{equation*}
+\noindent or, in terms of $S'$, $R'$, $Q'$, and $P'$
+\begin{multline*}
+[s'''v''', s'''z''' + c'\tbinom{s'''}{2}v'''y''', s'''y''' +
+g'\tbinom{s'''}{2}v'''z''', E_2 p^{m-4}] \\ = [s''v'' + s'v', s''z'' + s'z' +
+c'\{\tbinom{s''}{2}v''y'' + \tbinom{s'}{2}v'y' + s's''y''v'\}, \\ s''y'' +
+s'y' + g'\{\tbinom{s''}{2}v''z'' + \tbinom{s'}{2}v'z' + s's''v'z''\}, E_3 p^{m-4}]
+\end{multline*}
+\noindent and
+\begin{align*}
+s'''v''' & \equiv s''v'' + s'v' \pmod{p}, \\
+s'''z''' & + c'\tbinom{s'''}{2}v'''y''' \\
+  & \qquad \equiv s''z'' + s'z' + c'\{\tbinom{s''}{2}v''y'' + \tbinom{s'}{2}v'y'
+    + s's''y''v'\} \pmod{p}, \\
+s'''y''' & + g'\tbinom{s'''}{2}v'''z''' \\
+  & \qquad \equiv s''y'' + s'y' +  g'\{\tbinom{s''}{2}v''z'' + \tbinom{s'}{2}v'z'
+    + s's''z''v'\} \pmod{p}.
+\end{align*}
+
+If $g' \equiv 0$ and $c' \not\equiv 0 \pmod{p}$ the congruence $Z'_3
+\equiv Z_3 \pmod{p}$ gives
+\begin{equation*}
+(y'v'' - y''v') \equiv 0 \pmod{p}.
+\end{equation*}
+
+Elimination in this case of $s''$ between the first and last congruences
+gives
+\begin{equation*}
+s'''(y''v''' - y'''v'') \equiv 0 \pmod{p}.
+\end{equation*}
+
+Elimination of $s''$ between the first and second, and between the second
+and third, followed by elimination of $s'$ between the two results, gives
+\begin{equation*}
+s'''\left(z''^2 - c'y''z''v' + \frac{c'^2}{4}y''v''\right)
+(y'v''' - y'''v') \equiv 0 \pmod{p}.
+\end{equation*}
+
+Either $(y''v''' - y'''v'')$, or $(y'v''' - y'''v')$ is prime to $p$,
+since otherwise $s'''$ may be taken $= 1$.
+
+A similar set of conditions holds for $c' \equiv 0$ and $g' \not\equiv 0
+\pmod{p}$.
+
+When $c' \equiv g' \equiv 0 \pmod{p}$ elimination of $s'$ and $s''$ between
+the three congruences gives
+\begin{equation*}
+s'''\Delta \equiv s''' \left|\begin{matrix}
+                              v' & v'' & v''' \\
+                              y' & y'' & y''' \\
+                              z' & z'' & z''' \\ \end{matrix}\right|
+\equiv 0 \pmod{p}
+\end{equation*}
+\noindent and $\Delta$ is prime to $p$, since otherwise $s'''$
+may be taken $= 1$.
+
+\newpage
+7. \textit{Reduction to types.} In the discussion of congruences (32), the
+group $G'$ is taken from the simplest case and we associate with it all
+simply isomorphic groups $G$.
+
+\begin{center}
+\large I. \normalsize
+
+\smallskip
+\begin{tabular}{|r|c|c|c|c|c|c||r|c|c|c|c|c|}
+\multicolumn{7}{c}{A.}&\multicolumn{6}{c}{B.} \\ \hline
+           &$a_2$&$\beta_2$&$c_2$&$g_2$&$\gamma_2$&$\delta_2$&           &$k_2$&$\alpha_2$&$\epsilon_2$&$e_2$&$j_2$ \\ \hline
+\textbf{ 1}&  1  &    1    &  1  &  1  &    1     &     1    &\textbf{ 1}&  1  &     1    &      1     &  1  &  1   \\ \hline
+\textbf{ 2}&  0  &    1    &  1  &  1  &    1     &     1    &\textbf{ 2}&  0  &     1    &      1     &  1  &  1   \\ \hline
+\textbf{ 3}&  0  &    0    &  1  &  1  &    1     &     1    &\textbf{ 3}&  1  &     0    &      1     &  1  &  1   \\ \hline
+\textbf{ 4}&  0  &    0    &  1  &  1  &    1     &     0    &\textbf{ 4}&  1  &     1    &      0     &  1  &  1   \\ \hline
+\textbf{ 5}&  0  &    0    &  1  &  0  &    1     &     1    &\textbf{ 5}&  1  &     1    &      1     &  0  &  1   \\ \hline
+\textbf{ 6}&  0  &    0    &  1  &  0  &    1     &     0    &\textbf{ 6}&  1  &     1    &      1     &  1  &  0   \\ \hline
+\textbf{ 7}&  0  &    1    &  0  &  1  &    1     &     1    &\textbf{ 7}&  0  &     0    &      1     &  1  &  1   \\ \hline
+\textbf{ 8}&  0  &    1    &  0  &  1  &    0     &     1    &\textbf{ 8}&  0  &     1    &      0     &  1  &  1   \\ \hline
+\textbf{ 9}&  0  &    1    &  1  &  0  &    1     &     1    &\textbf{ 9}&  0  &     1    &      1     &  0  &  1   \\ \hline
+\textbf{10}&  0  &    1    &  1  &  0  &    1     &     0    &\textbf{10}&  0  &     1    &      1     &  1  &  0   \\ \hline
+\textbf{11}&  1  &    0    &  1  &  1  &    1     &     1    &\textbf{11}&  1  &     0    &      0     &  1  &  1   \\ \hline
+\textbf{12}&  1  &    0    &  1  &  0  &    1     &     1    &\textbf{12}&  1  &     0    &      1     &  0  &  1   \\ \hline
+\textbf{13}&  1  &    0    &  1  &  1  &    0     &     1    &\textbf{13}&  1  &     0    &      1     &  1  &  0   \\ \hline
+\textbf{14}&  1  &    0    &  1  &  1  &    1     &     0    &\textbf{14}&  1  &     1    &      0     &  0  &  1   \\ \hline
+\textbf{15}&  1  &    0    &  1  &  0  &    0     &     1    &\textbf{15}&  1  &     1    &      0     &  1  &  0   \\ \hline
+\textbf{16}&  1  &    0    &  1  &  0  &    1     &     0    &\textbf{16}&  1  &     1    &      1     &  0  &  0   \\ \hline
+\textbf{17}&  1  &    0    &  1  &  1  &    0     &     0    &\textbf{17}&  0  &     0    &      0     &  1  &  1   \\ \hline
+\textbf{18}&  1  &    0    &  1  &  0  &    0     &     0    &\textbf{18}&  0  &     0    &      1     &  0  &  1   \\ \hline
+\textbf{19}&  1  &    1    &  0  &  1  &    1     &     1    &\textbf{19}&  0  &     0    &      1     &  1  &  0   \\ \hline
+\textbf{20}&  1  &    1    &  0  &  1  &    0     &     1    &\textbf{20}&  0  &     1    &      0     &  0  &  1   \\ \hline
+\textbf{21}&  1  &    1    &  0  &  1  &    1     &     0    &\textbf{21}&  0  &     1    &      0     &  1  &  0   \\ \hline
+\textbf{22}&  1  &    1    &  0  &  1  &    0     &     0    &\textbf{22}&  0  &     1    &      1     &  0  &  0   \\ \hline
+\textbf{23}&  1  &    1    &  1  &  0  &    1     &     1    &\textbf{23}&  1  &     0    &      0     &  0  &  1   \\ \hline
+\textbf{24}&  1  &    1    &  1  &  1  &    0     &     1    &\textbf{24}&  1  &     0    &      0     &  1  &  0   \\ \hline
+\textbf{25}&  1  &    1    &  1  &  1  &    1     &     0    &\textbf{25}&  1  &     0    &      1     &  0  &  0   \\ \hline
+\textbf{26}&  1  &    1    &  1  &  0  &    0     &     1    &\textbf{26}&  1  &     1    &      0     &  0  &  0   \\ \hline
+\textbf{27}&  1  &    1    &  1  &  0  &    1     &     0    &\textbf{27}&  0  &     0    &      0     &  0  &  1   \\ \hline
+\textbf{28}&  1  &    1    &  1  &  1  &    0     &     0    &\textbf{28}&  0  &     0    &      0     &  1  &  0   \\ \hline
+\textbf{29}&  1  &    1    &  1  &  0  &    0     &     0    &\textbf{29}&  0  &     0    &      1     &  0  &  0   \\ \hline
+           &     &         &     &     &          &          &\textbf{30}&  0  &     1    &      0     &  0  &  0   \\ \hline
+           &     &         &     &     &          &          &\textbf{31}&  1  &     0    &      0     &  0  &  0   \\ \hline
+           &     &         &     &     &          &          &\textbf{32}&  0  &     0    &      0     &  0  &  0   \\ \hline
+\end{tabular}
+
+\newpage
+\large II. \normalsize
+
+\smallskip
+A.
+
+B.\
+\begin{tabular}{|r|c|c|c|c|c|c|c|c|c|c|} \hline
+           &1       &2       &3       &4&5     &6     &7     &8     &9     &10     \\ \hline
+\textbf{1} &$\times$&$\times$&$\times$& &$19_6$&      &$19_6$&      &$19_6$&       \\ \hline
+\textbf{2} &$\times$&$2_1$   &$3_1$   & &      &$19_6$&$19_6$&      &      &$19_6$ \\ \hline
+\textbf{3} &$1_2$   &$2_1$   &$3_1$   & &$19_6$&      &      &$19_6$&$19_6$&       \\ \hline
+\textbf{4} &$1_2$   &$\times$&$\times$& &$19_6$&      &$19_6$&      &$19_6$&       \\ \hline
+\textbf{5} &$2_1$   &$2_1$   &        &*&      &$19_6$&$19_6$&      &$19_6$&       \\ \hline
+\textbf{6} &$2_1$   &$2_1$   &$3_1$   & &$19_6$&      &$19_6$&      &$19_6$&       \\ \hline
+\textbf{7} &$1_2$   &$2_1$   &$3_1$   & &      &$19_6$&      &$19_6$&      &$19_6$ \\ \hline
+\textbf{8} &$1_2$   &$2_4$   &$3_4$   & &      &$19_6$&$19_6$&      &      &$19_6$ \\ \hline
+\textbf{9} &$2_1$   &$2_1$   &        &*&$19_6$&$19_6$&$19_6$&      &      &$19_6$ \\ \hline
+\textbf{10}&$2_4$   &$2_4$   &$3_4$   & &      &$19_6$&$19_6$&      &      &$19_6$ \\ \hline
+\textbf{11}&$1_2$   &$2_4$   &$3_4$   & &$19_6$&      &      &$19_6$&$19_6$&       \\ \hline
+\textbf{12}&$2_4$   &$2_4$   &        &*&      &$19_6$&      &$19_6$&$19_6$&       \\ \hline
+\textbf{13}&$2_1$   &$2_1$   &$3_1$   & &$19_6$&      &      &$19_6$&$19_6$&       \\ \hline
+\textbf{14}&$2_1$   &$2_4$   &        &*&      &$19_6$&$19_6$&      &$19_6$&       \\ \hline
+\textbf{15}&$2_1$   &$2_4$   &$3_4$   & &$19_6$&      &$19_6$&      &$19_6$&       \\ \hline
+\textbf{16}&$2_1$   &$2_1$   &        &*&      &$19_6$&$19_6$&      &$19_6$&       \\ \hline
+\textbf{17}&$1_2$   &$2_4$   &$3_4$   & &      &$19_6$&      &$19_6$&      &$19_6$ \\ \hline
+\textbf{18}&$2_4$   &$2_4$   &        &*&$19_6$&$19_6$&      &$19_6$&      &$19_6$ \\ \hline
+\textbf{19}&$2_4$   &$2_4$   &$3_4$   & &      &$19_6$&      &$19_6$&      &$19_6$ \\ \hline
+\textbf{20}&$2_1$   &$2_4$   &        &*&$19_6$&$19_6$&$19_6$&      &      &$19_6$ \\ \hline
+\textbf{21}&$2_4$   &*       &*       & &      &$19_6$&$19_6$&      &      &$19_6$ \\ \hline
+\textbf{22}&$2_4$   &$2_4$   &        &*&$19_6$&$19_6$&$19_6$&      &      &$19_6$ \\ \hline
+\textbf{23}&$2_4$   &*       &        &*&      &$19_6$&      &$19_6$&$19_6$&       \\ \hline
+\textbf{24}&$2_1$   &$2_4$   &$3_4$   & &      &$19_6$&      &      &$19_6$&$19_6$ \\ \hline
+\textbf{25}&$2_4$   &$2_4$   &        &*&      &$19_6$&      &$19_6$&$19_6$&       \\ \hline
+\textbf{26}&$2_1$   &$2_4$   &        &*&      &$19_6$&$19_6$&      &$19_6$&       \\ \hline
+\textbf{27}&$2_4$   &*       &        &*&$19_6$&$19_6$&      &$19_6$&      &$19_6$ \\ \hline
+\textbf{28}&$2_4$   &*       &*       & &      &$19_6$&      &$19_6$&      &$19_6$ \\ \hline
+\textbf{29}&*       &*       &        &*&$19_6$&$19_6$&      &$19_6$&      &$19_6$ \\ \hline
+\textbf{30}&$2_4$   &*       &        &*&$19_6$&$19_6$&$19_6$&      &      &$19_6$ \\ \hline
+\textbf{31}&$2_4$   &*       &        &*&      &$19_6$&      &$19_6$&$19_6$&       \\ \hline
+\textbf{32}&*       &*       &        &*&$19_6$&$19_6$&      &$19_6$&      &$19_6$ \\ \hline
+\end{tabular}
+
+\newpage
+\large II. \normalsize (continued)
+
+\smallskip
+A.
+
+B.\
+\begin{tabular}{|r|c|c|c|c|c|c|c|c|c|c|} \hline
+           &11       &12    &13       &14       &15    &16    &17       &18    &19       \\ \hline
+\textbf{1} &$\times$ &$19_1$&$\times$ &$11_1$   &$19_1$&$19_1$&$13_1$   &$19_1$&$\times$ \\ \hline
+\textbf{2} &$25_2$   &      &$\times$ &$25_2$   &      &      &$13_2$   &      &$\times$ \\ \hline
+\textbf{3} &$11_1$   &$19_2$&$13_1$   &$24_2$   &$21_2$&$19_2$&$13_1$   &$21_2$&         \\ \hline
+\textbf{4} &$24_2$   &$19_2$&$13_1$   &$24_2$   &$19_1$&$19_2$&$13_1$   &$19_1$&$19_2$   \\ \hline
+\textbf{5} &         &      &         &         &      &      &         &      &$19_1$   \\ \hline
+\textbf{6} &$\times$ &$19_2$&$\times$ &$11_6$   &$21_2$&$19_2$&$13_6$   &$21_2$&$\times$ \\ \hline
+\textbf{7} &$25_2$   &      &$13_2$   &$25_2$   &      &      &$13_2$   &      &         \\ \hline
+\textbf{8} &$25_2$   &      &$13_2$   &$25_2$   &      &      &$13_2$   &      &$19_2$   \\ \hline
+\textbf{9} &         &$19_6$&         &         &$21_6$&$19_6$&         &$21_6$&$19_2$   \\ \hline
+\textbf{10}&$25_{10}$&      &$\times$ &$25_{10}$&      &      &$13_{10}$&      &$19_6$   \\ \hline
+\textbf{11}&$24_2$   &$19_2$&$13_1$   &*        &$21_2$&$19_2$&$13_1$   &$21_2$&         \\ \hline
+\textbf{12}&         &      &         &         &      &      &         &      &         \\ \hline
+\textbf{13}&$11_6$   &*     &$13_6$   &$11_6$   &*     &$19_2$&$13_6$   &*     &         \\ \hline
+\textbf{14}&         &      &         &         &      &      &         &      &$19_2$   \\ \hline
+\textbf{15}&$11_6$   &$19_2$&$13_6$   &$11_6$   &$21_2$&$19_2$&$13_6$   &$21_2$&$19_6$   \\ \hline
+\textbf{16}&         &      &         &         &      &      &         &      &$19_6$   \\ \hline
+\textbf{17}&$25_2$   &      &$13_2$   &$25_2$   &      &      &$13_2$   &      &         \\ \hline
+\textbf{18}&         &$19_6$&         &         &$21_6$&$19_6$&         &$21_6$&         \\ \hline
+\textbf{19}&$25_{10}$&      &$13_{10}$&$25_{10}$&      &      &$13_{10}$&      &         \\ \hline
+\textbf{20}&         &$19_6$&         &         &$21_6$&$19_6$&         &$21_6$&$19_2$   \\ \hline
+\textbf{21}&$25_{10}$&      &$13_{10}$&$25_{10}$&      &      &$13_{10}$&      &$19_6$   \\ \hline
+\textbf{22}&         &$19_6$&         &         &$21_6$&$19_6$&         &$21_6$&$19_6$   \\ \hline
+\textbf{23}&         &      &         &         &      &      &         &      &         \\ \hline
+\textbf{24}&         &$11_6$&$19_2$   &$13_6$   &$11_6$&*     &*        &$13_6$&*        \\ \hline
+\textbf{25}&         &      &         &         &      &      &         &      &         \\ \hline
+\textbf{26}&         &      &         &         &      &      &         &      &$19_6$   \\ \hline
+\textbf{27}&         &$19_6$&         &         &$21_6$&$19_6$&         &$21_6$&         \\ \hline
+\textbf{28}&$25_{10}$&      &$13_{10}$&$25_10$  &      &      &$13_{10}$&      &         \\ \hline
+\textbf{29}&         &$19_6$&         &         &$21_6$&$19_6$&         &$21_6$&         \\ \hline
+\textbf{30}&         &$19_6$&         &         &$21_6$&$19_6$&         &$21_6$&$19_6$   \\ \hline
+\textbf{31}&         &      &         &         &      &      &         &      &         \\ \hline
+\textbf{32}&         &$19_6$&         &         &$21_6$&$19_6$&         &$21_6$&         \\ \hline
+\end{tabular}
+
+\newpage
+\large II. \normalsize (concluded)
+
+\smallskip
+A.
+
+B.\
+\begin{tabular}{|r|c|c|c|c|c|c|c|c|c|c|} \hline
+           &20    &21      &22    &23    &24        &25       &26     &27    &28    &29     \\ \hline
+\textbf{1} &$19_1$&$19_1$  &$19_1$&$19_1$&$11_1$    &$11_1$   &$19_1$ &$19_1$&$11_1$&$19_1$ \\ \hline
+\textbf{2} &$19_2$&$\times$&$21_2$&      &$\times$  &$\times$ &       &      &$25_2$&       \\ \hline
+\textbf{3} &      &        &      &$19_2$&$25_2$    &$24_2$   &$21_2$ &$19_2$&$25_2$&$21_2$ \\ \hline
+\textbf{4} &$19_2$&$19_1$  &$19_1$&$19_2$&$11_1$    &$11_1$   &$19_1$ &$19_2$&$11_1$&$19_1$ \\ \hline
+\textbf{5} &$19_2$&$19_1$  &$19_1$&$19_6$&$11_6$    &$3_1$    &$21_6$ &$19_6$&$3_1$ &$21_6$ \\ \hline
+\textbf{6} &$19_6$&$\times$&$21_6$&$19_1$&$3_1$     &$11_6$   &$19_1$ &$19_2$&$3_1$ &$19_1$ \\ \hline
+\textbf{7} &      &        &      &      &$25_2$    &$25_2$   &       &      &*     &       \\ \hline
+\textbf{8} &$19_2$&$21_2$  &$21_2$&      &$24_2$    &$25_2$   &       &      &$25_2$&       \\ \hline
+\textbf{9} &$19_2$&$21_2$  &$21_2$&      &$11_6$    &$3_1$    &       &      &$3_1$ &       \\ \hline
+\textbf{10}&$19_6$&$21_6$  &$21_6$&      &$3_4$     &$\times$ &       &      &$3_4$ &       \\ \hline
+\textbf{11}&      &        &      &$19_2$&$25_2$    &$24_2$   &$21_2$ &$19_2$&$25_2$&$21_2$ \\ \hline
+\textbf{12}&      &        &      &$19_6$&$25_{10}$ &$3_4$    &$21_6$ &$19_6$&$3_4$ &$21_6$ \\ \hline
+\textbf{13}&      &        &      &$19_2$&$3_1$     &$11_6$   &$21_2$ &$19_2$&$3_1$ &$21_2$ \\ \hline
+\textbf{14}&*     &$19_1$  &$19_1$&$19_6$&$11_6$    &$3_1$    &$21_6$ &$19_6$&$3_1$ &$21_6$ \\ \hline
+\textbf{15}&$19_6$&$21_6$  &$21_6$&$19_2$&$3_1$     &$11_6$   &$19_1$ &*     &$3_1$ &$19_1$ \\ \hline
+\textbf{16}&$19_6$&$21_6$  &$21_6$&$19_6$&$3_1$     &$3_1$    &$21_6$ &$19_6$&*     &$21_6$ \\ \hline
+\textbf{17}&      &        &      &      &$25_2$    &$25_2$   &       &      &*     &       \\ \hline
+\textbf{18}&      &        &      &      &$25_{10}$ &$3_4$    &       &      &$3_4$ &       \\ \hline
+\textbf{19}&      &        &      &      &$3_4$     &$25_{10}$&       &      &$3_4$ &       \\ \hline
+\textbf{20}&$19_2$&$21_2$  &$21_2$&      &$11_6$    &$3_1$    &       &      &$3_1$ &       \\ \hline
+\textbf{21}&$19_6$&$21_6$  &$21_6$&      &$3_4$     &$25_{10}$&       &      &$3_4$ &       \\ \hline
+\textbf{22}&$19_6$&$21_6$  &$21_6$&      &$3_4$     &$3_4$    &       &      &*     &       \\ \hline
+\textbf{23}&      &        &      &$19_6$&$25_{10}$ &$3_4$    &$21_6$ &$19_6$&$3_4$ &$21_6$ \\ \hline
+\textbf{24}&      &        &      &$19_2$&$3_1$     &$11_6$   &$21_2$ &$19_2$&$3_1$ &$21_2$ \\ \hline
+\textbf{25}&      &$21_6$  &$21_6$&$19_6$&$3_4$     &$3_4$    &$21_6$ &$19_6$&*     &$21_6$ \\ \hline
+\textbf{26}&$19_6$&$21_6$  &$21_6$&$19_6$&$3_1$     &$3_1$    &$21_6$ &$19_6$&*     &$21_6$ \\ \hline
+\textbf{27}&      &        &      &      &$25_{10}$ &$3_4$    &       &      &$3_4$ &       \\ \hline
+\textbf{28}&      &        &      &      &$3_4$     &$25_{10}$&       &      &$3_4$ &       \\ \hline
+\textbf{29}&      &        &      &      &*         &*        &       &      &*     &       \\ \hline
+\textbf{30}&$19_6$&$21_6$  &$21_6$&      &$3_4$     &$3_4$    &       &      &*     &       \\ \hline
+\textbf{31}&      &        &      &$19_6$&$3_4$     &$3_4$    &$21_6$ &$19_6$&*     &$21_6$ \\ \hline
+\textbf{32}&      &        &      &      &*         &*        &       &      &*     &       \\ \hline
+\end{tabular}
+\end{center}
+
+For convenience the groups are divided into cases.
+
+The double Table I gives all cases consistent with congruences (17), (21),
+(23) and (25). The results of the discussion are given in Table II. The
+cases in Table II left blank are inconsistent with congruences (22) and
+(24), and therefore have no groups corresponding to them.
+
+Let $\kappa = \kappa_1 p^{k_2}$ where $dv[\kappa_1,\, p] = 1\; (\kappa = a,\,
+\beta,\, c,\, g,\, \gamma,\, d,\, k,\, \alpha,\, \epsilon,\, e,\, j)$.
+
+In explanation of Table II the groups in cases marked
+$\boxed{r_s}$ are simply isomorphic with groups in $A_r B_s$.
+
+The group $G'$ is taken from the cases marked
+$\boxed{\times}$. The types are also selected from these cases.
+
+The cases marked $\boxed{*}$ divide into two or more parts. Let
+\begin{align*}
+a\epsilon - \alpha e + jk &= I_1,    & a\epsilon - jk &= I_2, \\
+a\delta(a - e) + 2I_1 &= I_3,        & \alpha g - \beta j &= I_4, \\
+\alpha\delta - \beta\epsilon &= I_5, & \epsilon g - \delta j &= I_6, \\
+c\epsilon - e\gamma &= I_7,          & \alpha e - jk &= I_8, \\
+\delta e + \gamma j &= I_9,          & \alpha\gamma + \delta k &= I_{10}.
+\end{align*}
+
+The parts into which these groups divide, and the cases with which they are
+simply isomorphic, are given in Table III.
+
+\begin{center}
+\large III. \normalsize
+
+\smallskip
+\begin{tabular}{|l|l|c|l|c|} \hline
+$A_{1,2}B^*$           &$dv[I_1,p]=p$        &$2_1$    &$dv[I_1,p]=1$        &$2_4$  \\ \hline
+$A_{3}B^*$             &$dv[I_2,p]=p$        &$3_1$    &$dv[I_2,p]=1$        &$3_4$  \\ \hline
+$A_{4}B^*$             &$dv[I_3,p]=p$        &$3_1$    &$dv[I_3,p]=1$        &$3_4$  \\ \hline
+$A_{12}B_{13}$         &$dv[I_4,p]=p$        &$19_1$   &$dv[I_4,p]=1$        &$19_2$ \\ \hline
+$A_{14}B_{11}$         &$dv[I_5,p]=p$        &$11_1$   &$dv[I_5,p]=1$        &$24_2$ \\ \hline
+$A_{15,18}B^*$         &$dv[I_4,p]=p$        &$19_1$   &$dv[I_4,p]=1$        &$21_2$ \\ \hline
+$A_{16}B_{24}$         &$dv[I_6,I_5,p]=p$    &$19_1$   &$dv[I_6,I_5,p]=1$    &$19_2$ \\ \hline
+$A_{20}B_{14}$         &$dv[I_7,p]=p$        &$19_1$   &$dv[I_7,p]=1$        &$19_2$ \\ \hline
+$A_{24,25}B^*$         &$dv[I_8,p]=p$        &$3_1$    &$dv[I_8,p]=1$        &$3_4$  \\ \hline
+$A_{27}B_{15}$         &$dv[I_6,p]=p$        &$19_1$   &$dv[I_6,p]=1$        &$19_2$ \\ \hline
+$A_{29}B_{7,17}$       &$dv[I_{10},p]=p$     &$24_2$   &$dv[I_{10},p]=1$     &$25_2$ \\ \hline
+$A_{29}B_{16,26}$      &$dv[I_9,p]=p$        &$11_6$   &$dv[I_9,p]=1$        &$3_1$  \\ \hline
+$A_{29}B_{22,25,30,31}$&$dv[I_9,p]=p$        &$25_{10}$&$dv[I_9,p]=1$        &$3_4$  \\ \hline
+$A_{29}B_{29,32}$      &$dv[I_8,I_9,p]=p$    &$11_6$   &$[I_8,p]=p,[I_9,p]=1$&$3_1$  \\ \hline
+$A_{29}B_{29,32}$      &$[I_8,p]=1,[I_9,p]=p$&$25_{10}$&$[I_8,p]=1,[I_9,p]=1$&$3_4$  \\ \hline
+\end{tabular}
+\end{center}
+
+\newpage
+8. \textit{Types.} The types for this class are given by equations (30) where the
+constants have the values given in Table IV.
+
+\begin{center}
+\large IV. \normalsize
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|} \hline
+       &  $a$   &$\beta$&$c$&$g$&$\gamma$&$\delta$&$k$&$\alpha$&$\epsilon$&$e$&$j$ \\ \hline
+$1_1$  &    0   &    0  & 0 & 0 &    0   &    0   & 0 &    0   &     0    & 0 & 0  \\ \hline
+$2_1$  &    1   &    0  & 0 & 0 &    0   &    0   & 0 &    0   &     0    & 0 & 0  \\ \hline
+$3_1$  &$\kappa$&    1  & 0 & 0 &    0   &    0   & 0 &    0   &     0    & 0 & 0  \\ \hline
+$11_1$ &    0   &    1  & 0 & 0 &    0   &    0   & 0 &    0   &     0    & 0 & 0  \\ \hline
+$*13_1$&    0   &    1  & 0 & 0 &    1   &    0   & 0 &    0   &     0    & 0 & 0  \\ \hline
+$19_1$ &    0   &    0  & 1 & 0 &    0   &    0   & 0 &    0   &     0    & 0 & 0  \\ \hline
+$1_2$  &    0   &    0  & 0 & 0 &    0   &    0   & 1 &    0   &     0    & 0 & 0  \\ \hline
+$*13_2$&    0   &    1  & 0 & 0 &    1   &    0   & 1 &    0   &     0    & 0 & 0  \\ \hline
+$19_2$ &    0   &    0  & 1 & 0 &    0   &    0   & 1 &    0   &     0    & 0 & 0  \\ \hline
+$*21_2$&    0   &    0  & 1 & 0 &    0   &    1   & 1 &    0   &     0    & 0 & 0  \\ \hline
+$24_2$ &    0   &    0  & 0 & 0 &    1   &    0   & 1 &    0   &     0    & 0 & 0  \\ \hline
+$25_2$ &    0   &    0  & 0 & 0 &    0   &    1   & 1 &    0   &     0    & 0 & 0  \\ \hline
+$2_4$  &    1   &    0  & 0 & 0 &    0   &    0   & 0 &    0   &     1    & 0 & 0  \\ \hline
+$3_4$  &$\kappa$&    1  & 0 & 0 &    0   &    0   & 0 &    0   &     1    & 0 & 0  \\ \hline
+$11_6$ &    0   &    1  & 0 & 0 &    0   &    0   & 0 &    0   &     0    & 0 & 1  \\ \hline
+$*13_6$&    0   &    1  & 0 & 0 &    1   &    0   & 0 &    0   &     0    & 0 & 1  \\ \hline
+\end{tabular}
+
+\footnotesize \noindent $\kappa = 1$, and a non-residue (mod $p$).
+
+\noindent $*$For $p=3$ these groups are isomorphic in Class II.
+\end{center}
+
+A detailed analysis of congruences (32) for several cases is given below
+as a general illustration of the methods used.
+
+\medskip
+\begin{equation*} A_3 B_1. \end{equation*}
+
+The special forms of the congruences for this case are
+\begin{gather*}
+\beta'xz' \equiv 0 \pmod{p}, \tag{II} \\
+a'(yz' - y'z) \equiv kx \pmod{p}, \tag{III} \\
+\beta v' \equiv 0, \qquad \beta z' \equiv 0, \qquad \beta y' \equiv
+   \beta'xz'' \pmod{p}, \tag*{(IV),(V),(VI)} \\
+a'(yz'' - y''z) + a'\beta'x\tbinom{z''}{2} \equiv
+%%
+\alpha x + \beta x' + a'\beta y'z \pmod{p}, \tag{VII} \\
+a'(y'z'' - y''z') \equiv ax \pmod{p}, \tag{X} \\
+\gamma v'' + \delta v' \equiv 0 \pmod{p}, \tag{XI} \\
+\gamma z'' + \delta z' \equiv 0 \pmod{p}, \tag{XII} \\
+%%
+\gamma y'' + \delta y' \equiv \beta'xz'' \pmod{p}, \tag{XIII} \\
+\begin{split}
+  a'(yz''' - y'''z) + a'\beta'x\tbinom{z'''}{2} \equiv \epsilon x &+
+  \gamma x'' + \delta x + a'\delta y'z \\ &+ a'\gamma y''z
+  + a'\tbinom{\gamma}{2}y''z'' \pmod{p},
+\end{split} \tag{XIV} \\
+cv'' \equiv 0, \qquad cz'' \equiv 0, \qquad cy'' \equiv 0 \pmod{p},
+  \tag*{(XV),(XVI),(XVII)} \\
+%%
+a'(y'z''' - y'''z') \equiv ex \pmod{p}, \tag{XVIII} \\
+gv' \equiv 0, \qquad gz' \equiv 0, \qquad gy' \equiv 0 \pmod{p},
+  \tag*{(XIX),(XX),(XXI)} \\
+a'(y''z''' - y'''z'') \equiv jx \pmod{p}, \tag{XXII}
+\end{gather*}
+
+From (II) $z' \equiv 0 \pmod{p}$.
+
+The conditions of isomorphism give
+\begin{equation*}
+  \Delta \equiv \left| \begin{matrix}
+                          v' & v'' & v''' \\
+                          y' & y'' & y''' \\
+                          z' & z'' & z''' \\ \end{matrix}\right| \not\equiv 0 \pmod{p}.
+\end{equation*}
+
+Multiply (IV), (V), (VI) by $\gamma$ and reduce by (XII), $\beta\gamma v'
+\equiv 0$, $\beta\gamma z' \equiv 0$, $\beta\gamma y' \equiv 0 \pmod{p}$. Since
+$\Delta \not\equiv 0 \pmod{p}$, one at least of the quantities, $v'$, $z'$
+or $y'$ is $\not\equiv 0 \pmod{p}$ and $\beta\gamma \equiv 0 \pmod{p}$.
+
+From (XV), (XVI) and (XVII) $c \equiv 0 \pmod{p}$, and from (XIX), (XX) and
+(XXI) $g \equiv 0 \pmod{p}$.
+
+From (IV), (V), (VI) and (X) if $a \equiv 0$, then $\beta \equiv 0$
+and if $a \not\equiv 0$, then $\beta \not\equiv 0 \pmod{p}$.
+
+At least one of the three quantities $\beta$, $\gamma$ or $\delta$ is
+$\not\equiv 0 \pmod{p}$ and one, at least, of $a$, $e$ or $j$ is $\not
+\equiv 0 \pmod{p}$.
+
+\smallskip
+$A_3$: Since $z''' \equiv 0 \pmod{p}$, (XVIII) gives $e \equiv 0$.
+Elimination between (III), (X), (XIV) and (XXII) gives $a\epsilon - kj
+\equiv 0 \pmod{p}$. Elimination between (VI) and (X) gives
+$a'\beta'{z''}^2 \equiv a\beta \pmod{p}$ and $a\beta$ is a quadratic
+residue or non-residue according as $a'\beta'$ is or is not, and there are
+two types for this case.
+
+\smallskip
+$A_4$: Since $y'$ and $z''$ are $\not\equiv 0 \pmod{p}$, $e \not\equiv 0
+\pmod{p}$. Elimination between (VI), (X), (XIII) and (XVIII) gives $a\delta
+- \beta e \equiv 0 \pmod{p}$.
+
+This is a special form of (24).
+
+Elimination between (III), (VII), (X), (XIII), (XIV), (XVIII) and (XXII)
+gives
+\begin{equation*}
+2jk + a\delta(a - e) + 2(a\epsilon - \alpha e) \equiv 0 \pmod{p}.
+\end{equation*}
+
+\smallskip
+$A_{24}$: Since from (XI), (XII) and (XIII) $y''$ and $z''' \not\equiv 0
+\pmod{p}$, and $z'' \equiv v'' \equiv 0 \pmod{p}$, (xxii) gives $j \not
+\equiv 0 \pmod{p}$.
+
+Elimination between (III), (X), (XVIII) and (XXII) gives
+\begin{equation*}
+\alpha e - jk \equiv 0 \pmod{p}.
+\end{equation*}
+
+\smallskip
+$A_{25}$: (XI), (XII) and (XIII) give $v' \equiv z' \equiv 0$ and $y', z'''
+\not\equiv 0 \pmod{p}$ and this with (XVIII) gives $e \not\equiv 0$.
+
+Elimination between (III), (VII), (XVIII) and (XXII) gives
+\begin{equation*}
+\alpha e - jk \equiv 0 \pmod{p}.
+\end{equation*}
+
+\smallskip
+$A_{28}$: Since $a \equiv 0$ then $e$ or $j \not\equiv 0 \pmod{p}$.
+
+Elimination between (III), (VII), (XVIII) and (XXII) gives
+\begin{equation*}
+\alpha e - jk \equiv 0 \pmod{p}.
+\end{equation*}
+
+Multiply (XIII) by $a'z'''$ and reduce
+\begin{equation*}
+\delta e + \gamma j \equiv a'\beta'{z'''}^2 \not\equiv 0 \pmod{p}.
+\end{equation*}
+
+\medskip
+\begin{equation*} A_{11} B_1. \end{equation*}
+
+The special forms of the congruences for this case are
+\begin{gather*}
+\beta'xz' \equiv 0 \pmod{p}, \tag{II} \\
+kx \equiv 0 \pmod{p}, \tag{III} \\
+\beta v' \equiv \beta z' \equiv 0, \quad \beta y' \equiv \beta'xz'',
+  \tag*{(IV),(V),(VI)} \\
+\alpha x + \beta x' \equiv 0 \pmod{p}, \tag{VII} \\
+%%
+ax \equiv 0 \pmod{p}, \tag{X} \\
+\gamma v'' + \delta v \equiv 0 \pmod{p}, \tag{XI} \\
+\gamma z'' + \delta z \equiv 0 \pmod{p}, \tag{XII} \\
+\gamma y'' + \delta y \equiv \beta'xz''' \pmod{p}, \tag{XIII} \\
+%%
+\epsilon x + \gamma x'' + \delta x' \equiv 0 \pmod{p}, \tag{XIV} \\
+cv'' \equiv cz'' \equiv cy'' \equiv 0 \pmod{p}, \tag*{(XV),(XVI),(XVII)} \\
+ex \equiv 0 \pmod{p}, \tag{XVIII} \\
+gv' \equiv gz' \equiv gy' \equiv 0 \pmod{p}, \tag*{(XIX),(XX),(XXI)} \\
+jx \equiv 0 \pmod{p}, \tag{XXII}
+\end{gather*}
+
+(II) gives $z' = 0$, (III) gives $k \equiv 0$, (X) gives $a \equiv 0$,
+(XV), (XVI), (XVII) give $c \equiv 0 (\Delta \not\equiv 0)$, (XVIII) gives
+$e \equiv 0$, (XIX), (XX), (XXI) give $g \equiv 0$, (XXII) gives $j \equiv
+0$. One of the two quantities $z''$ or $z''' \not\equiv 0 \pmod{p}$,
+and by (VI) and (XIII) one of the three quantities $\beta$, $\gamma$ or
+$\delta$ is $\not\equiv 0$.
+
+\smallskip
+$A_{11}$: (XIV) gives $\epsilon \equiv 0 \pmod{p}$. Multiplying (IV), (V),
+(VI) by $\gamma$ gives, by (XII), $\beta\gamma v' \equiv \beta\gamma z'
+\equiv \beta\gamma y' \equiv 0 \pmod{p}$, and $\beta\gamma \equiv 0
+\pmod{p}$.
+
+\smallskip
+$A_{14}$: Elimination between (VII) and (XIV) gives $\alpha\delta -
+\beta\epsilon \equiv 0 \pmod{p}$.
+
+\smallskip
+$A_{24}$: (VII) gives $\alpha \equiv 0 \pmod{p}$, (XIV) $\epsilon \equiv 0$
+or $\not\equiv 0 \pmod{p}$.
+
+\smallskip
+$A_{25}$: (VII) gives $\alpha \equiv 0 \pmod{p}$, (XIV) $\epsilon \equiv$
+or $\not\equiv 0 \pmod{p}$.
+
+\smallskip
+$A_{28}$: (VII) gives $\alpha \equiv 0 \pmod{p}$, (XIV) $\epsilon \equiv$
+or $\not\equiv 0 \pmod{p}$.
+
+\newpage
+\begin{equation*} A_{19} B_1. \end{equation*}
+
+The special forms of the congruences for this case are
+\begin{gather*}
+c'(yv' - y'v) \equiv 0 \pmod{p}, \tag{I} \\
+kx \equiv 0 \pmod{p}, \tag{III} \\
+\beta v \equiv 0, \quad \beta z \equiv c'(yv'' - y''v), \quad \beta y'
+\equiv 0 \pmod{p}, \tag*{(IV),(V),(VI)} \\
+%%
+\alpha x + \beta x' \equiv 0 \pmod{p}, \tag{VII} \\
+c'(y'v'' - y''v') \equiv 0 \pmod{p}, \tag{VIII} \\
+ax \equiv 0 \pmod{p}, \tag{X} \\
+\gamma v'' + \delta v' \equiv 0 \pmod{p}, \tag{XI} \\
+%%
+\gamma z'' + \delta z' + c'\gamma\delta y''v + c'\tbinom{\delta}{2}v'y' +
+c'\tbinom{\gamma}{2}v''y'' \equiv c'(yv''' - y'''v) \pmod {p}, \tag{XII} \\
+\gamma y'' + \delta y' \equiv 0 \pmod{p}, \tag{XIII} \\
+\epsilon x + \gamma x'' + \delta x' \equiv 0 \pmod{p}, \tag{XIV} \\
+%%
+cv'' \equiv 0, \quad cz'' \equiv c'(y'v''' - y'''v'), \quad cy'' \equiv 0
+  \pmod{p}, \tag*{(XV),(XVI),(XVII)} \\
+ex + cx'' \equiv 0 \pmod{p}, \tag{XVIII} \\
+gv' \equiv 0, \quad gz' \equiv c'(y''v''' - y'''v''), \quad gy' \equiv 0
+  \pmod{p}, \tag*{(XIX),(XX),(XXI)} \\
+jx + gx' \equiv 0 \pmod{p}. \tag{XXII} \\
+\end{gather*}
+
+(III) gives $k\equiv 0$, (X) gives $a \equiv 0$.
+
+Since $dv[(y'v''' - y'''v'), (y''v''' - y'''v''), p] = 1$ then $dv[c, g, p]
+= 1$.
+
+If $c \not\equiv 0$, $v'' \equiv y'' \equiv 0 \pmod{p}$ and therefore $g
+\equiv 0 \pmod{p}$ and if $g \not\equiv 0$, then $c \equiv 0 \pmod{p}$.
+
+\smallskip
+$A_{12}$: (XVIII) gives $e \equiv 0 \pmod{p}$. Elimination between (VII)
+and (XXII) gives $\alpha g - \beta j \equiv 0 \pmod{p}$, (XIV) gives
+$\epsilon \equiv 0 \pmod{p}$.
+
+\smallskip
+$A_{15}$: (XVIII) gives $e \equiv 0 \pmod{p}$. Elimination between (VII)
+and (XXII) gives $\alpha g - \beta j \equiv 0 \pmod{p}$, (XIV) gives
+$\epsilon \equiv 0$ or $\not\equiv 0 \pmod{p}$.
+
+\smallskip
+$A_{16}$: (XVIII) gives $e \equiv 0$. Elimination between (XIV) and (XXII)
+gives $\epsilon g - \delta j \equiv 0 \pmod{p}$, between (VII) and (XIV)
+gives $\alpha\delta - \beta\epsilon \equiv 0$.
+
+\smallskip
+$A_{18}$: (XVIII) gives $e \equiv 0 \pmod{p}$. Elimination between (VII)
+and (XXII) gives $\alpha g - \beta j \equiv 0 \pmod{p}$, (XIV) gives
+$\epsilon \equiv 0$ or $\not\equiv 0 \pmod{p}$.
+
+\smallskip
+$A_{19}$: (VII) gives $\alpha \equiv 0 \pmod{p}$, (XIV) gives $\epsilon
+\equiv 0$, (XXII) gives $j \equiv 0 \pmod{p}$, (XVIII) gives $e \equiv 0$
+or $\not\equiv 0 \pmod{p}$.
+
+\smallskip
+$A_{20}$: (VII) gives $\alpha \equiv 0$, (XXII) gives $j \equiv 0$.
+Elimination between (XIV) and (XVIII) gives $\epsilon c - e\gamma \equiv 0
+\pmod{p}$.
+
+\smallskip
+$A_{21}$: (VII) gives $\alpha\equiv 0$, (XIV) gives $\epsilon \equiv 0$
+or $\not\equiv 0 \pmod{p}$, (XVIII) gives $e \equiv 0,$ or
+$\not\equiv 0$, and (XXII) gives $j \equiv 0 \pmod{p}$.
+
+\smallskip
+$A_{22}$: (VII) gives $\alpha \equiv 0$, (XIV) gives $\epsilon \equiv 0$
+or $\not\equiv 0$, (XVIII) gives $epsilon \equiv 0$ or $\not\equiv 0$,
+(XXII) gives $j \equiv 0 \pmod{p}$.
+
+\smallskip
+$A_{23}$: (VII) gives $\alpha \equiv 0$, (XIV) gives $\epsilon \equiv 0$,
+(XVIII) gives $\epsilon \equiv 0$, (XXII) gives $j \equiv 0$ or
+$\not\equiv 0 \pmod{p}$.
+
+\smallskip
+$A_{26}$: (VII) $\alpha \equiv 0$, (XIV) $\epsilon \equiv 0$ or
+$\not\equiv 0$, (XVIII) $\epsilon \equiv 0$, (XXII) $j \equiv 0$ or
+$\not\equiv 0 \pmod{p}$.
+
+\smallskip
+$A_{27}$: (VII) $\alpha \equiv 0$, (XIV) $\epsilon \equiv 0$ or
+$\not\equiv 0$, (XVIII) $\epsilon \equiv 0$, (XXII) $j \equiv 0$ or
+$\not\equiv 0 \pmod{p}$. Elimination between (XIV) and (XXII) gives
+$\epsilon g - \delta j \equiv 0 \pmod{p}$.
+
+\smallskip
+$A_{29}$: (VII) $\alpha \equiv 0$, (XIV) $\epsilon \equiv 0$ or
+$\not\equiv 0$, (XVIII) $\epsilon \equiv 0$, (XXII) $j \equiv 0$ or
+$\not\equiv 0 \pmod{p}$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%% GUTENBERG LICENSE %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Start of original license %%%%
+\iffalse
+
+\newpage
+\small
+\pagenumbering{gobble}
+\begin{verbatim}
+
+
+End of the Project Gutenberg EBook of Groups of Order p^m Which Contain
+Cyclic Subgroups of Order p^(m-3), by Lewis Irving Neikirk
+
+*** END OF THE PROJECT GUTENBERG EBOOK GROUPS OF ORDER P^M ***
+
+This file should be named 9930-t.tex or 9930-t.zip
+
+Produced by Cornell University, Joshua Hutchinson, Lee Chew-Hung,
+John Hagerson, and the Online Distributed Proofreading Team.
+
+Project Gutenberg eBooks are often created from several printed
+editions, all of which are confirmed as Public Domain in the US
+unless a copyright notice is included.  Thus, we usually do not
+keep eBooks in compliance with any particular paper edition.
+
+We are now trying to release all our eBooks one year in advance
+of the official release dates, leaving time for better editing.
+Please be encouraged to tell us about any error or corrections,
+even years after the official publication date.
+
+Please note neither this listing nor its contents are final til
+midnight of the last day of the month of any such announcement.
+The official release date of all Project Gutenberg eBooks is at
+Midnight, Central Time, of the last day of the stated month.  A
+preliminary version may often be posted for suggestion, comment
+and editing by those who wish to do so.
+
+Most people start at our Web sites at:
+http://gutenberg.net or
+http://promo.net/pg
+
+These Web sites include award-winning information about Project
+Gutenberg, including how to donate, how to help produce our new
+eBooks, and how to subscribe to our email newsletter (free!).
+
+
+Those of you who want to download any eBook before announcement
+can get to them as follows, and just download by date.  This is
+also a good way to get them instantly upon announcement, as the
+indexes our cataloguers produce obviously take a while after an
+announcement goes out in the Project Gutenberg Newsletter.
+
+http://www.ibiblio.org/gutenberg/etext03 or
+ftp://ftp.ibiblio.org/pub/docs/books/gutenberg/etext03
+
+Or /etext02, 01, 00, 99, 98, 97, 96, 95, 94, 93, 92, 92, 91 or 90
+
+Just search by the first five letters of the filename you want,
+as it appears in our Newsletters.
+
+
+Information about Project Gutenberg (one page)
+
+We produce about two million dollars for each hour we work.  The
+time it takes us, a rather conservative estimate, is fifty hours
+to get any eBook selected, entered, proofread, edited, copyright
+searched and analyzed, the copyright letters written, etc.   Our
+projected audience is one hundred million readers.  If the value
+per text is nominally estimated at one dollar then we produce $2
+million dollars per hour in 2002 as we release over 100 new text
+files per month:  1240 more eBooks in 2001 for a total of 4000+
+We are already on our way to trying for 2000 more eBooks in 2002
+If they reach just 1-2% of the world's population then the total
+will reach over half a trillion eBooks given away by year's end.
+
+The Goal of Project Gutenberg is to Give Away 1 Trillion eBooks!
+This is ten thousand titles each to one hundred million readers,
+which is only about 4% of the present number of computer users.
+
+Here is the briefest record of our progress (* means estimated):
+
+eBooks Year Month
+
+    1  1971 July
+   10  1991 January
+  100  1994 January
+ 1000  1997 August
+ 1500  1998 October
+ 2000  1999 December
+ 2500  2000 December
+ 3000  2001 November
+ 4000  2001 October/November
+ 6000  2002 December*
+ 9000  2003 November*
+10000  2004 January*
+
+
+The Project Gutenberg Literary Archive Foundation has been created
+to secure a future for Project Gutenberg into the next millennium.
+
+We need your donations more than ever!
+
+As of February, 2002, contributions are being solicited from people
+and organizations in: Alabama, Alaska, Arkansas, Connecticut,
+Delaware, District of Columbia, Florida, Georgia, Hawaii, Illinois,
+Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Massachusetts,
+Michigan, Mississippi, Missouri, Montana, Nebraska, Nevada, New
+Hampshire, New Jersey, New Mexico, New York, North Carolina, Ohio,
+Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South
+Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West
+Virginia, Wisconsin, and Wyoming.
+
+We have filed in all 50 states now, but these are the only ones
+that have responded.
+
+As the requirements for other states are met, additions to this list
+will be made and fund raising will begin in the additional states.
+Please feel free to ask to check the status of your state.
+
+In answer to various questions we have received on this:
+
+We are constantly working on finishing the paperwork to legally
+request donations in all 50 states.  If your state is not listed and
+you would like to know if we have added it since the list you have,
+just ask.
+
+While we cannot solicit donations from people in states where we are
+not yet registered, we know of no prohibition against accepting
+donations from donors in these states who approach us with an offer to
+donate.
+
+International donations are accepted, but we don't know ANYTHING about
+how to make them tax-deductible, or even if they CAN be made
+deductible, and don't have the staff to handle it even if there are
+ways.
+
+Donations by check or money order may be sent to:
+
+Project Gutenberg Literary Archive Foundation
+PMB 113
+1739 University Ave.
+Oxford, MS 38655-4109
+
+Contact us if you want to arrange for a wire transfer or payment
+method other than by check or money order.
+
+The Project Gutenberg Literary Archive Foundation has been approved by
+the US Internal Revenue Service as a 501(c)(3) organization with EIN
+[Employee Identification Number] 64-622154.  Donations are
+tax-deductible to the maximum extent permitted by law.  As fund-raising
+requirements for other states are met, additions to this list will be
+made and fund-raising will begin in the additional states.
+
+We need your donations more than ever!
+
+You can get up to date donation information online at:
+
+http://www.gutenberg.net/donation.html
+
+
+***
+
+If you can't reach Project Gutenberg,
+you can always email directly to:
+
+Michael S. Hart <hart@pobox.com>
+
+Prof. Hart will answer or forward your message.
+
+We would prefer to send you information by email.
+
+
+**The Legal Small Print**
+
+
+(Three Pages)
+
+***START**THE SMALL PRINT!**FOR PUBLIC DOMAIN EBOOKS**START***
+Why is this "Small Print!" statement here? You know: lawyers.
+They tell us you might sue us if there is something wrong with
+your copy of this eBook, even if you got it for free from
+someone other than us, and even if what's wrong is not our
+fault. So, among other things, this "Small Print!" statement
+disclaims most of our liability to you. It also tells you how
+you may distribute copies of this eBook if you want to.
+
+*BEFORE!* YOU USE OR READ THIS EBOOK
+By using or reading any part of this PROJECT GUTENBERG-tm
+eBook, you indicate that you understand, agree to and accept
+this "Small Print!" statement. If you do not, you can receive
+a refund of the money (if any) you paid for this eBook by
+sending a request within 30 days of receiving it to the person
+you got it from. If you received this eBook on a physical
+medium (such as a disk), you must return it with your request.
+
+ABOUT PROJECT GUTENBERG-TM EBOOKS
+This PROJECT GUTENBERG-tm eBook, like most PROJECT GUTENBERG-tm eBooks,
+is a "public domain" work distributed by Professor Michael S. Hart
+through the Project Gutenberg Association (the "Project").
+Among other things, this means that no one owns a United States copyright
+on or for this work, so the Project (and you!) can copy and
+distribute it in the United States without permission and
+without paying copyright royalties. Special rules, set forth
+below, apply if you wish to copy and distribute this eBook
+under the "PROJECT GUTENBERG" trademark.
+
+Please do not use the "PROJECT GUTENBERG" trademark to market
+any commercial products without permission.
+
+To create these eBooks, the Project expends considerable
+efforts to identify, transcribe and proofread public domain
+works. Despite these efforts, the Project's eBooks and any
+medium they may be on may contain "Defects". Among other
+things, Defects may take the form of incomplete, inaccurate or
+corrupt data, transcription errors, a copyright or other
+intellectual property infringement, a defective or damaged
+disk or other eBook medium, a computer virus, or computer
+codes that damage or cannot be read by your equipment.
+
+LIMITED WARRANTY; DISCLAIMER OF DAMAGES
+But for the "Right of Replacement or Refund" described below,
+[1] Michael Hart and the Foundation (and any other party you may
+receive this eBook from as a PROJECT GUTENBERG-tm eBook) disclaims
+all liability to you for damages, costs and expenses, including
+legal fees, and [2] YOU HAVE NO REMEDIES FOR NEGLIGENCE OR
+UNDER STRICT LIABILITY, OR FOR BREACH OF WARRANTY OR CONTRACT,
+INCLUDING BUT NOT LIMITED TO INDIRECT, CONSEQUENTIAL, PUNITIVE
+OR INCIDENTAL DAMAGES, EVEN IF YOU GIVE NOTICE OF THE
+POSSIBILITY OF SUCH DAMAGES.
+
+If you discover a Defect in this eBook within 90 days of
+receiving it, you can receive a refund of the money (if any)
+you paid for it by sending an explanatory note within that
+time to the person you received it from. If you received it
+on a physical medium, you must return it with your note, and
+such person may choose to alternatively give you a replacement
+copy. If you received it electronically, such person may
+choose to alternatively give you a second opportunity to
+receive it electronically.
+
+THIS EBOOK IS OTHERWISE PROVIDED TO YOU "AS-IS". NO OTHER
+WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, ARE MADE TO YOU AS
+TO THE EBOOK OR ANY MEDIUM IT MAY BE ON, INCLUDING BUT NOT
+LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A
+PARTICULAR PURPOSE.
+
+Some states do not allow disclaimers of implied warranties or
+the exclusion or limitation of consequential damages, so the
+above disclaimers and exclusions may not apply to you, and you
+may have other legal rights.
+
+INDEMNITY
+You will indemnify and hold Michael Hart, the Foundation,
+and its trustees and agents, and any volunteers associated
+with the production and distribution of Project Gutenberg-tm
+texts harmless, from all liability, cost and expense, including
+legal fees, that arise directly or indirectly from any of the
+following that you do or cause:  [1] distribution of this eBook,
+[2] alteration, modification, or addition to the eBook,
+or [3] any Defect.
+
+DISTRIBUTION UNDER "PROJECT GUTENBERG-tm"
+You may distribute copies of this eBook electronically, or by
+disk, book or any other medium if you either delete this
+"Small Print!" and all other references to Project Gutenberg,
+or:
+
+[1]  Only give exact copies of it.  Among other things, this
+     requires that you do not remove, alter or modify the
+     eBook or this "small print!" statement.  You may however,
+     if you wish, distribute this eBook in machine readable
+     binary, compressed, mark-up, or proprietary form,
+     including any form resulting from conversion by word
+     processing or hypertext software, but only so long as
+     *EITHER*:
+
+     [*]  The eBook, when displayed, is clearly readable, and
+          does *not* contain characters other than those
+          intended by the author of the work, although tilde
+          (~), asterisk (*) and underline (_) characters may
+          be used to convey punctuation intended by the
+          author, and additional characters may be used to
+          indicate hypertext links; OR
+
+     [*]  The eBook may be readily converted by the reader at
+          no expense into plain ASCII, EBCDIC or equivalent
+          form by the program that displays the eBook (as is
+          the case, for instance, with most word processors);
+          OR
+
+     [*]  You provide, or agree to also provide on request at
+          no additional cost, fee or expense, a copy of the
+          eBook in its original plain ASCII form (or in EBCDIC
+          or other equivalent proprietary form).
+
+[2]  Honor the eBook refund and replacement provisions of this
+     "Small Print!" statement.
+
+[3]  Pay a trademark license fee to the Foundation of 20% of the
+     gross profits you derive calculated using the method you
+     already use to calculate your applicable taxes.  If you
+     don't derive profits, no royalty is due.  Royalties are
+     payable to "Project Gutenberg Literary Archive Foundation"
+     the 60 days following each date you prepare (or were
+     legally required to prepare) your annual (or equivalent
+     periodic) tax return.  Please contact us beforehand to
+     let us know your plans and to work out the details.
+
+WHAT IF YOU *WANT* TO SEND MONEY EVEN IF YOU DON'T HAVE TO?
+Project Gutenberg is dedicated to increasing the number of
+public domain and licensed works that can be freely distributed
+in machine readable form.
+
+The Project gratefully accepts contributions of money, time,
+public domain materials, or royalty free copyright licenses.
+Money should be paid to the:
+"Project Gutenberg Literary Archive Foundation."
+
+If you are interested in contributing scanning equipment or
+software or other items, please contact Michael Hart at:
+hart@pobox.com
+
+[Portions of this eBook's header and trailer may be reprinted only
+when distributed free of all fees.  Copyright (C) 2001, 2002 by
+Michael S. Hart.  Project Gutenberg is a TradeMark and may not be
+used in any sales of Project Gutenberg eBooks or other materials be
+they hardware or software or any other related product without
+express permission.]
+
+*END THE SMALL PRINT! FOR PUBLIC DOMAIN EBOOKS*Ver.02/11/02*END*
+
+\end{verbatim}
+\normalsize
+\fi
+%%%%% End of original license %%%%
+
+\PGLicense
+\begin{PGtext}
+End of the Project Gutenberg EBook of Groups of Order p^m Which Contain
+Cyclic Subgroups of Order p^(m-3), by Lewis Irving Neikirk
+
+*** END OF THIS PROJECT GUTENBERG EBOOK GROUPS OF ORDER P^M WHICH ***
+
+***** This file should be named 9930-pdf.pdf or 9930-pdf.zip *****
+This and all associated files of various formats will be found in:
+        http://www.gutenberg.org/9/9/3/9930/
+
+Produced by Cornell University, Joshua Hutchinson, Lee
+Chew-Hung, John Hagerson, and the Online Distributed
+Proofreading Team
+
+
+Updated editions will replace the previous one--the old editions
+will be renamed.
+
+Creating the works from public domain print editions means that no
+one owns a United States copyright in these works, so the Foundation
+(and you!) can copy and distribute it in the United States without
+permission and without paying copyright royalties.  Special rules,
+set forth in the General Terms of Use part of this license, apply to
+copying and distributing Project Gutenberg-tm electronic works to
+protect the PROJECT GUTENBERG-tm concept and trademark.  Project
+Gutenberg is a registered trademark, and may not be used if you
+charge for the eBooks, unless you receive specific permission.  If you
+do not charge anything for copies of this eBook, complying with the
+rules is very easy.  You may use this eBook for nearly any purpose
+such as creation of derivative works, reports, performances and
+research.  They may be modified and printed and given away--you may do
+practically ANYTHING with public domain eBooks.  Redistribution is
+subject to the trademark license, especially commercial
+redistribution.
+
+
+
+*** START: FULL LICENSE ***
+
+THE FULL PROJECT GUTENBERG LICENSE
+PLEASE READ THIS BEFORE YOU DISTRIBUTE OR USE THIS WORK
+
+To protect the Project Gutenberg-tm mission of promoting the free
+distribution of electronic works, by using or distributing this work
+(or any other work associated in any way with the phrase "Project
+Gutenberg"), you agree to comply with all the terms of the Full Project
+Gutenberg-tm License available with this file or online at
+  www.gutenberg.org/license.
+
+
+Section 1.  General Terms of Use and Redistributing Project Gutenberg-tm
+electronic works
+
+1.A.  By reading or using any part of this Project Gutenberg-tm
+electronic work, you indicate that you have read, understand, agree to
+and accept all the terms of this license and intellectual property
+(trademark/copyright) agreement.  If you do not agree to abide by all
+the terms of this agreement, you must cease using and return or destroy
+all copies of Project Gutenberg-tm electronic works in your possession.
+If you paid a fee for obtaining a copy of or access to a Project
+Gutenberg-tm electronic work and you do not agree to be bound by the
+terms of this agreement, you may obtain a refund from the person or
+entity to whom you paid the fee as set forth in paragraph 1.E.8.
+
+1.B.  "Project Gutenberg" is a registered trademark.  It may only be
+used on or associated in any way with an electronic work by people who
+agree to be bound by the terms of this agreement.  There are a few
+things that you can do with most Project Gutenberg-tm electronic works
+even without complying with the full terms of this agreement.  See
+paragraph 1.C below.  There are a lot of things you can do with Project
+Gutenberg-tm electronic works if you follow the terms of this agreement
+and help preserve free future access to Project Gutenberg-tm electronic
+works.  See paragraph 1.E below.
+
+1.C.  The Project Gutenberg Literary Archive Foundation ("the Foundation"
+or PGLAF), owns a compilation copyright in the collection of Project
+Gutenberg-tm electronic works.  Nearly all the individual works in the
+collection are in the public domain in the United States.  If an
+individual work is in the public domain in the United States and you are
+located in the United States, we do not claim a right to prevent you from
+copying, distributing, performing, displaying or creating derivative
+works based on the work as long as all references to Project Gutenberg
+are removed.  Of course, we hope that you will support the Project
+Gutenberg-tm mission of promoting free access to electronic works by
+freely sharing Project Gutenberg-tm works in compliance with the terms of
+this agreement for keeping the Project Gutenberg-tm name associated with
+the work.  You can easily comply with the terms of this agreement by
+keeping this work in the same format with its attached full Project
+Gutenberg-tm License when you share it without charge with others.
+
+1.D.  The copyright laws of the place where you are located also govern
+what you can do with this work.  Copyright laws in most countries are in
+a constant state of change.  If you are outside the United States, check
+the laws of your country in addition to the terms of this agreement
+before downloading, copying, displaying, performing, distributing or
+creating derivative works based on this work or any other Project
+Gutenberg-tm work.  The Foundation makes no representations concerning
+the copyright status of any work in any country outside the United
+States.
+
+1.E.  Unless you have removed all references to Project Gutenberg:
+
+1.E.1.  The following sentence, with active links to, or other immediate
+access to, the full Project Gutenberg-tm License must appear prominently
+whenever any copy of a Project Gutenberg-tm work (any work on which the
+phrase "Project Gutenberg" appears, or with which the phrase "Project
+Gutenberg" is associated) is accessed, displayed, performed, viewed,
+copied or distributed:
+
+This eBook is for the use of anyone anywhere at no cost and with
+almost no restrictions whatsoever.  You may copy it, give it away or
+re-use it under the terms of the Project Gutenberg License included
+with this eBook or online at www.gutenberg.org
+
+1.E.2.  If an individual Project Gutenberg-tm electronic work is derived
+from the public domain (does not contain a notice indicating that it is
+posted with permission of the copyright holder), the work can be copied
+and distributed to anyone in the United States without paying any fees
+or charges.  If you are redistributing or providing access to a work
+with the phrase "Project Gutenberg" associated with or appearing on the
+work, you must comply either with the requirements of paragraphs 1.E.1
+through 1.E.7 or obtain permission for the use of the work and the
+Project Gutenberg-tm trademark as set forth in paragraphs 1.E.8 or
+1.E.9.
+
+1.E.3.  If an individual Project Gutenberg-tm electronic work is posted
+with the permission of the copyright holder, your use and distribution
+must comply with both paragraphs 1.E.1 through 1.E.7 and any additional
+terms imposed by the copyright holder.  Additional terms will be linked
+to the Project Gutenberg-tm License for all works posted with the
+permission of the copyright holder found at the beginning of this work.
+
+1.E.4.  Do not unlink or detach or remove the full Project Gutenberg-tm
+License terms from this work, or any files containing a part of this
+work or any other work associated with Project Gutenberg-tm.
+
+1.E.5.  Do not copy, display, perform, distribute or redistribute this
+electronic work, or any part of this electronic work, without
+prominently displaying the sentence set forth in paragraph 1.E.1 with
+active links or immediate access to the full terms of the Project
+Gutenberg-tm License.
+
+1.E.6.  You may convert to and distribute this work in any binary,
+compressed, marked up, nonproprietary or proprietary form, including any
+word processing or hypertext form.  However, if you provide access to or
+distribute copies of a Project Gutenberg-tm work in a format other than
+"Plain Vanilla ASCII" or other format used in the official version
+posted on the official Project Gutenberg-tm web site (www.gutenberg.org),
+you must, at no additional cost, fee or expense to the user, provide a
+copy, a means of exporting a copy, or a means of obtaining a copy upon
+request, of the work in its original "Plain Vanilla ASCII" or other
+form.  Any alternate format must include the full Project Gutenberg-tm
+License as specified in paragraph 1.E.1.
+
+1.E.7.  Do not charge a fee for access to, viewing, displaying,
+performing, copying or distributing any Project Gutenberg-tm works
+unless you comply with paragraph 1.E.8 or 1.E.9.
+
+1.E.8.  You may charge a reasonable fee for copies of or providing
+access to or distributing Project Gutenberg-tm electronic works provided
+that
+
+- You pay a royalty fee of 20% of the gross profits you derive from
+     the use of Project Gutenberg-tm works calculated using the method
+     you already use to calculate your applicable taxes.  The fee is
+     owed to the owner of the Project Gutenberg-tm trademark, but he
+     has agreed to donate royalties under this paragraph to the
+     Project Gutenberg Literary Archive Foundation.  Royalty payments
+     must be paid within 60 days following each date on which you
+     prepare (or are legally required to prepare) your periodic tax
+     returns.  Royalty payments should be clearly marked as such and
+     sent to the Project Gutenberg Literary Archive Foundation at the
+     address specified in Section 4, "Information about donations to
+     the Project Gutenberg Literary Archive Foundation."
+
+- You provide a full refund of any money paid by a user who notifies
+     you in writing (or by e-mail) within 30 days of receipt that s/he
+     does not agree to the terms of the full Project Gutenberg-tm
+     License.  You must require such a user to return or
+     destroy all copies of the works possessed in a physical medium
+     and discontinue all use of and all access to other copies of
+     Project Gutenberg-tm works.
+
+- You provide, in accordance with paragraph 1.F.3, a full refund of any
+     money paid for a work or a replacement copy, if a defect in the
+     electronic work is discovered and reported to you within 90 days
+     of receipt of the work.
+
+- You comply with all other terms of this agreement for free
+     distribution of Project Gutenberg-tm works.
+
+1.E.9.  If you wish to charge a fee or distribute a Project Gutenberg-tm
+electronic work or group of works on different terms than are set
+forth in this agreement, you must obtain permission in writing from
+both the Project Gutenberg Literary Archive Foundation and Michael
+Hart, the owner of the Project Gutenberg-tm trademark.  Contact the
+Foundation as set forth in Section 3 below.
+
+1.F.
+
+1.F.1.  Project Gutenberg volunteers and employees expend considerable
+effort to identify, do copyright research on, transcribe and proofread
+public domain works in creating the Project Gutenberg-tm
+collection.  Despite these efforts, Project Gutenberg-tm electronic
+works, and the medium on which they may be stored, may contain
+"Defects," such as, but not limited to, incomplete, inaccurate or
+corrupt data, transcription errors, a copyright or other intellectual
+property infringement, a defective or damaged disk or other medium, a
+computer virus, or computer codes that damage or cannot be read by
+your equipment.
+
+1.F.2.  LIMITED WARRANTY, DISCLAIMER OF DAMAGES - Except for the "Right
+of Replacement or Refund" described in paragraph 1.F.3, the Project
+Gutenberg Literary Archive Foundation, the owner of the Project
+Gutenberg-tm trademark, and any other party distributing a Project
+Gutenberg-tm electronic work under this agreement, disclaim all
+liability to you for damages, costs and expenses, including legal
+fees.  YOU AGREE THAT YOU HAVE NO REMEDIES FOR NEGLIGENCE, STRICT
+LIABILITY, BREACH OF WARRANTY OR BREACH OF CONTRACT EXCEPT THOSE
+PROVIDED IN PARAGRAPH 1.F.3.  YOU AGREE THAT THE FOUNDATION, THE
+TRADEMARK OWNER, AND ANY DISTRIBUTOR UNDER THIS AGREEMENT WILL NOT BE
+LIABLE TO YOU FOR ACTUAL, DIRECT, INDIRECT, CONSEQUENTIAL, PUNITIVE OR
+INCIDENTAL DAMAGES EVEN IF YOU GIVE NOTICE OF THE POSSIBILITY OF SUCH
+DAMAGE.
+
+1.F.3.  LIMITED RIGHT OF REPLACEMENT OR REFUND - If you discover a
+defect in this electronic work within 90 days of receiving it, you can
+receive a refund of the money (if any) you paid for it by sending a
+written explanation to the person you received the work from.  If you
+received the work on a physical medium, you must return the medium with
+your written explanation.  The person or entity that provided you with
+the defective work may elect to provide a replacement copy in lieu of a
+refund.  If you received the work electronically, the person or entity
+providing it to you may choose to give you a second opportunity to
+receive the work electronically in lieu of a refund.  If the second copy
+is also defective, you may demand a refund in writing without further
+opportunities to fix the problem.
+
+1.F.4.  Except for the limited right of replacement or refund set forth
+in paragraph 1.F.3, this work is provided to you 'AS-IS', WITH NO OTHER
+WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PURPOSE.
+
+1.F.5.  Some states do not allow disclaimers of certain implied
+warranties or the exclusion or limitation of certain types of damages.
+If any disclaimer or limitation set forth in this agreement violates the
+law of the state applicable to this agreement, the agreement shall be
+interpreted to make the maximum disclaimer or limitation permitted by
+the applicable state law.  The invalidity or unenforceability of any
+provision of this agreement shall not void the remaining provisions.
+
+1.F.6.  INDEMNITY - You agree to indemnify and hold the Foundation, the
+trademark owner, any agent or employee of the Foundation, anyone
+providing copies of Project Gutenberg-tm electronic works in accordance
+with this agreement, and any volunteers associated with the production,
+promotion and distribution of Project Gutenberg-tm electronic works,
+harmless from all liability, costs and expenses, including legal fees,
+that arise directly or indirectly from any of the following which you do
+or cause to occur: (a) distribution of this or any Project Gutenberg-tm
+work, (b) alteration, modification, or additions or deletions to any
+Project Gutenberg-tm work, and (c) any Defect you cause.
+
+
+Section  2.  Information about the Mission of Project Gutenberg-tm
+
+Project Gutenberg-tm is synonymous with the free distribution of
+electronic works in formats readable by the widest variety of computers
+including obsolete, old, middle-aged and new computers.  It exists
+because of the efforts of hundreds of volunteers and donations from
+people in all walks of life.
+
+Volunteers and financial support to provide volunteers with the
+assistance they need are critical to reaching Project Gutenberg-tm's
+goals and ensuring that the Project Gutenberg-tm collection will
+remain freely available for generations to come.  In 2001, the Project
+Gutenberg Literary Archive Foundation was created to provide a secure
+and permanent future for Project Gutenberg-tm and future generations.
+To learn more about the Project Gutenberg Literary Archive Foundation
+and how your efforts and donations can help, see Sections 3 and 4
+and the Foundation information page at www.gutenberg.org
+
+
+Section 3.  Information about the Project Gutenberg Literary Archive
+Foundation
+
+The Project Gutenberg Literary Archive Foundation is a non profit
+501(c)(3) educational corporation organized under the laws of the
+state of Mississippi and granted tax exempt status by the Internal
+Revenue Service.  The Foundation's EIN or federal tax identification
+number is 64-6221541.  Contributions to the Project Gutenberg
+Literary Archive Foundation are tax deductible to the full extent
+permitted by U.S. federal laws and your state's laws.
+
+The Foundation's principal office is located at 4557 Melan Dr. S.
+Fairbanks, AK, 99712., but its volunteers and employees are scattered
+throughout numerous locations.  Its business office is located at 809
+North 1500 West, Salt Lake City, UT 84116, (801) 596-1887.  Email
+contact links and up to date contact information can be found at the
+Foundation's web site and official page at www.gutenberg.org/contact
+
+For additional contact information:
+     Dr. Gregory B. Newby
+     Chief Executive and Director
+     gbnewby@pglaf.org
+
+Section 4.  Information about Donations to the Project Gutenberg
+Literary Archive Foundation
+
+Project Gutenberg-tm depends upon and cannot survive without wide
+spread public support and donations to carry out its mission of
+increasing the number of public domain and licensed works that can be
+freely distributed in machine readable form accessible by the widest
+array of equipment including outdated equipment.  Many small donations
+($1 to $5,000) are particularly important to maintaining tax exempt
+status with the IRS.
+
+The Foundation is committed to complying with the laws regulating
+charities and charitable donations in all 50 states of the United
+States.  Compliance requirements are not uniform and it takes a
+considerable effort, much paperwork and many fees to meet and keep up
+with these requirements.  We do not solicit donations in locations
+where we have not received written confirmation of compliance.  To
+SEND DONATIONS or determine the status of compliance for any
+particular state visit www.gutenberg.org/donate
+
+While we cannot and do not solicit contributions from states where we
+have not met the solicitation requirements, we know of no prohibition
+against accepting unsolicited donations from donors in such states who
+approach us with offers to donate.
+
+International donations are gratefully accepted, but we cannot make
+any statements concerning tax treatment of donations received from
+outside the United States.  U.S. laws alone swamp our small staff.
+
+Please check the Project Gutenberg Web pages for current donation
+methods and addresses.  Donations are accepted in a number of other
+ways including checks, online payments and credit card donations.
+To donate, please visit:  www.gutenberg.org/donate
+
+
+Section 5.  General Information About Project Gutenberg-tm electronic
+works.
+
+Professor Michael S. Hart was the originator of the Project Gutenberg-tm
+concept of a library of electronic works that could be freely shared
+with anyone.  For forty years, he produced and distributed Project
+Gutenberg-tm eBooks with only a loose network of volunteer support.
+
+Project Gutenberg-tm eBooks are often created from several printed
+editions, all of which are confirmed as Public Domain in the U.S.
+unless a copyright notice is included.  Thus, we do not necessarily
+keep eBooks in compliance with any particular paper edition.
+
+Most people start at our Web site which has the main PG search facility:
+
+     www.gutenberg.org
+
+This Web site includes information about Project Gutenberg-tm,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.
+\end{PGtext}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%                                                                         %
+% End of the Project Gutenberg EBook of Groups of Order p^m Which Contain %
+% Cyclic Subgroups of Order p^(m-3), by Lewis Irving Neikirk              %
+%                                                                         %
+% *** END OF THIS PROJECT GUTENBERG EBOOK GROUPS OF ORDER P^M WHICH ***   %
+%                                                                         %
+% ***** This file should be named 9930-t.tex or 9930-t.zip *****          %
+% This and all associated files of various formats will be found in:      %
+%         http://www.gutenberg.org/9/9/3/9930/                            %
+%                                                                         %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+\end{document}
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.6)  24 APR 2015 14:30
+entering extended mode
+ %&-line parsing enabled.
+**9930-t.tex
+(./9930-t.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks14
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen103
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks16
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks17
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+) (/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+No file 9930-t.aux.
+\openout1 = `9930-t.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+
+Overfull \hbox (4.64594pt too wide) in paragraph at lines 125--125
+[]\OT1/cmtt/m/n/9 This eBook is for the use of anyone anywhere in the United St
+ates and most[] 
+ []
+
+
+Overfull \hbox (4.64594pt too wide) in paragraph at lines 127--127
+[]\OT1/cmtt/m/n/9 whatsoever.  You may copy it, give it away or re-use it under
+ the terms of[] 
+ []
+
+
+Overfull \hbox (14.09583pt too wide) in paragraph at lines 129--129
+[]\OT1/cmtt/m/n/9 www.gutenberg.org.  If you are not located in the United Stat
+es, you'll have[] 
+ []
+
+
+Overfull \hbox (28.27066pt too wide) in paragraph at lines 130--130
+[]\OT1/cmtt/m/n/9 to check the laws of the country where you are located before
+ using this ebook.[] 
+ []
+
+
+Overfull \hbox (4.64594pt too wide) in paragraph at lines 134--134
+[]\OT1/cmtt/m/n/9 Title: Groups of Order p^m Which Contain Cyclic Subgroups of 
+Order p^(m-3)[] 
+ []
+
+[1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+] [3
+
+] [4] [1
+
+] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] 
+[19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34]
+[35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50]
+[51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [1
+
+] [2] [3] [4] [5] [6] [7] (./9930-t.aux)
+
+ *File List*
+    book.cls    2007/10/19 v1.4h Standard LaTeX document class
+    bk10.clo    2007/10/19 v1.4h Standard LaTeX file (size option)
+enumerate.sty    1999/03/05 v3.00 enumerate extensions (DPC)
+ amsmath.sty    2013/01/14 v2.14 AMS math features
+ amstext.sty    2000/06/29 v2.01
+  amsgen.sty    1999/11/30 v2.0
+  amsbsy.sty    1999/11/29 v1.2d
+  amsopn.sty    1999/12/14 v2.01 operator names
+   alltt.sty    1997/06/16 v2.0g defines alltt environment
+ ***********
+
+ ) 
+Here is how much of TeX's memory you used:
+ 922 strings out of 493304
+ 10377 string characters out of 6139872
+ 113348 words of memory out of 5000000
+ 4424 multiletter control sequences out of 15000+600000
+ 13023 words of font info for 47 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 26i,18n,23p,257b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on 9930-t.pdf (71 pages, 512785 bytes).
+PDF statistics:
+ 342 PDF objects out of 1000 (max. 8388607)
+ 239 compressed objects within 3 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
